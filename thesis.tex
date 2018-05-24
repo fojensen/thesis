@@ -1,80 +1,42 @@
 \documentclass[defaultstyle,11pt]{thesis}
 
-\usepackage{amssymb}		% to get all AMS symbols
-\usepackage{graphicx}		% to insert figures
-\usepackage{hyperref}		% PDF hyperreferences??
-
-%%%%%%%%%%%%   All the preamble material:   %%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{subcaption}
 
 \title{Search for supersymmetry using boosted Higgs bosons and missing transverse momentum in proton-proton collisions at 13 TeV}
 
-\author{I.~B.}{Scriptor}
+\author{Frank}{Jensen}
+\otherdegrees{M.S., University of Colorado Boulder, 2014\\B.A., University of California Berkeley, 2008}
+\degree{Doctor of Philosophy} {Ph.D.,experiment high-energy physics}% #1 {long descr}  #2 {short descr}
 
-\otherdegrees{B.A., North Dakota State University, 2005 \\
-	      M.S., University of Reno, 2007}
+\dept{Department of}	{Physics} % #1 {designation} #2 {name}
+\advisor{Professor}{Kevin Stenson} % #1 {title} #2 {name}
+\reader{Professor William Ford}	 %  2nd person to sign thesis
+\readerThree{Professor Jamie Nagle} %  3rd person to sign thesis
 
-\degree{Doctor of Philosophy}		%  #1 {long descr.}
-	{Ph.D., Rocket Science}		%  #2 {short descr.}
+\abstract{ \OnePageChapter % because it is very short
+A search for physics beyond the standard model in events with one or more high-momentum Higgs bosons, H, decaying to pairs of b quarks in association with missing transverse momentum is presented. The data, corresponding to an integrated luminosity of $\mathrm{35.9}\,\mathrm{fb}^{-1}$, were collected with the CMS detector at the LHC in proton-proton collisions at the center-of-mass energy $\sqrt{s}\,=\,13\,\mathrm{TeV}$. The analysis utilizes a new b quark tagging technique based on jet substructure to identify jets from $\mathrm{H}\,\rightarrow\,b\bar{b}$. Events are categorized by the multiplicity of H-tagged jets, jet mass, and the missing transverse momentum. No significant deviation from standard model expectations is observed. In the context of supersymmetry (SUSY), limits on the cross sections of pair-produced gluinos are set, assuming that gluinos decay to quark pairs, H (or Z), and the lightest SUSY particle, LSP, through an intermediate next-to-lightest SUSY particle, NLSP. With large mass splitting between the NLSP and LSP, and 100$\%$ NLSP branching fraction to H, the lower limit on the gluino mass is found to be 2010 GeV.
+}
 
-\dept{Department of}			%  #1 {designation}
-	{Rocket Science}		%  #2 {name}
-
-\advisor{Prof.}				%  #1 {title}
-	{Ed Visor}			%  #2 {name}
-
-\reader{Prof.~Rachel Goddard}		%  2nd person to sign thesis
-\readerThree{Ms.~Thora Nea}		%  3rd person to sign thesis
-
-\abstract{  \OnePageChapter	% because it is very short
-
-	Often the abstract will be long enough to require
-	more than one page, in which case the macro
-	``$\backslash$OnePageChapter'' should {\it not}
-	be used.
-
-	But this one isn't, so it should.
-	}
-
-\dedication[Dedication]{	% NEVER use \OnePageChapter here.
-	To all of the fluffy kitties.
-	}
-
-\acknowledgements{	\OnePageChapter	% *MUST* BE ONLY ONE PAGE!
-	Here's where you acknowledge folks who helped.
-	But keep it short, i.e., no more than one page,
-	as required by the Grad School Specifications.
-	}
-
-% \IRBprotocol{E927F29.001X}	% optional!
-
-\ToCisShort	% use this only for 1-page Table of Contents
-
-\LoFisShort	% use this only for 1-page Table of Figures
-% \emptyLoF	% use this if there is no List of Figures
-
-\LoTisShort	% use this only for 1-page Table of Tables
-% \emptyLoT	% use this if there is no List of Tables
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%       BEGIN DOCUMENT...         %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\dedication[Dedications \& Acknowledgements]{
+The section with the dedications and acknowledgements.
+}
 
 \begin{document}
 
-\input macros.tex
-\input chapter1.tex
-\input chapter2.tex
+%\input macros.tex
+\input introduction.tex
+\input sm.tex
+\input detector.tex
+\input analysis.tex
+\input conclusions.tex
 
-%%%%%%%%%   then the Bibliography, if any   %%%%%%%%%
-\bibliographystyle{plain}	% or "siam", or "alpha", etc.
-\nocite{*}		% list all refs in database, cited or not
-\bibliography{refs}		% Bib database in "refs.bib"
+\bibliographystyle{ieeetr}
+\bibliography{thebib}
 
-%%%%%%%%%   then the Appendices, if any   %%%%%%%%%
 \appendix
-\input appendixA.tex
-\input appendixB.tex
-
+\input bbcommissioning.tex
 
 \end{document}
-
