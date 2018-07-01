@@ -1,28 +1,23 @@
 \begin{thebibliography}{1}
 
-\bibitem{1126-6708-2008-04-063}
-M.~Cacciari, G.~P. Salam, and G.~Soyez, ``The anti- k t jet clustering
-  algorithm,'' {\em Journal of High Energy Physics}, vol.~2008, no.~04, p.~063,
-  2008.
+\bibitem{CMS-PRF-14-001}
+A.~M. Sirunyan {\em et~al.}, ``Particle-flow reconstruction and global event
+  description with the cms detector,'' {\em JINST}, vol.~12, p.~P10003, 2017.
 
-\bibitem{2016152}
-{CMS Collaboration}, ``{Search for supersymmetry in the multijet and missing
-  transverse momentum final state in pp collisions at 13 TeV},'' {\em Physics
-  Letters B}, vol.~758, pp.~152 -- 180, 2016.
+\bibitem{SUS16033}
+{CMS Collaboration}, ``Search for supersymmetry in multijet events with missing
+  transverse momentum in proton-proton collisions at 13 tev,'' {\em Phys. Rev.
+  D}, vol.~96, p.~032003, 2017.
 
-\bibitem{PhysRevD.96.032003}
-{CMS Collaboration}, ``{Search for supersymmetry in multijet events with
-  missing transverse momentum in proton-proton collisions at 13 TeV},'' {\em
-  Phys. Rev. D}, vol.~96, p.~032003, Aug 2017.
+\bibitem{SUS15002}
+{CMS Collaboration}, ``Search for supersymmetry in the multijet and missing
+  transverse momentum final state in pp collisions at 13 tev,'' {\em Phys.
+  Lett. B}, vol.~758, p.~152, 2016.
 
-\bibitem{Sirunyan:2017bsh}
-{CMS Collaboration}, ``{Search for physics beyond the standard model in events
-  with high-momentum Higgs bosons and missing transverse momentum in
-  proton-proton collisions at 13 TeV},'' 2017.
-
-\bibitem{PhysRevD.81.094023}
-S.~D. Ellis, C.~K. Vermilion, and J.~R. Walsh, ``Recombination algorithms and
-  jet substructure: Pruning as a tool for heavy particle searches,'' {\em Phys.
-  Rev. D}, vol.~81, p.~094023, May 2010.
+\bibitem{SUS17006}
+{CMS Collaboration}, ``Search for physics beyond the standard model in events
+  with high-momentum higgs bosons and missing transverse momentum in
+  proton-proton collisions at 13 tev,'' {\em Phys. Rev. Lett.}, vol.~120,
+  p.~241801, 2018.
 
 \end{thebibliography}
