@@ -6,3 +6,5 @@
 *.gz
 *.toc
 .DS_Store
+thesis.bbl
+thesis.blg
