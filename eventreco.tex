@@ -3,23 +3,25 @@
 
 \section{Basic Elements From the Detector} 
 
-Depending on their nature, the particles emanating from the collision leave various forms of energy deposits in the different subdetectors. All these signals need to be aggregated and processed to allow for the reconstruction of what could be considered particle-level information. The first step in this process consists of building \textit{Particle Flow elements} using information only locally within each subdetector. There are four primary elements from the subdetectors: tracks from the tracker, calorimeter deposits in each the ECAL and HCAL, and tracks from the muon detector. As will be discussed in the next section, these are known as \textit{Particle Flow elements}; the elements are eventually merged via the Particle Flow algorithm, yielding reconstructed particles used for physics analysis.
+Depending on their nature, the particles emanating from the collision leave various forms of energy deposits in the different subdetectors. All these signals need to be aggregated and processed to allow for the reconstruction of what could be considered particle-level information. The first step in this process consists of building \textit{Particle Flow elements} using information only locally within each subdetector. There are four primary elements from the subdetectors: tracks from the tracker, calorimeter deposits in each the ECAL and HCAL, and tracks from the muon detector. As will be discussed in the next section the elements are combined via the Particle Flow \textit{algorithm}, yielding reconstructed particles used for physics analysis.
 
 Note that the definition of any object within the detector makes use of additional selection criteria which is not generally discussed here. For instance, one may require that a track in the tracker have at least 3 hits in the pixel detector, or that a calorimeter hit is above some minimum threshold energy. The effects of this selection is generally a balance between the reconstruction efficiency of any given particle and the probability to misidentify a particle (purity).
 
-This section is adapted from \cite{CMS-PRF-14-001}.
+This chapter is adapted from \cite{CMS-PRF-14-001}.
 
 \subsection{Tracker Tracks}
 
+Track seeds are formed separately in the Pixel and Strips detectors by clustering adjacent elements. This creates a reconstructed hit in that detector layer. Charge sharing among pixels in the hit allows a finer resolution as the position can be better determined using a charge weighted sum of hit coordinates.\cite{trackerreco}
+
 \subsection{ECAL Clusters}
 
-\textit{Superclusters} are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (8) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Superclusters are built separately in the barrel and endcap. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of Energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width $\sigma$ scale set by the crystal size.
+\textit{Superclusters} are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (8) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Superclusters are built separately in the barrel and endcap. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width $\sigma$ scale set by the crystal size.
 
 \subsection{HCAL Clusters}
 
 \subsection{Muon Tracks}
 
-As there are multiple detector layers within a single muon station, track segments are locally formed within a chamber for both the DTs and CSC. These track segments represent the muon momentum at that station; pattern recognition is able to provide to measurement and its high speed allows the segments to be used trigger primitives for the muon systems, as was seen in Figure \ref{fig:trigger}. For track reconstruction, the track segments act as seeds for the track finding algoritm. The hits in each the DT, CSC, and RPC subdetectors are used in the final track reconstruction.
+As there are multiple detector layers within a single muon station, track segments are locally formed within a chamber for both the DTs and CSC. These track segments represent the muon momentum at that station; pattern recognition is able to provide to measurement and its high speed allows the segments to be used trigger primitives for the muon systems, as was seen in Figure \ref{fig:trigger}. For track reconstruction, the track segments act as seeds for the track finding algorithm. The hits in each the DT, CSC, and RPC subdetectors are used in the final track reconstruction.
 
 The geometry of the DT system allows for up to 32 measurements of the r-$\phi$ position and 16 for the r-z. The geometry of the CSC system allows for any in between 20-28 hits, depending on the position $\eta$. The geometry of the RPC system allows for any in between 6-10 hits, depending on the position $\eta$. 
 
@@ -87,8 +89,8 @@ p_{T}^{\mathrm{miss}}  \equiv \left | - \sum_{i} \vec{p_{T}} \right |,~\forall~\
 
 In addition to SM neutrinos, many theories of beyond the Standard Model physics predict particles which are expected to give rise to a source of $p_{T}^{\mathrm{miss}}$.
 
-\subsection{$\tau$ leptons}
-\subsection{$\pi^{0}$}
+\subsection{$\pi^{0}$ meson}
 
+Charged and neutral $\pi$ mesons are the lightest of all hadrons with masses of 135 and 140 MeV, respectively. The next massive are the K mesons at ~495 MeV; the lightest baryons are neutrons and protons, with masses of 940 MeV. Pions are therefore copiously produced within hadronic interactions and often contain much of the jet energy. As a rule-of-thumb, the charged to neutral energy fraction within a jet is approximately two-thirds to one-third (to match the pion and Kaon multiplicities).
 
-
+Because the neutral pion branching to photons is over 98\% and its lifetime is relatively short (25.5$\,$nm), the detection of neutral pions therefore involves reconstruction of photon pairs with the appropriate invariant mass. This is simple enough in principle, but as the pion $p_{T}$ increases the photons from the pion decay become more and more collimated. Eventually, for pions above about 7 GeV, individual photons are not able to be resolved because of the ECAL resolution (crystal size), the same crystal gets the energy from both photons. This was the primary motivation for the Preshower ECAL detector.
