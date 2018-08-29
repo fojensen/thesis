@@ -29,16 +29,16 @@ where $\mathrm{B}_{\mu\nu} \equiv \partial_{\mu}\mathrm{B}_{\nu} + \partial_{\nu
 Quantum electrodynamics describes the interactions of particles with electric charge. The interactions arise naturally by requiring the free-particle Dirac Lagrangian to be invariant under the U(1) transformation:
 
 \begin{equation}
-\psi(x)  \xrightarrow[]{\text{U(1)}} e^{i q \alpha(x)}\,\psi(x)
+\psi(x)  \xrightarrow[]{\text{U(1)}} e^{i q \xi(x)}\,\psi(x)
 \label{eq:u1}
 \end{equation}
-where $q$ is the electric charge, and $\alpha$ is an arbitrary function of spacetime. $\psi$ is a single Dirac fermion.
+where $q$ is the electric charge, and $\xi$ is an arbitrary function of spacetime. $\psi$ is a single Dirac fermion.
 
 U(1) gauge-invariance requires us to modify the definition of the partial derivative to include a spin-1 vector field $\mathrm{A}_{\mu}$, the photon:
 \begin{equation}
 \begin{array}{l}
-\partial{\mu} \rightarrow\ \partial_{\mu} - iq\mathrm{A}_{\mu}
-\\A_{\mu} \xrightarrow[]{\text{U(1)}} \mathrm{A}_{\mu} - q \partial_{\mu} \alpha
+\partial{\mu} \rightarrow\ \partial_{\mu} - ie\mathrm{A}_{\mu}
+\\A_{\mu} \xrightarrow[]{\text{U(1)}} \mathrm{A}_{\mu} + \frac{1}{e} \partial_{\mu} \alpha
  \end{array}
 \end{equation}
 
@@ -46,7 +46,7 @@ The complete Lagrangian becomes:
 \begin{equation}
 \mathcal{L}_{\mathrm{QED}} =
 i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi
-- q\bar{\psi}\gamma^{\mu}\psi \mathrm{A}_{\mu}
+- e\bar{\psi}\gamma^{\mu}\psi \mathrm{A}_{\mu}
 - m\bar{\psi}\psi
 - \frac{1}{4}\mathrm{F}_{\mu\nu} \mathrm{F}^{\mu\nu}
 \end{equation}
@@ -58,15 +58,15 @@ where $\mathrm{F}_{\mu\nu}\equiv\partial_{\mu}\mathrm{A}_{\nu} - \partial_{\nu}\
 Quantum chromodynamics describes the strong force - interactions of particles with color charge. The interactions arise naturally by requiring the free-particle Dirac Lagrangian to be invariant under the SU(3) transformation:
 
 \begin{equation}
-\psi(x) \xrightarrow[]{\text{SU(3)}} e^{\frac{1}{2}ig_{s}\bm{\alpha(x)}\cdot\bm{\lambda}}\,\psi(x)
+q(x) \xrightarrow[]{\text{SU(3)}} e^{\frac{1}{2}ig_{s}\bm{\xi(x)}\cdot\bm{\lambda}}\,q(x)
 \end{equation}
-where $g_{s}$ is the strong coupling constant, $\bm{\alpha}$ is an arbitrary 8-dimensional vector of spacetime, and $\bm{\lambda}$ are the 8 3x3 Gell-Mann matrices. $\psi$ is a color triplet of Dirac fermions $\bar{\psi} = (\psi_{red}, \psi_{blue}, \psi_{green})$.
+where $g_{s}$ is the strong coupling constant, $\bm{\xi}$ is an arbitrary 8-dimensional vector of spacetime, and $\bm{\lambda}$ are the 8 3x3 Gell-Mann matrices. q is a color triplet of Dirac fermions $\bar{q} = (q_{red}, q_{blue}, q_{green})$.
 
 SU(3) gauge invariance requires us to modify the definition of the partial derivative to include 8 spin-1 vector fields $\bm{G}_{\mu}$, the gluons:
 \begin{equation}
 \begin{array}{l}
 \partial{\mu} \rightarrow \partial_{\mu} - i g_{s} \bm{\lambda} \cdot \bm{G}_{\mu}\\
-G^{k}_{\mu} \xrightarrow[]{\text{SU(3)}} G^{k}_{\mu} - g_{s}\partial_{\mu}\alpha_{k} - g_{s}f_{ijk}\alpha_{i}G^{j}_{\mu}
+G^{k}_{\mu} \xrightarrow[]{\text{SU(3)}} G^{k}_{\mu} - \frac{1}{g_{s}}\partial_{\mu}\xi_{k} - f_{ijk}\xi_{i}G^{j}_{\mu}
 \end{array}
 \end{equation}
 where $f_{ijk}$ are known as the \textit{structure constants} of SU(3) and arise from its non-abelian nature, they satisfy $[\lambda_{i},\lambda_{j}] = 2if_{ijk}\lambda_{k}$. This term is responsible for the self-coupling within the gluon field.
@@ -74,15 +74,15 @@ where $f_{ijk}$ are known as the \textit{structure constants} of SU(3) and arise
 The complete Lagrangian becomes:
 \begin{equation}
 \mathcal{L}_{\mathrm{QCD}} =
-i \bar{\psi} \gamma^{\mu} \partial_{\mu} \psi
-- (g_{s} \bar{\psi} \gamma^{\mu} \bm{\lambda} \psi) \cdot \textbf{G}_{\mu}
-- m \bar{\psi} \psi
-- \frac{1}{16\pi} \textbf{G}^{\mu\nu} \cdot \textbf{G}_{\mu\nu}
+i \bar{q} \gamma^{\mu} \partial_{\mu} q
+-  \frac{1}{2} (g_{s} \bar{q} \gamma^{\mu} \bm{\lambda} q) \cdot \textbf{G}_{\mu}
+- m \bar{q} q
+- \frac{1}{4} \textbf{G}^{\mu\nu} \cdot \textbf{G}_{\mu\nu}
 \end{equation}
 
 where $G^{\mu\nu}_{i} \equiv \partial^{\mu} G^{\nu}_{i} - \partial_{\nu} G^{\mu}_{i} - 2 q f_{ijk} G^{\mu}_{j} G^{\nu}_{k}$ is the field strength tensor for the gluon fields.
 
-The presence of theThe gluon mass term $\frac{1}{2}m^{2}\bm{\mathrm{G}}^{\mu} \cdot \bm{\mathrm{G}}_{\mu}$ is forbidden as it is not invariant under the transformation rule and they remain massless.
+A mass term of the form $\frac{1}{2}m^{2}\bm{\mathrm{G}}^{\mu} \cdot \bm{\mathrm{G}}_{\mu}$ is forbidden as it is not invariant under the transformation rule, the gluons remain massless.
 
 \section{Electroweak Theory}
 
@@ -94,7 +94,9 @@ Electroweak theory is a quantum field theory which provides a description of the
 \psi_{L}(x) \xrightarrow[]{\text{SU(2)}} e^{i g_{W} \bm{\xi}(x) \cdot \frac{1}{2} \bm{\sigma} } \, \psi_{L}(x) 
 \end{array}
 \end{equation}
-where $g'$ is the hypercharge coupling constant, Y is the hypercharge operator, $g_{W}$ is the weak coupling constant, $\alpha$ and $\xi$ are arbitrary functions of spacetime, and $\bm{\sigma}$ represents the 3 2x2 Pauli spin matrices. $\psi_{L}$ is an \textbf{isospin doublet} made of the following fermion anti-fermion pairs:
+where $g'$ is the hypercharge coupling constant, Y is the hypercharge operator, $g_{W}$ is the weak coupling constant, $\alpha$ and $\xi$ are arbitrary functions of spacetime, $\bm{\sigma}$ represents the 3 2x2 Pauli spin matrices, and $\psi_{L}$ is an \textbf{isospin doublet}.
+
+Isospin doublets consist of pairs of leptons or quarks differing by one unit of the third component of isospin. As the hat the (electrically-charged) W bosons I$_{3}$. T
 
 \begin{equation*}
 \begin{pmatrix} \nu_{e} \\ e \end{pmatrix},
@@ -188,6 +190,19 @@ Up to this point, it has not been mentioned that the fermion mass term $m\psi\ba
 \mathcal{L} = -y ( \bar{\psi_{L}} \phi \psi_{R} + \bar{\psi_{R}} \phi^{\dagger} \psi_{L})
 \end{equation}
 where $y$ is the \textit{Yukawa coupling}, $\bar{\psi_{L}}$ is an isospin doublet of left-chiral fermions, and $\psi_{R}$ is a right-chiral fermion.
+
+\subsection{Quark mixing - the CKM Matrix}
+
+\begin{equation}
+\begin{pmatrix} d' \\ s' \\ b' \end{pmatrix} =
+\begin{pmatrix} V_{ud} \,\, V_{us}  \,\, V_{ub} \\ V_{cd} \,\, V_{cs} \,\, V_{cb}  \\ V_{td} \,\, V_{ts} \,\, V_{tb} \end{pmatrix}
+\begin{pmatrix} d \\ s \\ b \end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{pmatrix} |V_{ud}| \,\, |V_{us}|  \,\, |V_{ub}| \\ |V_{cd}| \,\, |V_{cs}| \,\, |V_{cb}|  \\ |V_{td}| \,\, |V_{ts}| \,\, |V_{tb}| \end{pmatrix} \approx
+\begin{pmatrix} 0.974 \,\, 0.225  \,\, 0.004 \\ 0.225 \,\, 0.973 \,\, 0.041  \\ 0.009 \,\, 0.040 \,\, 0.999 \end{pmatrix}
+\end{equation}
 
 \section{Parameters of the Standard Model}
 
