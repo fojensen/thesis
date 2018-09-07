@@ -9,15 +9,22 @@ Note that the definition of any object within the detector makes use of addition
 
 This chapter is adapted from \cite{CMS-PRF-14-001}.
 
-\subsection{Tracker Tracks}
+\subsection{Tracks and Vertices}
 
-Track seeds are formed separately in the Pixel and Strips detectors by clustering adjacent elements. This creates a reconstructed hit in that detector layer. Charge sharing among pixels in the hit allows a finer resolution as the position can be better determined using a charge weighted sum of hit coordinates.\cite{trackerreco}
+Tracker hits are formed in the pixel and strips detectors by clustering any hits in neighboring elements of the detector plane. The cluster position is measured by weighted sums of the individual channel positions. Charge sharing among detector channels allow for a finer spatial resolution in the position measurement. Track reconstruction first begins by forming track seeds consisting of a small number of detector hits. These track seeds are then projected onto successive detector layers looking for nearby additional hits. This follows the Kalman filtering procedure, in which track information is updated after the addition of each hit. Electron tracking is performed with a slightly modified algorithm to better account for the energy loss mechanisms as the electron traverses the detector. \cite{trackerreco}
 
-\subsection{ECAL Clusters}
+The track building procedure follows an iterative procedure, where the requirements on the quality of the track seed decrease as the iterations proceed. The first iterations begin with seeds consisting of 3 pixel hits and lead to high performance reconstruction of high $p_{T}$ tracks emanating from the collision region. The iterations proceed until essentially only requiring hits in the outer tracker and reconstructs displaced tracks or those missing hits. The iteration procedure provides a balance between reconstruction efficiency, track purity, and computation economics. Table \ref{tab:itertracks} list these iterations - the requirements on the seed and types of tracks that iteration targets.
+
+\begin{table}[h]
+\caption{Iterative tracking steps. \cite{CMS-PRF-14-001}}
+\centering
+\includegraphics[width=0.8\textwidth]{figs/itertracks.png}
+\label{tab:itertracks}
+\end{table}
+
+\subsection{ECAL \& HCAL Clusters}
 
 \textit{Superclusters} are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (8) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Superclusters are built separately in the barrel and endcap. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width $\sigma$ scale set by the crystal size.
-
-\subsection{HCAL Clusters}
 
 \subsection{Muon Tracks}
 
@@ -52,7 +59,7 @@ There are three types of tracks which can be used for muon reconstruction:
 \textit{\textbf{global}} muons are reconstructed using the hits from both the inner silicon tracker and the muon stations.  The track pairing is the same done for tracker muons. For momenta above 200 GeV, the use of the muon system for tracks improves the momentum measurement.
 \end{itemize}
 
-Any ECAL or HCAL clusters associated with the muon track are used as muon selection/definition criteria if those clusters are found to be consistent with the muon hypothesis (what does this mean?).
+Any ECAL or HCAL clusters associated with the muon track are used as muon selection/definition criteria if those clusters are found to be consistent with the muon hypothesis.
 
 \item \textbf{Electrons \& Isolated Photons}:
 
@@ -65,6 +72,9 @@ Electrons and isolated photons are reconstructed within the same Particle Flow s
 Hadrons \& non-isolated photons result from hadronization/fragmentation of jets. ECAL clusters not associated to any tracks are assigned to be photons. Neutral hadrons ($K^{0}_{L}$, neutrons) are reconstructed from HCAL clusters with no associated track; neutral hadrons leave a very small amount of energy in the ECAL. Charged hadrons ($\pi^{\pm}$, K$^{\pm}$, protons) are reconstructed using the remaining tracks and HCAL deposits. Charged hadrons do not radiate bremsstrahlung photons nor cause $e^{+}e^{-}$ pair creation and thus do not leave signals in the ECAL.
 
 \item \textbf{Nuclear Interactions}:
+
+Nuclear interactions often occur when outgoing particles interact within the detector material causing a shower of secondary particles. If multiple tracks are linked through a common secondary vertex they will be be summed to create a single charged hadron particle which replaces its constituents in the particle list of the event.
+
 \end{enumerate}
 
 \section{Additional High-Level Objects}
@@ -81,13 +91,13 @@ In addition to tagging jets as originating from a single b quark, tagging of jet
 
 \subsection{Neutrinos -- Invisible Particles $\rightarrow p_{T}^{\mathrm{miss}}$}
 
-Neutrinos are so weakly interacting that they leave no energy deposits in CMS and therefore cannot be detected by our experiment. Although direct detection is not possible, we are still able to \textit{infer} the presence of a neutrino. The protons involved in the initial collision have no net momentum in the transverse direction; the summed momenta of all the final state particles should therefore be equal to zero in the direction transverse to the beamline. Any non-zero value for the final-state transverse momentum is thus indicative of a neutrino escaping unscathed. We define this imbalance as 
+Neutrinos are so weakly interacting that they leave no energy deposits in CMS and therefore cannot be detected by our experiment. Although direct detection is not possible, we are still able to \textit{infer} the presence of a neutrino. The protons involved in the initial collision have no net momentum in the transverse direction; the summed momenta of all the final state particles should therefore be equal to zero in the direction transverse to the beamline. Any non-zero value for the final-state transverse momentum is thus indicative of a neutrino escaping unscathed. We define this imbalance as:
 
 \begin{equation}
 p_{T}^{\mathrm{miss}}  \equiv \left | - \sum_{i} \vec{p_{T}} \right |,~\forall~\textrm{particles~i}.
 \end{equation}
 
-In addition to SM neutrinos, many theories of beyond the Standard Model physics predict particles which are expected to give rise to a source of $p_{T}^{\mathrm{miss}}$.
+In addition to SM neutrinos, many theories of beyond the Standard Model physics predict particles which are expected to give rise to a source of $p_{T}^{\mathrm{miss}}$ as they (presumably) would not interact with our detector.
 
 \subsection{$\pi^{0}$ meson}
 
