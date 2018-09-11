@@ -1,53 +1,55 @@
 \chapter{The CMS Detector}
 \label{chap:detector}
 
-To ensure as much as possible of the debris of the proton-proton collisions can be detected, CMS is constructed to maximize the solid-angle coverage of the interaction region. The 20$\,$cm transverse size of the beam-pipe prohibits instrumentation in the most forward of this region. CMS is composed of a modular design of different detectors, each with their own technology and working points, allowing for direct measurements of a wide spectra of particles. Figure \ref{fig:howcmsworks} illustrates how well instrumented the interaction region is, highlighting each of the detector systems. The proton-proton beamline is seen as a grey tube oriented from the bottom right to the top left of the figure. The interaction region is within the silicon tracker.
+To ensure as much as possible of the debris of the proton-proton collisions can be detected, CMS is constructed to maximize the solid-angle coverage of the interaction region. CMS is composed of a modular design of different detectors, each with their own technology and working points, allowing for direct measurements of a wide spectra of particles. Figure~\ref{fig:howcmsworks} illustrates how well instrumented the interaction region is, highlighting each of the detector systems. The proton-proton beamline is seen as a grey tube oriented from the bottom right to the top left of the figure. The interaction region is within the silicon tracker.
 
-Only the lightest particles within the SM have a long enough lifetime to travel any appreciable distance within our detector. Electrons $e^{\pm}$, photons $\gamma$, and protons $p^{\pm}$ are stable and can be directly detected via interactions with the bulk of the detector. Muons $\mu^{\pm}$, pions $\pi^{\pm}, \pi^{0}$, neutrons n, and kaons $K^{\pm}, K^{0}$ are intrinsically unstable but have long enough lifetimes to travel far enough to interact with our detector. The different CMS subdetectors responsible for the detection of these particles are seen in Figure \ref{fig:schematicview}. By piecing together these elements we are able to provide a reconstruction of the physics processes occurring within each particle collision. Different types of interactions leave unique signatures by decaying into specific final states, which are those we detect. We can not directly detect neutrinos $\nu$, but must infer there presence from an imbalance in the total momentum of the event; precision neutrinos physics requires specialized detector technology.
+Of the SM particles, only the lightest have a long enough lifetime to travel any appreciable distance within our detector. Electrons $e^{\pm}$, photons $\gamma$, and protons $p^{\pm}$ are stable and can be directly detected via interactions with the bulk of the detector. Muons $\mu^{\pm}$, charged pions $\pi^{\pm}$, neutrons n, and kaons $K^{\pm}, K^{0}_{L}$ are intrinsically unstable but have long enough lifetimes to travel far enough to interact with our detector. The different CMS subdetectors responsible for the detection of these particles are seen in Figure~\ref{fig:schematicview}. By piecing together these elements we are able to provide a reconstruction of the physics processes occurring within each particle collision. Different types of interactions leave unique signatures by decaying into specific final states, which are those we detect.
 
-The detector can generically be divided into central \textit{barrel} and forward \textit{endcap} regions. The geometry either takes the form of concentric cylinders (in the barrel) or flat planes of detectors (in the endcaps). Figure \ref{fig:detectoreta} illustrates these barrel ($|\eta|<1.5$) and endcap ($1.5<|\eta|<5$) regions. The beamline is seen as the thin cyan line across the base of the image.  
+The detector can generically be divided into central \textit{barrel} and forward \textit{endcap} regions. The geometry either takes the form of concentric cylinders (in the barrel) or flat planes of detectors (in the endcaps). Figure~\ref{fig:detectoreta} illustrates these barrel ($|\eta|<1.5$) and endcap ($1.5<|\eta|<5$) regions. The beamline is seen as the thin cyan line across the base of the image.  
 
 This chapter will discuss the main elements of the CMS detector, beginning with the innermost (closest to the beam pipe) silicon tracker and concluding with the muon tracker. 
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.9\textwidth]{figs/howcmsworks.png}
-\caption{A diagram of the CMS detector. Detector subsystems are labeled.}
+\caption[A diagram of the CMS detector.]{A diagram of the CMS detector. Specific detector subsystems are labeled.}
 \label{fig:howcmsworks}
 \end{figure}
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.875\textwidth]{figs/CMS-PRF-14-001_Figure_001.pdf}
-\caption{A diagram of the CMS detector in the r-$\phi$ plane; the beam axis is perpendicular to the page. SM particle signatures within the detector are shown.}
+\caption[A diagram of the CMS detector in the r-$\phi$ plane; particle signatures are shown.]{A diagram of the CMS detector in the r-$\phi$ plane; the beam axis is perpendicular to the page; SM particle signatures within the detector are shown.}
 \label{fig:schematicview}
 \end{figure}
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.8\textwidth]{figs/img41.pdf}
-\caption{A diagram of the CMS detector in the r-z plane; the beampipe is the thin cyan sliver along the bottom. The detector subtends a large solid angle about the interaction region.}
+\caption[A diagram of the CMS detector in the r-z plane.]{A diagram of the CMS detector in the r-z plane; the beampipe is the thin cyan sliver along the bottom. The detector subtends a large solid angle about the interaction region.}
 \label{fig:detectoreta}
 \end{figure}
 
 \section{Silicon Tracker}
 
-The silicon tracker is responsible for the reconstruction of charged particles: electrons, muons, kaons and pions. The particle trajectory is reconstructed using ionization deposits left in layers of thin silicon. The particle momentum is measured by the curvature of the trajectory when submerged in the magnetic field.\cite{trackertdr} \cite{trackertdradd}
+The silicon tracker is responsible for the reconstruction of charged particles, which are mainly electrons, muons, kaons and pions. The particle trajectory is reconstructed using ionization deposits left in layers of thin silicon. The particle momentum is measured by the curvature of the trajectory when submerged in the magnetic field \cite{trackertdr, trackertdradd}.
 
-The tracker is built of modules consisting of a layer of sensitive silicon bonded on top readout electronics. The silicon is arranged as a p-n junction, reversed-biased and fully-depleted. As a charged particle travels through the material, it ionizes the silicon creating electron-hole pairs within the depletion zone. Electric fields accelerate the charge through the silicon to the readout electronics bonded to the back of the sensor. The readout chips amplify, digitize, and store the hit information before being piped outside the detector. The silicon is very thin (~300$\mu$m), the tracker is constructed of as little material as possible so as not to perturb the trajectory of the particle.
+The tracker is built of modules consisting of a layer of sensitive silicon bonded on top readout electronics. The silicon is arranged as a p-n junction, reversed-biased and fully-depleted. As a charged particle travels through the material, it ionizes the silicon creating electron-hole pairs within the depletion zone. Electric fields accelerate the charge through the silicon to the readout electronics bonded to the back of the sensor. The readout chips amplify, digitize, and store the hit information before being piped outside the detector. The silicon is very thin ($\sim300\,\mu m$), the tracker is constructed of as little material as possible so as not to perturb the trajectory of the particle.
 
-The silicon tracker is divided into two major components. The pixel detector is at a closer proximity to the beam line and has finer spatial segmentation. The strips detector covers a much larger spatial volume and is responsible for the majority of the hits along a particle trajectory. A diagram of the geometry and layers of the tracker is seen in Figure \ref{fig:tracker}.
+The silicon tracker is divided into two major components. The pixel detector is at a closer proximity to the beam line and has finer spatial segmentation. The strips detector covers a much larger spatial volume and is responsible for the majority of the hits along a particle trajectory. A diagram of the geometry and layers of the tracker is seen in Figure~\ref{fig:tracker}.
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.8\textwidth]{figs/TrackerLayoutNew.pdf}
-\caption{The CMS silicon tracker. The vertical and horizontal lines represent layers of silicon modules.}
+\caption[The CMS silicon tracker]{The CMS silicon tracker. The vertical and horizontal lines represent layers of silicon modules.}
 \label{fig:tracker}
 \end{figure}
 
 \subsection{Pixel Detector}
 
-The task of the pixel detector is to provide the spatial granularity required for precision track vertexing. The barrel region ($|\eta|<1.5$) of the pixel detector consists of 4 concentric cylinders sitting at radii between 2.9 and 16 cm from the beamline. The endcaps ($1.5<|\eta|<2.5$) consist of three discs on each side ($\pm$z) placed in between z = 3.2 and 4.8cm. The pixel size on the silicon modules is 100x150$\mu\,m$ wide, consisting over of 65 million channels in total.
+The task of the pixel detector is to provide the spatial granularity required for precision track vertexing. The barrel region ($|\eta|<1.5$) of the pixel detector consists of 3 concentric cylinders sitting at radii of 4.4, 7.3, and 10.2 cm from the beamline. The endcaps ($1.5<|\eta|<2.5$) consist of two discs on each side ($\pm$z) placed at $z = \pm 35.5, 48.5\,\textrm{cm}$. The pixel size on the silicon modules is 100x150$\,$$\mu$m wide, consisting over of 65 million channels in total.
+
+A new pixel detector was installed in 2016 to accommodate the ever-increasing instantaneous luminosity provided by the LHC \cite{newpixel}. The increase in the luminosity results in many more additional proton-proton interactions per bunch crossing, called \textit{pileup}.  High pileup results in a very dense environment for track reconstruction to operate as all the individual hits in the detector layers must be disentangled correctly. To increase the performance, the new detector therefore included \textbf{4} layers in the barrel and \textbf{3} endcap discs on either end. The readout chip was upgraded to fully digital readout to give larger hit buffers to accommodate the increased hit rate.
 
 \subsection{Strips Detector}
 
@@ -55,20 +57,20 @@ The silicon strips detector sits immediately outside the pixel detector and prov
 
 \section{Electromagnetic Calorimeter}
 
-The electromagnetic calorimeter is responsible for the reconstruction of electrons $e^{\pm}$, photons $\gamma$ and charged pions $\pi^{\pm}$. The energy is measured by collecting the light generated by an electromagnetic shower as the particle is absorbed in the calorimeter.\cite{ecaltdr}\cite{ecaltdradd}
+The electromagnetic calorimeter is responsible for the reconstruction of electrons $e^{\pm}$ and photons $\gamma$. The energy is measured by collecting the light generated by an electromagnetic shower as the particle is absorbed in the calorimeter \cite{ecaltdr, ecaltdradd}.
 
-The bulk of the calorimeter consists of lead-tungstate (PbWO$_{4}$) crystal. Electromagnetic showers are created when high energy particle enters the material. Low-mass particles, such as electrons, scatter as they traverse the material and emit bremstrallung radiation in the form of lower-energy photons. Photons interact with the material and convert into an electron-positron pair, which themselves are able to then emit radiation. The light generated by this shower is collected using photodetectors mounted at the end of each crystal. Light incident on the photodetector first encounters silicon where the photon knocks an electron of a silicon atom. This electron is accelerated with an electric field onto an electrode surface which liberates electrons via the photoelectric effect. These electrons are accelerated onto another electrode which in turn liberate more electrons. This signal is then further amplified and digitized.
+The bulk of the calorimeter consists of clear lead-tungstate (PbWO$_{4}$) crystal. Electromagnetic showers are created when high energy photons or electrons enter the crystal. From there, a number of energy loss mechanisms may occur which eventually allow for the complete absorption of the energy of the primary particle. a) Low-mass particles, such as electrons, scatter often as they traverse the material and emit bremstrallung radiation. b) High energy photons are able to convert into electron-positron pairs within the crystal. c) Charged particles produce scintillation light within the crystal. These interactions proceed until eventually all the particles are sufficiently low energy and absorbed by the photodetectors mounted at the end of each crystal. Avalanche photodiodes with a gain of 50 and vacuum phototriodes with a gain of 10 are used in the barrel and endcap, respectively. The signal is then further amplified and digitized.
 
-The electromagnetic calorimeter is divided into barrel ($|\eta|<1.5$) and endcap ($1.5<|\eta|<3$) regions comprising over 75,000 crystals. The crystals measure 2.2$\,$x$\,$2.2$\,$x$\,$23$\,$cm in the barrel (matching the Moliere radius of PbWO$_{4}$ - 2.2 cm) and 3$\,$x$\,$3$\,$x$\,$22$\,$cm in the endcaps; they are oriented radially outward from the interaction region. A schematic of the detector is seen in Figure \ref{fig:ecal}. This thickness of absorber is sufficient to contain over 98\% of the energy of incident particles. Additionally, the electromagnetic calorimeter serves as an absorber for the hadronic calorimeter, initiating a shower in approximately 1/3 the particles headed for the hadronic calorimeter.
+The electromagnetic calorimeter is divided into barrel ($|\eta|<1.5$) and endcap ($1.5<|\eta|<3$) regions comprising 75,848 crystals. The crystals measure 2.2$\,$x$\,$2.2$\,$x$\,$23$\,$cm in the barrel and 3$\,$x$\,$3$\,$x$\,$22$\,$cm in the endcaps; they are oriented radially outward from the interaction region. A schematic of the detector is seen in Figure~\ref{fig:ecal}. Additionally, the electromagnetic calorimeter serves as an absorber for the hadronic calorimeter, initiating a shower in approximately 1/3 of the hadrons that are headed the HCAL.
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
-\begin{subfigure}[b]{0.35\textwidth}
+\begin{subfigure}[c]{0.35\textwidth}
 \includegraphics[width=\textwidth]{figs/ecalcrystal.jpg}
 \caption{A single PbWO$_{4}$ crystal attached to photomultiplier tube.}
 \label{fig:ecalcrystal}
 \end{subfigure}
-\begin{subfigure}[b]{0.625\textwidth}
+\begin{subfigure}[c]{0.625\textwidth}
 \includegraphics[width=\textwidth]{figs/ecal.png}
 \caption{Diagram of the ECAL layout, emphasizing the crystal orientation. A small gap in the $\eta$ coverage is seen.}
 \label{fig:ecal}
@@ -78,76 +80,81 @@ The electromagnetic calorimeter is divided into barrel ($|\eta|<1.5$) and endcap
 
 \subsection{Preshower}
 
-The preshower is a more finely segmented region of the electromagnetic calorimeter intended for greater spatial resolution for resolving electromagnetic showers. It consists of two alternating layers of lead absorber and Si detectors (like the tracker) which are able to reconstruct the electron-positron pairs created at an early stage in the showering process. The silicon detector is able to reconstruct the electron and positron trajectories allowing for the greater spatial resolution compared to the rest of the calorimeter.
+The preshower is an additional detector which allows for greater spatial hit resolution of calorimeter clusters in the $1.7<|\eta|<2.6$ region. Placed in front of the crystal calorimeter, it consists of a lead absorber, followed by a plane of silicon-strip sensors, followed by another lead absorber, followed by an orthogonal plane of silicon strip sensors. The silicon sensors are $320\mu m$ thick and measure $6.1\times6.1\textrm{cm}^{2}$ per sensor module. Measurements in the two orthogonal directions of each silicon layer are combined to provide more precise shower shape measurements.
 
-The preshower is designed to properly identify photon pairs resulting from high-$p_{T}$ neutral pion decay (98.8\% branching fraction). When a sufficiently high $p_{T}$ pion decays, the daughter photons become collimated to the extent they can not be separately resolved within the ECAL. Proper identification is crucial as neutral pions are one of the most copiously produced particles in these collisions. Preshower instrumentation only exists in a forward region $1.7<\eta<2.6$ where this poses the greatest challenge because of the pion kinematics.
+The preshower is designed to properly identify photon pairs resulting from high-$p_{T}$ neutral pion decay (98.8\% branching fraction). When a sufficiently high $p_{T}$ pion decays, the daughter photons become collimated to the extent they can not be separately resolved within the ECAL crystals. Proper identification of neutral pions are important as they are copiously produced in high-energy particle collisions. There is a physics motivation for instrumenting this particular region of the ECAL: at least one of the photons from $H\rightarrow\gamma\gamma$ falls within this region of $\eta$. 
 
 \section{Hadronic Calorimeter}
 
-The hadronic calorimeter is responsible for the reconstruction of hadrons: pions $\pi^{\pm}$, protons $p^{\pm}$, neutrons n, and kaons $K^{\pm}, K^{0}$. The particle energy is measured by collecting light generated by a hadronic shower as the particle is absorbed in the calorimeter.\cite{hcaltdr}
+The hadronic calorimeter is responsible for the reconstruction of undecayed hadrons: pions $\pi^{\pm}$, protons $p$, neutrons n, and kaons $K^{\pm}, K^{0}_{L}$. It is composed of 4 distinct components with some amount of overlap. It is divided into barrel ($|\eta|<1.4$, HB), endcap ($1.3<|\eta|<3$, HE), forward ($3<|\eta|<5.2$, HF), and outer ($|\eta|<1.2$, HO) regions  \cite{hcaltdr}. A diagram of the HCAL geometry is seen in Figure~\ref{fig:hcal}.
 
-The bulk of the calorimeter consists of steel or brass absorber. A particle will interact with the material causing a shower of a number of secondary particles. These secondary particles in turn interact and this process creates a particle shower within the detector.  Interspaced with the absorber are tiles of clear plastic scintillator which create flashes of light after de-excitation of the scintillating molecules embedded in the plastic. Fibers are ran throughout the plastic and absorb the light, which is then piped to hybrid photodiodes. Light incident on the photodiodes liberates electrons via the photoelectric effect which are then accelerated onto the surface of a silicon diode which further amplifies and digitizes the signal.
+In the HE and HB, a particle will interact with the brass absorber inducing a shower of secondary particles. These secondary particles in turn may interact with the brass, and so on creating a hadronic shower within the detector. Interspaced within the absorber are clear plastic scintillator which create flashes of light after de-excitation of the scintillating molecules embedded in the plastic. Wavelength shifting fibers are routed throughout the plastic to absorb the light, which is then piped to hybrid photodiodes. Light incident on the photodiodes liberates electrons via the photoelectric effect which are then accelerated onto the surface of a silicon diode which further amplifies and digitizes the signal. The particle energy is therefore measured by collecting light generated by a hadronic shower as the particle is absorbed in the calorimeter.
 
-A diagram of the HCAL is seen in Figure \ref{fig:hcal}. It is divided into barrel ($|\eta|<1.2$), endcap ($1.2<|\eta|<3$), and forward regions ($3<|\eta|<5.2$), containing over 9000 readout channels in total. The absorber is over a meter thick, consisting of about 16 layers of 5cm brass plates and 1cm thick scintillator. This thickness of absorber is sufficient to contain over 98\% of the energy of incident particles. For improved resolution of late-starting showers, there is an additional section of calorimeter in the barrel region outside the magnet solenoid.
+Each of these detectors consists of 17 alternating layers of 5cm brass and 1cm plastic. The readout of the optical signals are summed into \textit{towers} of size of roughly 0.09x0.09 in $\eta-\phi$, this results in the $\eta$ segmentation seen in Figure~\ref{fig:hcal}, labeled from 1 to 15 for HB and then 18-29 in HE.  Layers of constant color represent depth segmentation of the summed light within a single tower.  e.g. two energy deposits in the central HE may be formed from a single shower. (Upgrades beginning in 2020 will increase this segmentation, as well as update the signal collection to using silicon photomultipliers  \cite{hcalupgrade}.)
 
-\begin{figure}[hb!]
+The HO sits \textbf{outside} the magnet in the barrel region $|\eta|<1.2$ and collects additional radiation not absorbed in the material in front of it with an additional layer of scintillator planes.
+
+An addition to HB, HO, and HE, there is a steel calorimeter HF which detects radiation in the very forward region $3<|\eta|<5.2$ on each side of the interaction point. This forward region has a very large radiation flux - the majority of the proton-proton interactions are ``glancing blows'' in which there is very little momentum transfer and the particles are deflected only slightly, directly into this region of the detector - this environment requires a different approach than in the rest of the HCAL. Each detector is comprised of 165cm thick steel interspersed with radiation-hard quartz fibers (parallel to the beamlime) to collect light which is read out by photomultipliers. The tower size in this detector is about 0.175x0.175 in $\eta-\phi$.
+
+\begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.8\textwidth]{figs/hcal.pdf}
-\caption{The CMS hadron calorimeter. Color coding identifies optically summed channels.\cite{cosmichcal}}
+\caption[The CMS hadron calorimeter.]{The CMS hadron calorimeter \cite{cosmichcal}.}
 \label{fig:hcal}
 \end{figure}
 
 \section{Solenoidal Magnet}
 
-The CMS magnet provides the field necessary to deflect charged particles within the tracker to allow for a measurement of the momentum. The superconducting iron electromagnet delivers a uniform 3.8 T solenoidal field (parallel to the beampipe) within the silicon tracker volume. The magnetic field lines are returned via steel yokes sitting outside the magnet interspaced within the muon tracker volume, the field strength throughout the muon system is approximately 2 T.\cite{magnettdr}. A simulation of the magnetic field within the whole of CMS is seen in Figure \ref{fig:magnet} \cite{magnet}.
+The solenoidal magnet provides the magnetic field necessary to deflect charged particles within the tracker volume to allow for a measurement of the momentum. The tracker, ECAL, and HCAL all fit inside the magnet bore diameter of 6m and length of 12.5m. It delivers a 3.8T solenoidal field (parallel to the beampipe) within the tracker volume. The field is produced by running current through coils of superconducting NbTi wires cooled to less than 5K. The magnetic field lines are returned via steel yokes sitting outside the magnet interspaced within the muon tracker volume, the field strength throughout the muon system is approximately 2T \cite{magnettdr}. A simulation of the magnetic field within the whole of CMS is seen in Figure~\ref{fig:magnet} \cite{magnet}.
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.7\textwidth]{figs/magnet.png}
-\caption{A simulation of the magnetic field within CMS. The uniformity of the the 4T field within the tracker volume is crucial.}
+\caption[A simulation of the 4T CMS magnetic field.]
+{A simulation of the 4T CMS magnetic field. Note the uniformity within the tracker volume.}
 \label{fig:magnet}
 \end{figure}
 
 \section{Muon System}
 
-The muon system is responsible for the reconstruction (and triggering) of muons $\mu^{\pm}$. The muon trajectory is reconstructed using ionization deposits left in layers of gaseous detectors. The muon momentum is measured by the curvature of the trajectory when submerged in the magnetic field.\cite{muontdr}
+The muon system is responsible for the reconstruction (and triggering) of muons $\mu^{\pm}$. The muon trajectory is reconstructed using ionization deposits left in layers of gaseous detectors. The muon momentum is measured by the curvature of the trajectory when immersed in the magnetic field \cite{muontdr}.
 
-The muon detectors sit at the furthest distance from the beamline, and any particles which have made the journey traveled through many layers of detector material (e.g. silicon Si, lead tungstate PbWO$_{4}$, brass (Cu), iron Fe) before being detected. Because of the relatively long lifetime and large mass of the muon they are the only particles which are expected to reach the muon detectors.
+The muon system sits at the furthest distance from the beamline, high performance reconstruction is made possible by the balanced combination of the muon and detector properties. Any particles which have made the journey to the muon system has traveled far and through many layers of detector material (e.g. Si, PbWO$_{4}$, Cu), Fe) before finally being detected. Many particles are unstable and decay before reaching the muon system; other particles are absorbed in either of the calorimeters. But the muon has a relatively large mass (compared to an electron) and is not very likely to initiate electromagnetic showers in the ECAL. Nor does the muon interact strongly, and so there will be no hadron showers within the HCAL. Muons have a sufficiently long lifetime to make it to the outer detector. This combination yields a very pure sample of reconstructed muons.
 
-There are three components of the muon detector: drift tubes, cathode strip chambers, and resistive plate chambers. The drift tubes and cathode strip chambers are primarily used for tracking in the barrel and endcap regions, respectively. There is a small amount of overlap in coverage of the two subdetectors. The resistive plate chambers are used primarily for triggering and has coverage in the barrel and endcap regions, interspersed within the drift tubes and cathode strip chambers.
+There are three components of the muon system: The drift tubes (DT) are in the barrel ($|\eta|<1.3$), the cathode strip chambers (CSC) are in the endcaps ($0.9<|\eta|<2.4$), and resistive plate chambers (RPC) are in both regions ($|\eta| < 1.6$). These detectors rely on different technology and have some amount of overlap with each other. All detectors participate in triggering and track reconstruction, but the DTs and CSCs provide greater position and momentum resolution, while the RPCs have excellent timing resolution allowing for more precise bunch crossing tagging.
 
 \subsection{Drift Tubes}
 
-The drift tubes are used for muon tracking in the barrel portion of the detector ($|\eta|<1.3$). The basic element is a gas tube 4$\,$x$\,$1.3$\,$cm in transverse size and 2$\,$-$\,$4$\,$m long (depending on its position). High-voltage is applied to a wire strung the length of the cylinder and collects charge released when an incident muon ionizes the gas mixture. For economic and safety reasons the gas mixture is chosen to be Ar and CO$_{2}$. An 85/15\% fraction is chosen for nice gas quenching (shower avalanche) and drift velocity properties. \cite{dtperformance}
+The drift tubes are used for muon tracking in the barrel portion of the detector ($|\eta|<1.3$). The basic element is a gas tube 4$\,$x$\,$1.3$\,$cm in transverse size and 2$\,$-$\,$4$\,$m long (depending on its position). High-voltage is applied to a wire strung the length of the cylinder and collects charge released when an incident muon ionizes an 85/15\% Ar/CO$_{2}$ gas mixture \cite{dtperformance}.
 
-The drift tubes are divided into four barrel regions (each called a station) at different radii within the magnetic return yoke. Each station contains 3 \textit{superlayers}, where a superlayer is composed of four layers of stacked tubes, each layer staggered by one half width. For each station, two of the superlayers are oriented parallel to the beamline for $r-\phi$ measurements and one superlayer is perpendicular to the beamline to allow for measurements of the r-z position. An image of a DT station is seen in Figure \ref{fig:superlayer}.
+The drift tubes are divided into four barrel regions (each called a station) at different radii within the magnetic return yoke. Each station contains 3 \textit{superlayers}, where a superlayer is composed of four layers of stacked tubes, each layer staggered by one half width. For each station, two of the superlayers are oriented parallel to the beamline for $r-\phi$ measurements and one superlayer is perpendicular to the beamline to allow for measurements of the r-z position. An image of a DT station is seen in Figure~\ref{fig:superlayer}.
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
-\begin{subfigure}[b]{0.475\textwidth}
+\begin{subfigure}[c]{0.475\textwidth}
 \includegraphics[width=\textwidth]{figs/dtcell.png}
 \caption{Cross sectional view of a drift tube cell.}
 \end{subfigure}
-\begin{subfigure}[b]{0.475\textwidth}
+\begin{subfigure}[c]{0.475\textwidth}
 \includegraphics[width=\textwidth]{figs/superlayer.png}
 \caption{Drift tube configuration within a superlayer.}
 \end{subfigure}
-\caption{The CMS muon drift tube detector.\cite{dtcellpic}}
+\caption[The CMS muon drift tube detector.]{The CMS muon drift tube detector \cite{dtcellpic}.}
 \label{fig:superlayer}
 \end{figure}
 
 \subsection{Cathode Strip Chambers}
 
-The cathode strip chambers are used for muon tracking in the endcap portion of the detector ($0.9<|\eta|<2.4$). The system is divided up into 468 trapezoidal chambers arranged in 2 or 3 concentric rings on a disk. There are 4 discs on either side of the detector ($\pm z$). The geometry of the chambers on a disk are seen in Figure \ref{fig:cscring} (an example image of the hit occupancy of a disc during cosmic ray runs). Each chamber (diagram in Figure \ref{fig:cscchamber}) consists of 6 layers of electrode planes separated by a gas layer of C$_{2}$H$_{2}$F$_{4}$ (freon) and C$_{4}$H$_{10}$ (isobutane). Wires are strung in the phi direction (concentric circles about the z axis) and therefore make a measurement of the radial coordinate of the hit. The electron shower generates an image charge in cathode planes. For each layer, one of the planes is segmented into strips which are perpendicular to the wires. Reading out the strips allows for additional hit information. The orientation of the strips is such that provides an additional measurement of the hit, a good measure of the $\phi$ coordinate. \cite{cscperformance}
+The cathode strip chambers are used for muon tracking in the endcap portion of the detector ($0.9<|\eta|<2.4$). The system is divided up into 468 trapezoidal chambers arranged in 2 or 3 concentric rings on a disk. There are 4 discs on either side of the detector ($\pm z$). The geometry of the chambers on a disk are seen in Figure~\ref{fig:cscring} (an example image of the hit occupancy of a disc during cosmic ray runs). Each chamber (diagram in Figure~\ref{fig:cscchamber}) consists of 6 layers of electrode planes separated by a gas layer of C$_{2}$H$_{2}$F$_{4}$ (freon) and C$_{4}$H$_{10}$ (isobutane). Wires are strung in the phi direction (concentric circles about the z axis) and therefore make a measurement of the radial coordinate of the hit. The electron shower generates an image charge in cathode planes. For each layer, one of the planes is segmented into strips which are perpendicular to the wires providing an good measure of the $\phi$ coordinate \cite{cscperformance}.
 
-\begin{figure}[hb!]
+\begin{figure}[hbp!]
 \centering
-\begin{subfigure}[b]{0.55\textwidth}
+\begin{subfigure}[c]{0.55\textwidth}
 \includegraphics[width=0.8\textwidth]{figs/cscring.png}
-\caption{Hit occupancy on one disc.}
+\caption[Example occupancy on one CSC disc.]{Example occupancy on one CSC disc \cite{cscperformance}.}
 \label{fig:cscring}
 \end{subfigure}
-\begin{subfigure}[b]{0.3\textwidth}
+\begin{subfigure}[c]{0.3\textwidth}
 \includegraphics[width=0.9\textwidth]{figs/cscchamber.png}
 \caption{One chamber - strips/wires are oriented vertically/horizontally.}
 \label{fig:cscchamber}
@@ -157,19 +164,29 @@ The cathode strip chambers are used for muon tracking in the endcap portion of t
 
 \subsection{Resistive Plate Chambers}
 
-Resistive plate chambers cover the entire region within $|\eta|<2.5$ and are interspersed within the other muon detectors and the magnetic return yoke. They have an excellent timing resolution of about 3ns which allows for fast muon triggering and identification of the different bunch crossings. Pattern matching across the hits in the different layers allows for estimates of the muon $p_{T}$ to be used in further trigger processing. Hits created in the resistive plate chambers are additionally used for global fitting of the muon tracks.
+Resistive plate chambers cover the region $|\eta| < 1.6$ and are interspersed within CSC and DT and the magnetic return yoke \cite{rpc}. They have an excellent timing resolution of about $3\,\textrm{ns}$ which allows for fast muon triggering and identification of the different bunch crossings. Pattern matching across the hits in the different layers allows for estimates of the muon $p_{T}$ to be used in further trigger processing. Hits created in the resistive plate chambers are additionally used for global fitting of the muon tracks.
 
-The resistive plate chambers consist of an airtight system of two parallel high-resistivity planes separated by a 1cm gas gap. The outside of each plate is coated to form an electrode for the high-voltage bias. On top of each electrode sits aluminum strips which are insulated from the electrode and serve as the readout. Electron showers created in the gas bulk induce an image charge on the strips which is then recorded.
+The resistive plate chambers consist of an airtight system of two parallel high-resistivity planes separated by a $1\,\textrm{cm}$ gas gap. The outside of each plate is coated to form an electrode for the high-voltage bias. On top of each electrode sits aluminum strips which are insulated from the electrode and serve as the readout. Electron showers created in the gas bulk induce an image charge on the strips which is then recorded. The gas mixture is 95/5\% C$_{2}$H$_{2}$F$_{4}$ (freon) and C$_{4}$H$_{10}$ (isobutane), with trace amounts of SF$_{6}$. A diagram of an RPC chamber is seen in Figure~\ref{fig:rpc}.
+
+\begin{figure}[hbp!]
+\centering
+\includegraphics[width=0.6\textwidth]{figs/rpc.png}
+\caption[The CMS muon resistive plate chamber.]{The CMS muon resistive plate chamber \cite{rpc}.}
+\label{fig:rpc}
+\end{figure}
 
 \section{Trigger System}
 
-While in operation mode, the LHC provides collisions at a rate of 400 MHz (25ns per bunchcrossing). This is a phenomenal rate which the CMS detector bandwidth is not able to accommodate, nor does the experiment have access to the amount of disc space necessary to store all this information. Therefore, the CMS detector makes use of a trigger system to quickly determine if the event is 'interesting' and will be saved for storage - events which are not triggered are lost forever. Examples of interesting events contain those with high-$p_{T}$ muons, or a large imbalance in the total momentum of the event.\cite{CMS-TRG-12-001}
+While in operation mode, the LHC provides collisions at a rate of 40 MHz (25ns per bunchcrossing). This is a phenomenal rate which the CMS detector bandwidth is not able to accommodate, nor does the experiment have access to the amount of storage space necessary to store all this information. Therefore, the CMS detector makes use of a trigger system to quickly determine if the event is 'interesting' and will be saved for storage - events which are not triggered are lost forever. Examples of interesting events are those with high-$p_{T}$ muons, or a large imbalance in the total momentum of the event \cite{CMS-TRG-12-001}.
 
-The trigger consists of two stages known as the Level-1 (L1) and High-Level Trigger (HLT). L1 is a hardware based trigger which combines information from the calorimeters and muon systems to make a decision if the event will be passed to HLT for further processing. L1 is able to reduce the event rate from 400 MHz to 100 kHz and must make the decision within $4\,\mu s$. Primitive objects such as calorimeter energy deposits or muon track segments are first constructed locally within the detector before being combined to form the global decision at L1. The flowchart seen in Figure \ref{fig:trigger} illustrates the L1 system. If the decision is made at L1 that the event is of potential interest, it is passed to HLT. HLT is a software based trigger which makes use of more sophisticated reconstruction algorithms which can be tuned to select events of choice.
+The trigger consists of two stages known as the Level-1 (L1) and High-Level Trigger (HLT). L1 is a hardware based trigger which combines information from the calorimeters and muon systems to make a decision if the event will be passed to HLT for further processing. L1 is able to reduce the event rate from 40 MHz to 100 kHz and must make the decision within $4\,\mu s$. Primitive objects such as calorimeter energy deposits or muon track segments are first constructed locally within the detector before being combined to form the global decision at L1. If the decision is made at L1 that the event is of potential interest, it is passed to HLT. HLT is a software based trigger which makes use of more sophisticated reconstruction algorithms which can be tuned to select events of choice.
 
-\begin{figure}[hb!]
-\centering
-\includegraphics[width=0.6\textwidth]{figs/CMS-TRG-12-001_Figure_002.pdf}
-\caption{The CMS L1 trigger system; trigger logic flows from local (top) to global (bottom).}
-\label{fig:trigger}
-\end{figure}
+%The flowchart seen in Figure~\ref{fig:trigger} illustrates the L1 system. 
+%\begin{figure}[hbp!]
+%\centering
+%\includegraphics[width=0.6\textwidth]{figs/CMS-TRG-12-001_Figure_002.pdf}
+%\caption
+%[The CMS L1 trigger system; trigger logic flows from local to global.]
+%{The CMS L1 trigger system; trigger logic flows from local (top) to global (bottom).}
+%\label{fig:trigger}
+%\end{figure}

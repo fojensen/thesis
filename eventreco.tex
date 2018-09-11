@@ -11,12 +11,14 @@ This chapter is adapted from \cite{CMS-PRF-14-001}.
 
 \subsection{Tracks and Vertices}
 
-Tracker hits are formed in the pixel and strips detectors by clustering any hits in neighboring elements of the detector plane. The cluster position is measured by weighted sums of the individual channel positions. Charge sharing among detector channels allow for a finer spatial resolution in the position measurement. Track reconstruction first begins by forming track seeds consisting of a small number of detector hits. These track seeds are then projected onto successive detector layers looking for nearby additional hits. This follows the Kalman filtering procedure, in which track information is updated after the addition of each hit. Electron tracking is performed with a slightly modified algorithm to better account for the energy loss mechanisms as the electron traverses the detector. \cite{trackerreco}
+Tracker hits are formed in the pixel and strips detectors by clustering any hits in neighboring elements of the detector plane. The cluster position is measured by weighted sums of the individual channel positions. Charge sharing among detector channels allow for a finer spatial resolution in the position measurement. Track reconstruction first begins by forming track seeds consisting of a small number of detector hits. These track seeds are then projected onto successive detector layers looking for nearby additional hits. This follows the Kalman filtering procedure, in which track information is updated after the addition of each hit. Electron tracking is performed with a slightly modified algorithm to better account for the energy loss mechanisms as the electron traverses the detector \cite{trackerreco}.
 
-The track building procedure follows an iterative procedure, where the requirements on the quality of the track seed decrease as the iterations proceed. The first iterations begin with seeds consisting of 3 pixel hits and lead to high performance reconstruction of high $p_{T}$ tracks emanating from the collision region. The iterations proceed until essentially only requiring hits in the outer tracker and reconstructs displaced tracks or those missing hits. The iteration procedure provides a balance between reconstruction efficiency, track purity, and computation economics. Table \ref{tab:itertracks} list these iterations - the requirements on the seed and types of tracks that iteration targets.
+The track building procedure follows an iterative procedure, where the requirements on the quality of the track seed decrease as the iterations proceed. The first iterations begin with seeds consisting of 3 pixel hits and lead to high performance reconstruction of high $p_{T}$ tracks emanating from the collision region. The iterations proceed until essentially only requiring hits in the outer tracker and reconstructs displaced tracks or those missing hits. The iteration procedure provides a balance between reconstruction efficiency, track purity, and computation economics. Table~\ref{tab:itertracks} list these iterations - the requirements on the seed and types of tracks that iteration targets.
 
-\begin{table}[h]
-\caption{Iterative tracking steps.\cite{CMS-PRF-14-001}}
+\begin{table}[hbp!]
+\caption
+[Seeding requirements for each step in the iterative track reconstruction.]
+{Seeding requirements for each step in the iterative track reconstruction \cite{CMS-PRF-14-001}.}
 \centering
 \includegraphics[width=0.8\textwidth]{figs/itertracks.png}
 \label{tab:itertracks}
@@ -28,13 +30,13 @@ The track building procedure follows an iterative procedure, where the requireme
 
 \subsection{Muon Tracks}
 
-As there are multiple detector layers within a single muon station, track segments are locally formed within a chamber for both the DTs and CSC. These track segments represent the muon momentum at that station; pattern recognition is able to provide to measurement and its high speed allows the segments to be used trigger primitives for the muon systems, as was seen in Figure \ref{fig:trigger}. For track reconstruction, the track segments act as seeds for the track finding algorithm. The hits in each the DT, CSC, and RPC subdetectors are used in the final track reconstruction.
+As there are multiple detector layers within a single muon station, track segments are locally formed within a chamber for both the DTs and CSC. These track segments represent the muon momentum at that station; pattern recognition is able to provide to measurement and its high speed allows the segments to be used trigger primitives for the muon systems. For track reconstruction, the track segments act as seeds for the track finding algorithm. The hits in each the DT, CSC, and RPC subdetectors are used in the final track reconstruction.
 
 The geometry of the DT system allows for up to 32 measurements of the r-$\phi$ position and 16 for the r-z. The geometry of the CSC system allows for any in between 20-28 hits, depending on the position $\eta$. The geometry of the RPC system allows for any in between 6-10 hits, depending on the position $\eta$. 
 
 \section{Obtaining a Particle-level Description}
 
-Once the elements have been built, the Particle Flow algorithm exploits the information from each of the detectors to form the best possible particle candidate. \cite{CMS-PRF-14-001}. As different varieties of particles have unique signatures in the detector, particle identification is aided by the particular combination of elements \textit{linked} with one another. An illustrative example of these combinations we have seen in Figure \ref{fig:schematicview}  Elements are linked when projections from one element to the other are spatially consistent. There are four primary links:
+Once the elements have been built, the Particle Flow algorithm exploits the information from each of the detectors to form the best possible particle candidate \cite{CMS-PRF-14-001}. As different varieties of particles have unique signatures in the detector, particle identification is aided by the particular combination of elements \textit{linked} with one another. An illustrative example of these combinations we have seen in Figure~\ref{fig:schematicview}  Elements are linked when projections from one element to the other are spatially consistent. There are four primary links:
 
 \begin{itemize}
 \item Tracks formed in the tracker are linked to an ECAL or HCAL cluster if the projection of the track, at a depth of the expected maximum of a shower in the ECAL or at one interaction length inside the HCAL, lies within the cluster area.
@@ -87,7 +89,7 @@ Bare quarks and gluons can never be observed in Nature due to a QCD phenomenon c
 
 Jets resulting from the production of b quarks (and to some extent c quarks) garner special attention in our experiment. As usual for quarks and gluons, the b-quark will quickly hadronize and form a b hadron. But what is unique about the b hadrons are the values their lifetimes take such that they can travel hundreds of $\mu$m before decaying inside our detector. Vertexing the tracks resulting from the decay will reveal the presence of a \textit{secondary vertex} which is spatially displaced from the rest of the hadrons inside the jet. This secondary vertex allows for one handle on being able to identify jets as coming from b quark production. Other handles include the momenta and multiplicity of the other particles clustered into the jet.
 
-In addition to tagging jets as originating from a single b quark, tagging of jets as originating from \textbf{two} b quarks is also possible.\cite{bbtagger} As would be expected, this technique makes heavy use of the presence of \textbf{two} secondary vertices. The analysis presented in Section \ref{chap:analysis} makes extensive use of this technique.
+In addition to tagging jets as originating from a single b quark, tagging of jets as originating from \textbf{two} b quarks is also possible \cite{bbtagger}. As would be expected, this technique makes heavy use of the presence of \textbf{two} secondary vertices. The analysis presented in Section \ref{chap:analysis} makes extensive use of this technique.
 
 \subsection{Neutrinos -- Invisible Particles $\rightarrow p_{T}^{\mathrm{miss}}$}
 
@@ -101,6 +103,6 @@ In addition to SM neutrinos, many theories of beyond the Standard Model physics 
 
 \subsection{$\pi^{0}$ meson}
 
-Charged and neutral $\pi$ mesons are the lightest of all hadrons with masses of 135 and 140 MeV, respectively. The next massive are the K mesons at ~495 MeV; the lightest baryons are neutrons and protons, with masses of 940 MeV. Pions are therefore copiously produced within hadronic interactions and often contain much of the jet energy. As a rule-of-thumb, the charged to neutral energy fraction within a jet is approximately two-thirds to one-third (to match the pion and Kaon multiplicities).
+Charged and neutral $\pi$ mesons are the lightest of all hadrons with masses of 135 and 140 MeV, respectively. The next massive are the K mesons at $\sim495\,\textrm{MeV}$; the lightest baryons are neutrons and protons, with masses of 940 MeV. Pions are therefore copiously produced within hadronic interactions and often contain much of the jet energy. As a rule-of-thumb, the charged to neutral energy fraction within a jet is approximately two-thirds to one-third (to match the pion and Kaon multiplicities).
 
 Because the neutral pion branching to photons is over 98\% and its lifetime is relatively short (25.5$\,$nm), the detection of neutral pions therefore involves reconstruction of photon pairs with the appropriate invariant mass. This is simple enough in principle, but as the pion $p_{T}$ increases the photons from the pion decay become more and more collimated. Eventually, for pions above about 7 GeV, individual photons are not able to be resolved because of the ECAL resolution (crystal size), the same crystal gets the energy from both photons. This was the primary motivation for the Preshower ECAL detector.
