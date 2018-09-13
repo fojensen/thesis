@@ -32,28 +32,26 @@ This chapter will discuss the main elements of the CMS detector, beginning with 
 
 \section{Silicon Tracker}
 
-The silicon tracker is responsible for the reconstruction of charged particles, which are mainly electrons, muons, kaons and pions. The particle trajectory is reconstructed using ionization deposits left in layers of thin silicon. The particle momentum is measured by the curvature of the trajectory when submerged in the magnetic field \cite{trackertdr, trackertdradd}.
+The silicon tracker is responsible for the reconstruction of charged particles, which are mainly electrons, muons, kaons and pions. The particle trajectory is reconstructed using ionization deposits left in layers of thin silicon. The particle momentum is measured by the curvature of the trajectory when immersed in the magnetic field. The silicon tracker is divided into two major components. The pixel detector is at a closer proximity to the beam line and has finer spatial segmentation. The strips detector covers a much larger spatial volume and is responsible for the majority of the hits along a particle trajectory. \cite{trackertdr, trackertdradd}. A diagram of the geometry and layers of the tracker is seen in Figure~\ref{fig:tracker}.
 
 The tracker is built of modules consisting of a layer of sensitive silicon bonded on top readout electronics. The silicon is arranged as a p-n junction, reversed-biased and fully-depleted. As a charged particle travels through the material, it ionizes the silicon creating electron-hole pairs within the depletion zone. Electric fields accelerate the charge through the silicon to the readout electronics bonded to the back of the sensor. The readout chips amplify, digitize, and store the hit information before being piped outside the detector. The silicon is very thin ($\sim300\,\mu m$), the tracker is constructed of as little material as possible so as not to perturb the trajectory of the particle.
-
-The silicon tracker is divided into two major components. The pixel detector is at a closer proximity to the beam line and has finer spatial segmentation. The strips detector covers a much larger spatial volume and is responsible for the majority of the hits along a particle trajectory. A diagram of the geometry and layers of the tracker is seen in Figure~\ref{fig:tracker}.
 
 \begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.8\textwidth]{figs/TrackerLayoutNew.pdf}
-\caption[The CMS silicon tracker]{The CMS silicon tracker. The vertical and horizontal lines represent layers of silicon modules.}
+\caption[The CMS silicon tracker]{The CMS silicon tracker. The vertical and horizontal lines represent layers of silicon modules. Lines in blue represent layers with ``stereo'' hits, formed from two silicon layers.}
 \label{fig:tracker}
 \end{figure}
 
 \subsection{Pixel Detector}
 
-The task of the pixel detector is to provide the spatial granularity required for precision track vertexing. The barrel region ($|\eta|<1.5$) of the pixel detector consists of 3 concentric cylinders sitting at radii of 4.4, 7.3, and 10.2 cm from the beamline. The endcaps ($1.5<|\eta|<2.5$) consist of two discs on each side ($\pm$z) placed at $z = \pm 35.5, 48.5\,\textrm{cm}$. The pixel size on the silicon modules is 100x150$\,$$\mu$m wide, consisting over of 65 million channels in total.
+The task of the pixel detector is to provide the spatial granularity required for precision track vertexing. The barrel region ($|\eta|<1.5$) of the pixel detector consists of 3 concentric cylinders sitting at radii of 4.4, 7.3, and 10.2 cm from the beamline. The endcaps ($1.5<|\eta|<2.5$) consist of two discs on each side ($\pm$z) placed at $z = \pm 35.5, 48.5\,\textrm{cm}$. A pixel module, used to form the detector layers, consists of 16 readout chips glued to a $2\times6\,cm$ mechanical support structure. Bump-bonded to the readout chips are the $285\,\mu m$ thick silicon sensors. The readout chips and sensor are divided up into $100x150\mu\,m$ pixels which allow the excellent hit resolution (over 65 million channels for the entire detector). The $100\mu\,m$ lengths are oriented to give the most precise measurement of the $\phi$ coordinate of the track, as that is the direction on bending due to the magnetic field.  
 
 A new pixel detector was installed in 2016 to accommodate the ever-increasing instantaneous luminosity provided by the LHC \cite{newpixel}. The increase in the luminosity results in many more additional proton-proton interactions per bunch crossing, called \textit{pileup}.  High pileup results in a very dense environment for track reconstruction to operate as all the individual hits in the detector layers must be disentangled correctly. To increase the performance, the new detector therefore included \textbf{4} layers in the barrel and \textbf{3} endcap discs on either end. The readout chip was upgraded to fully digital readout to give larger hit buffers to accommodate the increased hit rate.
 
 \subsection{Strips Detector}
 
-The silicon strips detector sits immediately outside the pixel detector and provides additional hits along a particle's trajectory: the barrel region ($|\eta|<1.5$) provides 10 layers, the endcaps ($1.5<|\eta|<2.5$) provide 12. The silicon modules are partitioned in strips ranging from $80-180\,\mu$m wide, yielding more than 10 million individual readout channels.
+The silicon strips detector sits immediately outside the pixel detector and provides additional hits along a particle's trajectory. The barrel region ($|\eta|<1.5$) provides 10 layers of sensor situated between 20 and 116cm from the beamline. The endcap regions ($1.5<|\eta|<2.5$) have a total of 12 layers situated between 58 and 282cm from the center of the detector, on each side. The silicon modules are partitioned in roughly 10cm long strips which are oriented parallel to the beamline. The strip pitch varies ranging from $80-180\,\mu$m wide. The silicon thickness ranges from 320 to 500 $\mu\,m$ thick. Some of the layers, indicated in the blue lines in Figure \ref{fig:tracker}, have two modules which are slightly rotated relative to each other to give a ``stereo-hit'', providing a more precise position measurement.
 
 \section{Electromagnetic Calorimeter}
 
