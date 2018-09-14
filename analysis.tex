@@ -28,7 +28,7 @@ With this as motivation, we designed an analysis searching for physics beyond th
 \label{fig:sms}
 \end{figure}
 
-\section{Object Definition \& Event Selection}
+\section{Event Selection}
 
 We establish a baseline selection choosing events with all-hadronic final states and missing transverse momentum (\ptmiss), as motivated by Figure~\ref{fig:sms}. The baseline selection is as follows:
 
@@ -36,17 +36,16 @@ We establish a baseline selection choosing events with all-hadronic final states
 \item $\geq2$ AK8 jets, with $p_{T} > 300\,\mathrm{GeV}$ and $50 < \mathrm{mass} < 250\,\mathrm{GeV}$
 \item $p_{T}^{\mathrm{miss}} > 300\,\mathrm{GeV}$;
 \item no isolated electrons with $p_{T}>10\,\textrm{GeV}$:\newline
-To remove events with $W \rightarrow e \nu$.
+To remove events with $W \rightarrow e \nu$. Isolation requires the $p_{T}$ sum of the particles within a cone of $\Delta R < 0.2$ to be less than 10\% of the electron $p_{T}$. (See \cite{miniiso} for details about ``mini-isolation''.)
 \item no isolated muons with $p_{T}>10\,\textrm{GeV}$:\newline
-To remove events with $W \rightarrow \mu \nu$.
+To remove events with $W \rightarrow \mu \nu$. The energy fraction for the isolation requirement is relaxed to 20\%.
 \item no isolated tracks:\newline
-To remove events with top or W production in which the W decays to a tau. The tau branching fraction to states containing at least one charged particle is 85\%. As an isolated track is defined by looser criteria than that of an electron or muon, this cut also serves to increase the efficiency of the isolated electron and muon vetoes.
-
+To remove events with top or W production in which the W decays to a tau. The tau branching fraction to states containing at least one charged particle is 85\%. As an isolated track is defined by looser criteria than that of an electron or muon, this cut also serves to increase the efficiency of the isolated electron and muon vetoes. Leptonic tracks must satisfy $p_{T}>5\,\textrm{GeV}$ and have 20\% isolation. Hadronic tracks must satisfy $p_{T}>10\,\textrm{GeV}$ and have 10\% isolation.
 \item $\Delta\phi_{1, 2, 3, 4} > 0.5, 0.5, 0.3, 0.3$; $\Delta\phi_{i}\equiv \Delta\phi(\vec{p_{T}}^{\mathrm{miss}}, \mathrm{AK4\,jet}_{i})$\newline
 The $\Delta\phi$ cut is designed to remove QCD events in which a jet is under-measured leading to an artificial imbalance in the event $p_{T}$. This cut requires that the difference in $\phi$ between the \ptmiss vector and each of the four highest-p$_{T}$ jets is sufficiently large to remove events in which a jet has been under-measured giving rise to fake \ptmiss pointing in the same direction. If less than four AK4 jets are available the additional cuts are removed.
 \end{itemize}
 
-A dedicated heavy tagging algorithm is used to identify AK8 jets arising from the decay of two b quarks \cite{bbtagger}. The distribution of the output discriminator for the two highest-p$_{T}$ AK8 jets are seen in the left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). The stacked histogram and solid lines shows the distribution after baseline selection for simulation and two representative signal points, respectively.
+To tag jets from $H \rightarrow b\bar{b}$ a dedicated MVA algorithm is used to identify AK8 jets arising from the decay of two b quarks \cite{bbtagger}. The distribution of the output discriminator for the two highest-p$_{T}$ AK8 jets are seen in the left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). The stacked histogram and solid lines shows the distribution after baseline selection for simulation and two representative signal points, respectively.
 
 Further H/Z tagging of an AK8 jet is accomplished by restricting the jet mass window to [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in Figure~\ref{fig:ak8dists}. The signal shown in the solid line is the T5HH model (i.e. Figure~\ref{fig:t5hh}). The same identification criteria are applied to tag an AK8 jet as either an H or Z boson, there is no distinction made.
 
@@ -63,7 +62,9 @@ Further H/Z tagging of an AK8 jet is accomplished by restricting the jet mass wi
 
 \section{Dataset \& Trigger}
 
-We use a total of 35.9 fb$^{-1}$ of data collected by the CMS experiment in 2016. Events are selected with a trigger requiring greater than 100 GeV of \ptmiss calculated at high-level trigger (HLT). To improve the trigger efficiency, the logical OR with triggers of thresholds of 110 and 120 GeV are included.
+We use a total of 35.9 fb$^{-1}$ of data collected by the CMS experiment in 2016. Events are selected with the requirement of at least 100 GeV of \ptmiss calculated at high-level trigger (\texttt{HLT\_PFMET100\_PFMHT100\_IDTight}, HLT). To improve the trigger efficiency, the logical OR of similar triggers of thresholds 110, 120$\,$GeV are included.
+
+The HLT is seeded at level-1 (L1) by the requirement of at least 100 GeV of missing transverse energy (\texttt{L1\_ETM100}). Missing transverse energy is calculated by the vectorial sums of the regional energy deposits in the calorimeters (and rotation by 180$^{\circ}$). This is additionally ORed with similar seeds of thresholds 90, 80, 70, 60, 50 GeV. Two additional ORed seeds require calorimeter jets with $p_{T}$ of at least 60 GeV (\texttt{L1\_ETM60\_Jet60\_dPhi\_Min0p4, L1\_DoubleJetC60\_ETM60}).
 
 The trigger efficiency is defined as $\epsilon = N_{1}/N_{2}$, where $N_{2}$ is the total number of events passing baseline selection and $N_{1}$ is the total number of events selected by the trigger and passing baseline selection. In order to calculate this efficiency, we need to form an additional (hopefully independent) dataset by selecting events via a \textit{reference trigger}. Our reference trigger requires a single electron of $p_{T}>27\,\textrm{GeV}$, in addition to the baseline selection we require these events to contain at least three AK4 jets and exactly one reconstructed electron of $p_{T}>25\,\textrm{GeV}$. The signal region trigger is found to be greater than 98\% for events with \ptmiss$>$250 GeV and $H_{T}>300\,\textrm{GeV}$ \cite{CMS-SUS-16-033}. This correction is ultimatly applied as a systematic error to the final results.
 
@@ -186,6 +187,13 @@ We assume the background arises from three main sources:
 \item Jet production via QCD in which the $p_{T}$ of a jet is substantially under-measured, this creates a fake source of \ptmiss.
 \end{itemize}
 
+\begin{figure}[hbp!]
+\centering
+\includegraphics[width=0.5\textwidth]{figs/CMS-SUS-17-006_Figure-aux_003.pdf}
+\caption{The fractional composition of expected SM backgrounds in the 6 analysis regions.}
+\label{fig:bkgfrac}
+\end{figure}
+
 In order to study these backgrounds in data, we define three control regions which are expected to be enhanced in processes similar to the targeted background. The event selection is the same as applied to the nominal signal and sideband regions, but with some defining orthogonal condition:
 
 \begin{itemize}
@@ -253,7 +261,7 @@ A_{1, 2}^{\mathrm{predicted}} = \kappa \cdot \left(B_{1, 2} \cdot \ \frac{C}{D}\
 
 These values of $\kappa$ are those which we have already seen in Figure~\ref{fig:MCclosure}.
 
-The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling of  in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization of  in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost-lepton, and QCD background  samples. Rare processes (e.g. diboson) are taken directly from .
+The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling of  in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization of  in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost-lepton, and QCD background  samples. Rare processes (e.g. diboson) are taken directly from.
 
 First consider how the yield N predicted by  in an arbitrary bin (of 18) is the sum of the yields in the different  datasets ($t\bar{t}$ and $W\rightarrow\ell\nu$ are grouped as they together represent the lost-lepton background):
 
@@ -531,21 +539,21 @@ The summary of the signal systematics and their effect on the signal yields is s
 \end{figure}
 
 \begin{table}[hbp!]
-\centering
-\begin{tabular}{c|c}
-\hline \hline
-\multicolumn{2}{c}{Data}\\
-\hline \hline 
-Mean &  $78.2 \pm 0.46$\\ \hline
-Sigma & $10.10  \pm 0.671$ \\ \hline
-\hline
-\multicolumn{2}{c}{\ttbar }\\ \hline
-\hline
-Mean &  $ 78.4  \pm 0.35$\\ \hline
-Sigma & $ 7.23   \pm 0.48$ \\ \hline
-\end{tabular}
-\caption{Fit results for W-mass resolution in data and }
+\caption{Fit results for W-mass resolution in data and simulation.}
 \label{tab:WMassFit}
+\centering
+%\hline\hline
+\begin{tabular}{c||c|c}
+\hline
+\hline
+% & \multicolumn{1}{c}{Data} & \multicolumn{1}{c}{$t\bar{t}$}\\
+ & Data & $t\bar{t}$\\
+\hline
+Mean & 78.2$\pm$0.46 & 78.4$\pm$0.35\\
+Sigma & 10.10$\pm$0.67 & 7.23$\pm$0.48\\
+\hline
+\hline
+\end{tabular}
 \end{table}
 
 \begin{table}[hbp!]
@@ -578,6 +586,22 @@ Mass Resolution &1-15\% \\ \hline
 \label{sec:results}
 
 After unblinding the 4x3=12 sideband regions and performing the background estimation the 2x3=6 signal regions were unblinded. The observed yields, along with the background predictions, are seen in Table~\ref{tab:DataPred}. Our signal region yields are consistent with the background expectation. Additionally, Table~\ref{tab:DataPred} shows the expected signal yields for two model points corresponding to gluino $\tilde{g}$ masses of 2000 or 1800 GeV; the mass of the neutralino $\tilde{\chi}_{1}^{0}$ is fixed at 1 GeV; the mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed at 50 GeV.
+
+\begin{figure}[hbp!]
+\centering
+\begin{subfigure}[b]{0.425\textwidth}
+\centering
+\includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/CMS-SUS-17-006_Figure-aux_004.pdf}
+\caption{The single Higgs tag region (A$_{1}$).}
+\end{subfigure}
+\begin{subfigure}[b]{0.425\textwidth}
+\centering
+\includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/CMS-SUS-17-006_Figure-aux_005.pdf} 
+\caption{The double Higgs tag region (A$_{2}$).}
+\end{subfigure}
+\caption{Observed yields in the signal regions.}
+\label{fig:datayields}
+\end{figure}
 
 \begin{table}[hbp!]
 \caption{Signal yields and background predictions.}
@@ -634,113 +658,3 @@ where the 4 regions are modeled by Poisson distribution and the term Constraints
 \caption{Observed and expected limits on the gluino cross section.}
 \label{fig:brazil}
 \end{figure}
-
-\section{Reinterpretation}
-\label{sec:reinterpretation}
-
-In Section~\ref{sec:results} our results were presented in the context of limit-setting for the T5HH and T5ZH models. Many such SMS models exist within the MSSM which predict the production of high-$p_{T}$ bosons and it is therefore important to include information necessary to make predictions of yields for different final states. This is aided by providing the interested party with efficiencies for $b\bar{b}$ tagging and mass tagging of the AK8 jets. Tagging efficiencies for the five largest decay modes relevant to the analysis for the H boson are seen in \ref{fig:effH}. Tagging efficiencies for the hadronic decay modes of the Z boson are seen in Figure~\ref{fig:effZ}, the much lower mass tagging efficiency for the Z boson is due to our choice of signal mass window [85, 135 GeV] not being optimal for Z boson reconstruction. These are used to calculate the expected yields in the 6 analysis regions when performing a reinterpretation of the analysis using different final states. 
-
-For each event, the yield in each bin can be predicted by first forming the following weights using the tagging efficiencies for the two highest p$_{T}$ AK8 jets as seen below. j0 and j1 represent the highest and second highest p$_{T}$ AK8 jet, respectively. The weights on the right-hand-side are $p_{T}$ dependent.
-
-\begin{itemize}
-\item double mass tag weight = $j0_{signalmass} \cdot j1_{signalmass}$
-\item anti mass tag weight = $(j0_{sidebandmass} \cdot j1_{signalmass}) + (j1_{signalmass} \cdot j1_{sidebandmass}) + (j0_{sidebandmass} \cdot j1_{sidebandmass})$
-\item double bb tag weight = $j0_{bbtag} \cdot j1_{bbtag}$
-\item single bb tag weight = $(j0_{bbtag} \cdot (1-j1_{bbtag})) + ((1-j0_{bbtag})\cdot j1_{bbtag})$
-\item anti bb tag weight = $(1-j0_{bbtag}) \cdot (1-j1_{bbtag}$)
-\end{itemize}
-
-These weights are then combined in the following manner to determine the yields across each of the 6 bins for a single event.
-
-\begin{enumerate}
-\item A1 weight = (single bb tag weight) $\cdot$ (double mass tag weight)
-\item A2 weight = (double bb tag weight) s$\cdot$ (double mass tag weight)
-\item B1 weight = (single bb tag weight) $\cdot$ (anti mass tag weight)
-\item B2 weight = (double bb tag weight) $\cdot$ (anti mass tag weight)
-\item C weight = (anti bb tag weight) $\cdot$ (double mass tag weight)
-\item D weight = (anti bb tag weight) $\cdot$ (anti mass tag weight)
-\end{enumerate}
-
-These weights for the 6 analysis bins (inclusive in \ptmiss) are then summed over all events to get the expected yields.
-The prescription was tested using the T5HH model with a gluino mass of 2200 GeV and compared it to the true value.
-The largest deficit was in the D region, with a difference of -36\% difference from nominal.
-The greatest over-prediction is found in the B2 region, with a surplus of +8.2\% events relative to nominal.
-The closure in the other bins fall somewhere in this range.
-These results are summarized in Table~\ref{tab:predclos}.
-As a further cross-check to the yield estimates, Table~\ref{tab:sigeff} shows the true signal event efficiencies for the T5HH model with a gluino mass of 2200 GeV.
-
-\begin{figure}[hbp!]
-\centering
-\includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_006.pdf}
-\includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_007.pdf}
-\includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_008.pdf}
-\includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_009.pdf}
-\includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_010.pdf}
-\includegraphics[width=0.425\linewidth]{figs/blankcanvas.pdf}
-\caption[Efficiencies for an AK8 jet originating from H boson decay, relative to baseline selection.]{
-Efficiencies for an AK8 jet originating from H boson decay, relative to baseline selection.
-"signal mass" represents the probability the jet will have mass [85, 135 GeV].
-"sideband mass" represents the probability the jet will have mass [50, 85 GeV] or [135, 250 GeV].
-"H-tag" represents the probability the jet have a double-b discriminator value greater than 0.3, for jets with mass [50, 250 GeV].
-Efficiencies were derived using the T5ZH  with a gluino mass of 2200 GeV.
-}
-\label{fig:effH}
-\end{figure}
-
-\begin{figure}[hbp!]
-\centering
-\includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_011.pdf}
-\includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_012.pdf}
-\caption[Efficiencies for an AK8 jet originating from Z boson decay, relative to baseline selection.]{
-Efficiencies for an AK8 jet originating from Z boson decay, relative to baseline selection.
-"signal mass" represents the probability the jet will have mass  [85, 135 GeV].
-"sideband mass" represents the probability the jet will have mass [50, 85 GeV] or [135, 250 GeV].
-"H-tag" represents the probability the jet have a double-b discriminator value greater than 0.3, for jets with mass [50, 250 GeV].
-Efficiencies were derived using the T5ZH  with a gluino mass of 2200 GeV.
-}
-\label{fig:effZ}
-\end{figure}
-
-\begin{table}[hbp!]
-\centering
-\caption[Comparison of the true reco-level event yield with those obtained via the prediction.]{
-Comparison of the true reco-level event yield with those obtained via the prediction. The columns with the RECO or GEN labels are the prediction using RECO or GEN event variables only, respectively. The prediction was made using the T5HH  with a gluino mass of 2200 GeV.
-}
-\begin{tabular}{c | c c c}
-\hline\hline
-         & RECO     & RECO           & GEN\\
-         & "truth"  & prediction     & prediction\\
-\hline
-Baseline & 4.08     & 3.46 (-15\%)   & 3.53 (-16\%)\\
-A1       & 1.21     & 1.18 (-2.3\%)  & 1.26 (+3.6\%)\\
-A2       & 0.777    & 0.748 (-3.7\%) & 0.815 (+4.7\%)\\
-B1       & 0.802    & 0.703 (-12\%)  & 0.664 (-21\%)\\
-B2       & 0.322    & 0.338 (+5.0\%) & 0.350 (+8.2\%)\\
-C        & 0.498    & 0.473 (-4.9\%) & 0.487 (-2.1\%)\\
-D        & 0.478    & 0.353 (25\%)   & 0.308 (-36\%)\\
-\hline\hline
-\end{tabular}
-\label{tab:predclos}
-\end{table}
-
-\begin{table}[hbp!]
-\centering
-\caption[T5HH signal event efficiencies.]{
-Signal efficiencies for an event to land in a given analysis bin.
-The efficiencies were derived using the T5HH  with a gluino mass of 2200 GeV.
-Choosing a gluino mass of 1800 GeV decreases the efficiencies by a relative 5\%.
-}
-\begin{tabular}{c | c c c c c c c c}
-\hline
-\hline
-                                                            & Baseline & A1     & A2      & B1      & B2      & C       & D\\
-\hline
-$p_{\mathrm{T}}^{\mathrm{miss}}< 300\,\mathrm{GeV}$        & 32\%    & 9.4\%   & 6.0\%   & 6.2\%   & 2.5\%   & 3.9\%   & 3.7\% \\
-$300 < p_{\mathrm{T}}^{\mathrm{miss}} < 500\,\mathrm{GeV}$  & 2.7\%   & 0.78\%  & 0.52\%  & 0.54\%  & 0.25\%  & 0.31\%  & 0.30\% \\
-$500 < p_{\mathrm{T}}^{\mathrm{miss}} < 700\,\mathrm{GeV}$  & 3.5\%   & 1.0\%   & 0.65\%  & 0.72\%  & 0.28\%  & 0.43\%  & 0.40\% \\
-$p_{\mathrm{T}}^{\mathrm{miss}} > 700\,\mathrm{GeV}$        & 26\%    & 7.6\%   & 4.9\%   & 5.0\%   & 2.0\%   & 3.1\%   & 3.0\% \\
-\hline
-\hline
-\end{tabular}
-\label{tab:sigeff}
-\end{table}
