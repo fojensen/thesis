@@ -1,31 +1,33 @@
 \chapter{The CMS Detector}
 \label{chap:detector}
 
-To ensure as much as possible of the debris of the proton-proton collisions can be detected, CMS is constructed to maximize the solid-angle coverage of the interaction region. CMS is composed of a modular design of different detectors, each with their own technology and working points, allowing for direct measurements of a wide spectra of particles. Figure~\ref{fig:howcmsworks} illustrates how well instrumented the interaction region is, highlighting each of the detector systems. The proton-proton beamline is seen as a grey tube oriented from the bottom right to the top left of the figure. The interaction region is within the silicon tracker.
+The interactions of the protons more often than not are just glancing blows off one another, there is not much energy transfer and the protons generally remain intact. The CMS experiment is predominantly interested in the dynamics of collisions with a very large energy transfer, unveiling quarks and gluons that are within the proton. Large energy transfers are necessary for the creation of massive particles such as the electroweak bosons, or potentially a new particle not within the SM. These high-energy collisions result in particles with a large amount of momentum in the direction perpendicular to the beam line ($p_{T}$), where the components of the CMS detector are carefully arranged. By detecting the outgoing flux of particles from these high-energy events, we are able to reconstruct the dynamics and quantum mechanical processes involved in the proton interactions.
 
-Of the SM particles, only the lightest have a long enough lifetime to travel any appreciable distance within our detector. Electrons $e^{\pm}$, photons $\gamma$, and protons $p^{\pm}$ are stable and can be directly detected via interactions with the bulk of the detector. Muons $\mu^{\pm}$, charged pions $\pi^{\pm}$, neutrons n, and kaons $K^{\pm}, K^{0}_{L}$ are intrinsically unstable but have long enough lifetimes to travel far enough to interact with our detector. The different CMS subdetectors responsible for the detection of these particles are seen in Figure~\ref{fig:schematicview}. By piecing together these elements we are able to provide a reconstruction of the physics processes occurring within each particle collision. Different types of interactions leave unique signatures by decaying into specific final states, which are those we detect.
+The detector is composed of a modular design of subsystems allowing for measurements of a wide spectra of particles. As seen in Figure \ref{fig:howcmsworks}, these detectors are placed around the interaction point to collect as much of the collision remnants as possible. In this figure, the beam line is seen as a small grey tube extending from the bottom right towards the top left. The interaction point is within the silicon trackers.
 
-The detector can generically be divided into central \textit{barrel} and forward \textit{endcap} regions. The geometry either takes the form of concentric cylinders (in the barrel) or flat planes of detectors (in the endcaps). Figure~\ref{fig:detectoreta} illustrates these barrel ($|\eta|<1.5$) and endcap ($1.5<|\eta|<5$) regions. The beamline is seen as the thin cyan line across the base of the image.  
+Each different system is capable of detecting specific types of particles. A silicon tracker allows for the reconstruction of charged particles traveling at least $50\,\mathrm{cm}$ (e.g. electrons $e^{\pm}$, charged pions $\pi^{\pm}$); calorimeters measure the energy of hadrons (e.g. protons, $K^{0}_{L}$) and photons $\gamma$; muon $\mu^{\pm}$ identification is made with gas detectors. The particle identification exploits the unique signature each of these particles leave in our detector. Figure~\ref{fig:schematicview} illustrates these signatures for some common SM particles. 
 
-This chapter will discuss the main elements of the CMS detector, beginning with the innermost (closest to the beam pipe) silicon tracker and concluding with the muon tracker. 
+Many of the particles produced in the interaction are unstable and decay before traveling any appreciable distance in the detector. These particles, such as top quarks, electroweak bosons, and many hadrons, must be reconstructed by the identification of their decay products. For instance, a Z boson may be reconstructed as a pair of oppositely charged muons $\mu^{\pm}$.
+
+This chapter will discuss the main elements of the CMS detector, beginning with the innermost (closest to the beam pipe) silicon tracker and concluding with the muon system. The detector can generically be divided into central \textit{barrel} and forward \textit{endcap} regions. The geometry either takes the form of concentric cylinders (in the barrel) or flat planes of detectors (in the endcaps). This is most apparent in Figure~\ref{fig:detectoreta}, where the beamline is seen as the thin cyan line at the bottom of the image. The origin is defined as the center of the detector. The radial coordinate $r$ is the distance from the beam line, in the transverse plane. The z axis is the direction parallel to the beamline, counterclockwise when viewed from above. The coordinate $\eta\equiv-\tan{\ln{\theta/2}}$ is used to represent the polar angle above the beamline. The $\phi$ coordinate is the azimuth angle about the beamline, with $\phi=0$ aligning with the x-axis pointing towards the center of the LHC ring. The y-axis points up.
 
 \begin{figure}[hbp!]
 \centering
-\includegraphics[width=0.9\textwidth]{figs/howcmsworks.png}
+\includegraphics[width=0.75\textwidth]{figs/howcmsworks.png}
 \caption[A diagram of the CMS detector.]{A diagram of the CMS detector. Specific detector subsystems are labeled.}
 \label{fig:howcmsworks}
 \end{figure}
 
 \begin{figure}[hbp!]
 \centering
-\includegraphics[width=0.875\textwidth]{figs/CMS-PRF-14-001_Figure_001.pdf}
+\includegraphics[width=0.75\textwidth]{figs/CMS-PRF-14-001_Figure_001.pdf}
 \caption[A diagram of the CMS detector in the r-$\phi$ plane; particle signatures are shown.]{A diagram of the CMS detector in the r-$\phi$ plane; the beam axis is perpendicular to the page; SM particle signatures within the detector are shown.}
 \label{fig:schematicview}
 \end{figure}
 
 \begin{figure}[hbp!]
 \centering
-\includegraphics[width=0.8\textwidth]{figs/img41.pdf}
+\includegraphics[width=0.75\textwidth]{figs/img41.pdf}
 \caption[A diagram of the CMS detector in the r-z plane.]{A diagram of the CMS detector in the r-z plane; the beampipe is the thin cyan sliver along the bottom. The detector subtends a large solid angle about the interaction region.}
 \label{fig:detectoreta}
 \end{figure}
@@ -55,9 +57,9 @@ The silicon strips detector sits immediately outside the pixel detector and prov
 
 \section{Electromagnetic Calorimeter}
 
-The electromagnetic calorimeter is responsible for the reconstruction of electrons $e^{\pm}$ and photons $\gamma$. The energy is measured by collecting the light generated by an electromagnetic shower as the particle is absorbed in the calorimeter \cite{ecaltdr, ecaltdradd}.
+The electromagnetic calorimeter is responsible for the reconstruction of electrons $e^{\pm}$ and photons $\gamma$. The energy is measured by collecting the light generated by an electromagnetic shower as the particle is absorbed in the calorimeter \cite{ecaltdr, ecaltdradd}. 
 
-The bulk of the calorimeter consists of clear lead-tungstate (PbWO$_{4}$) crystal. Electromagnetic showers are created when high energy photons or electrons enter the crystal. From there, a number of energy loss mechanisms may occur which eventually allow for the complete absorption of the energy of the primary particle. a) Low-mass particles, such as electrons, scatter often as they traverse the material and emit bremstrallung radiation. b) High energy photons are able to convert into electron-positron pairs within the crystal. c) Charged particles produce scintillation light within the crystal. These interactions proceed until eventually all the particles are sufficiently low energy and absorbed by the photodetectors mounted at the end of each crystal. Avalanche photodiodes with a gain of 50 and vacuum phototriodes with a gain of 10 are used in the barrel and endcap, respectively. The signal is then further amplified and digitized.
+Electromagnetic showers are created when high energy photons or electrons enter the material comprising the ECAL. The cross section for interactions of these particles with the detector scales with the square of the atomic nucleus, it was for this reason that the material is made of clear PbWO$_{4}$ crystals. High energy photons in the detector predominantly lose energy by the creation of $e^{+}e^{-}$ pairs via interactions with detector bulk. The predominant energy loss for high-energy electrons is through the emission of \textit{bremsstrahlung}, or electromagnetic radiation created by the scattering of the electrons. An incident particle will therefore cause a shower in the detector as the interactions proceed until all the particles are sufficiently low energy and absorbed by the photodetectors mounted at the end of each crystal. Avalanche photodiodes with a gain of 50 and vacuum phototriodes with a gain of 10 are used in the barrel and endcap, respectively. The signal is then further amplified and digitized.
 
 The electromagnetic calorimeter is divided into barrel ($|\eta|<1.5$) and endcap ($1.5<|\eta|<3$) regions comprising 75,848 crystals. The crystals measure 2.2$\,$x$\,$2.2$\,$x$\,$23$\,$cm in the barrel and 3$\,$x$\,$3$\,$x$\,$22$\,$cm in the endcaps; they are oriented radially outward from the interaction region. A schematic of the detector is seen in Figure~\ref{fig:ecal}. Additionally, the electromagnetic calorimeter serves as an absorber for the hadronic calorimeter, initiating a shower in approximately 1/3 of the hadrons that are headed the HCAL.
 

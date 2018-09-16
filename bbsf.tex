@@ -1,49 +1,54 @@
-\chapter{$b\bar{b}$-tagging Scale Factors for W jets in $t\bar{t}$ Events}
+\chapter{Determining $b\bar{b}$-tagging Scale Factors for W jets in $t\bar{t}$ Events}
+\label{chap:bbsf}
 
-Boosted W bosons can arise in many models of beyond the SM physics. The 67.41\% branching fraction of $\textrm{W} \rightarrow \textrm{hadrons}$ make their reconstruction as AK8 jets an efficient channel. Although W bosons do not decay to b-quarks (the top quark is too heavy), the $b\bar{b}$-tagger has a non-zero probability to tag one of these jets as having decayed to a $b\bar{b}$ pair. This \textit{mistag} rate can, in principle, be different in simulation compared to in data. Depending on the use, it may be necessary to apply \textit{scale factors} to the simulation to correct for this difference. By using a sample of AK8 jets identified as W bosons in semi-leptonic $t\bar{t}$ events, we can calculate the mistag rate in both data and simulation, taking their ratio to form the scale factors.
+$t\bar{t}$ production has a large production cross section at the LHC and often makes up a substantial component of the background for physics analyses. These events have a rich final state with two b jets from each of the top decays, and hadrons or leptons from the decay of each of the Ws. Semi-leptonic events, illustrated in Figure~\ref{fig:ttbar}, are events in which one W decays to a lepton and neutrino, and the other decays hadronically. These events have a true source of missing energy (\ptmiss), and additionally can result in boosted W bosons.
+
+Although W bosons do not decay to b-quarks (the top quark is too heavy), the $b\bar{b}$-tagger has a non-zero probability to tag one of these jets as having decayed to a $b\bar{b}$ pair. (see Section \ref{sec:baseline} for the application of $b\bar{b}$-tagging in the SUSY analysis.) This \textit{mistag} rate can, in principle, be different in simulation compared to in data. Depending on the use, it may be necessary to apply \textit{scale factors} to the simulation to correct for this difference. This appendix provides a description of how these scale factors and their uncertainties are determined.
 
 \begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.4\textwidth]{figs/feynman_ttbar_ljets_beamline.png}
-\caption[A diagram of a semi-leptonic $t\bar{t}$ event in the center-of-mass frame.]{A diagram of a semi-leptonic $t\bar{t}$ event in the center-of-mass frame \cite{ttbar}.}
+\caption[Diagram of a semileptonic $t\bar{b}$ event in which one W boson decays leptonically and one W boson decays hadronically.]{Diagram of a semileptonic $t\bar{b}$ event in which one W boson decays leptonically and one W boson decays hadronically \cite{ttbar}.}
 \label{fig:ttbar}
 \end{figure}
 
-Semi-leptonic $t\bar{t}$ events, as in Figure~\ref{fig:ttbar}, are selected by requiring a single muon ($p_{T}>50\,\textrm{GeV}$, $|\eta|<2.1$) within close proximity ($\Delta\phi<\frac{2}{3}\pi$) of a loose-b-tagged AK4 jet ($p_{T}>30\,\textrm{GeV}$, $|\eta|<2.4$). Opposite this muon ($\Delta\phi>\frac{2}{3}\pi$) we require at least one AK8 jet ($p_{T}>250\,\textrm{GeV}$, $|\eta|<2.4$) and at least one AK4 jet. The AK8 jet is to be reconstructed as the W boson. Events are triggered in data by requiring a $p_{T}>50\,\textrm{GeV}$ muon at HLT. Three additional selections are applied to ensure a high purity sample:
+To obtain a clean source of hadronically decaying W bosons, events are selected that are consistent with semi-leptonic $t\bar{t}$ events. The events are obtained from a data sample with a trigger requirement of at least one muon with $p_{T}>50\,\textrm{GeV}$ and are reconstructed in the same manner as described in Chapter 6.  In particular, jets are reconstructed with the anti-kt algorithm \cite{1126-6708-2008-04-063} operated with distance parameters of 0.4 (AK4 jets) and 0.8 (AK8 jets). The events are required to have a single muon with $p_{T}>50\,\textrm{GeV}$ and $|\eta|<2.1$ and be close $(\Delta\phi < 2\pi/3)$ to a b-tagged AK4 jet, where the loose b-tagging working point of the CSV algorithm is used \cite{BTV-16-002}.  Away from this muon $(\Delta\phi > 2\pi/3)$, we require at least one AK8 jet with $p_{T}>250\,\textrm{GeV}$ and $|\eta|<2.4$, intended to be the W jet. To increase the purity of the sample, three additional criteria are applied:
 
 \begin{itemize}
+
 \item
-The AK8 jet must be consistent with having a two-jet substructure (using a quantity called ``n-subjettiness'' \cite{njet1, njet2}).
+The AK8 jet must be consistent with having a two-jet substructure. This requirement is made by defining a variable ``n-subjettiness'' which parametrizes the degree to which an AK8 jet is consistent with having $n$ subjets \cite{njet1, njet2}. The variable is calculated by forming a $p_{T}$ weighted sum of the $\Delta R$ distance of every particle in the jet with its nearest subjet, for some fixed number of subjets: $\tau_{N} = \frac{1}{d_{0}} \sum_{k} p_{T, k} \min \{ \Delta R_{1,k}, \Delta R_{2,k}, ..., \Delta R_{N,k} \}$, where $d_{0} = 0.8 \sum_{k} p_{T, k}$, is a normalization parameter. The ratio $\tau_{2}/\tau_{1}$ is formed to discriminate between jets with two subjets from those with one.%The bottom left of Figure~\ref{fig:dists} shows the distribution for our samples. Signal like events peak to the left.
+
 \item
-The AK8 jet must have a mass within the window [50, 200 GeV]. Jets from QCD tend to have low mass.
+The AK8 jet mass must be between 50 and 200 GeV.  This is consistent with the W boson mass of $80.379\,\textrm{GeV}$, and tends to reject jets arising from QCD-only interactions, which tend to have lower mass.
 \item
-To minimize contamination from nearby objects, no AK4 jets are allowed with $\Delta R<0.8$ of the reconstructed W. 
+To minimize contamination from nearby objects, no AK4 jets are allowed within $\Delta R = \sqrt{(\Delta\phi)^2+(\Delta\eta)^2}<0.8$ of the selected AK8 jet.
 \end{itemize}
 
-The purity of the sample can be seen on the left in Figure~\ref{fig:dists}, a plot of the AK8 jet mass - the distribution is centered near $m_{W} = 80.385\,\textrm{GeV}$. A small contribution near $m_{top}=172.44\,\textrm{GeV}$ arises from the merging of a W and b quark into a single AK8 jet.
+Figure~\ref{fig:dists} (left) shows the AK8 jet mass distribution from data and simulation after all selection criteria have been applied. The distribution peaks near the W boson mass (80.379 GeV) and is dominated by the desired signal.  There is also a shoulder near the top quark mass (173.0 GeV), which arises from the merging of a W boson and a b quark into a single AK8 jet.
 
 \begin{figure}[hbp!]
 \centering
 \includegraphics[width=0.465\textwidth]{figs/ak8jetmass.png}
 \includegraphics[width=0.48\textwidth]{figs/ak8jetbbdisc.png}
-\caption{W jet mass and $b\bar{b}$-tagging discriminator in data and simulation. Simulation is scaled to match the data normalization.}
+%\includegraphics[width=0.465\textwidth]{figs/tau2tau1.png}
+\caption[The AK8 jet mass and $b\bar{b}$-tagging discriminator distributions from data and simulation.]{The AK8 jet mass and $b\bar{b}$-tagging discriminator distributions from data and simulation. The simulation distributions are normalized by area to the data.}
 \label{fig:dists}
 \end{figure}
 
-The right side of Figure~\ref{fig:dists} shows the distribution of the $b\bar{b}$-tagging discriminator for data and simulation. For a given working point (i.e. a fixed point along the x-axis of the figure), the mistag rate in  $t\bar{t}$ MC (inclusive in all decays) is defined as the number of jets with a discriminator greater than that value, divided by the total number of jets. In data, the observed yields are first corrected by a subtraction of the expected prompt W and single-top background estimated from simulation. Equation~\ref{eq:mistags} summarizes these equations:
+Figure~\ref{fig:dists} (right) shows the distribution of the $b\bar{b}$-tagging discriminator for data and simulation. The simulation contributions are divided into signal  and background components, where the signal contributions are inclusive $t\bar{t}$ events and the background contributions are from events with direct W boson plus jets, WW, or single-top production.  For a given working point (i.e.\ a fixed point along the x-axis), the mistag rate for the MC simulation is the ratio of the number of signal MC events above that point to the total number of signal MC events. The mistag rate for the data is calculated similarly except that the observed yields are corrected by subtracting the expected number of background events, estimated from the MC simulation:
 
 \begin{equation}
 \label{eq:mistags}
 \epsilon_{mc} = \frac{ N_{b\bar{b}-tagged}^{sig, mc} } { N^{sig, mc} }, \hspace{1cm}
-\epsilon_{data} = \frac{N_{b\bar{b}-tagged}^{data}-N_{b\bar{b}-tagged}^{bkg, mc}}{N^{data} - N^{bkg, mc}}, \hspace{1cm}
-\textrm{scale factor} = \frac{\epsilon_{data}} {\epsilon_{mc}}
+\epsilon_{data} = \frac{N_{b\bar{b}-tagged}^{data}-N_{b\bar{b}-tagged}^{bkg, mc}}{N^{data} - N^{bkg, mc}}, 
 \end{equation}
 
 Following this prescription, we obtain the mistag rates in data and simulation seen in Table~\ref{tab:mistag}. Four working points are defined ranging from disc$>$0.3 to disc$>$0.9. It is seen that the mistag rate in MC is higher for all working points than in data. This trend can be seen in the right-hand plot of Figure~\ref{fig:dists} - the MC under-predicts the yields with low discriminator value, and over-predicts those with a large discriminator value.
 
 \begin{table}[hbp!]
 \centering
-\caption{W jet $b\bar{b}$ mistag rates in data and simulation, inclusive in $p_{T}$. Errors are statistical only.}
+\caption[W jet $b\bar{b}$ mistag rates in data and simulation, inclusive in $p_{T}$]{W jet $b\bar{b}$ mistag rates in data and simulation, inclusive in $p_{T}$. Statistical uncertainties only.}
 \label{tab:mistag}
 \begin{tabular}{c|cc}
 \hline\hline
@@ -57,7 +62,13 @@ disc $>$ 0.9 & 0.058 $\pm$ 0.001 & 0.067 $\pm$ 0.001 \\
 \end{tabular}
 \end{table}
 
-The scale factors are then formed by taking the ratio of the mistag rate in data to that of simulation. Table~\ref{tab:sf} shows the scale factors, binned in jet $p_{T}$, for the four different working points. The errors shown arise from the quadrature sum of the statistical and two additional systematic errors: uncertainty in the normalization of the prompt-W background MC, and the effect of reweighting the $t\bar{t}$ MC to better match the top $p_{T}$ spectra observed in data \cite{toppt}. The size of the error from the prompt-W MC normalization is estimated by scaling the MC $\pm30\%$, we assign an absolute 2, 4, 6\% uncertainties for the low, medium, and high $p_{T}$ bins, respectively. The error due to the top $p_{T}$ re-weighting is estimated by taking the difference in scale factors with and without the weights. We assign an absolute error of 0, 1, 2\% to the low, medium, and high $p_{T}$ bins, respectively.
+The scale factors are then formed by taking the ratio of the mistag rate in data to that of simulation:
+\begin{equation}
+\label{eq:sf}
+\textrm{scale factor} = \frac{\epsilon_{data}} {\epsilon_{mc}}
+\end{equation}
+
+Table~\ref{tab:sf} shows the scale factors, binned in jet $p_{T}$, for the four different working points. The uncertainties are the result of summing in quadrature the statistical and two additional systematic uncertainties: The first systematic uncertainty originates from subtracting the background from the data using the MC. The uncertainty in the cross section of the background contributions is estimated to be 30\%, which results in uncertainties of 2, 4, and 6\% for the low, medium, and high $p_{T}$ bins, respectively.  The second systematic uncertainty arises from a known difference in the $p_{T}$ spectra of top quarks between data and simulation \cite{ttbar}. We assess the systematic uncertainty by comparing results when the top quark $p_{T}$ spectra is and is not reweighted to match the data.  This results in 0, 1, and 2\% uncertainties for the low, medium, and high $p_{T}$ bins, respectively.
 
 \begin{table}[hbp!]
 \centering

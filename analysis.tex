@@ -7,11 +7,11 @@
 
 \section{Motivation \& Strategy}
 
-If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in nature which have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics - if the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more momentum is imparted upon the particles involved in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating sufficiently to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC, one could suspect that there exists non-zero coupling with the electroweak H, Z, or W bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
+If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in nature which have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics - if the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more mome=ntum is imparted upon the particles involved in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating sufficiently to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC, one could suspect that there exists non-zero coupling with the electroweak H, Z, or W bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
 
 The Minimal Supersymmetric SM contains a $\mathbb{Z}_{2}$ symmetry in which all SM particles have charge -1 and all supersymmetric particles have charge +1, this is called R-parity \cite{susyprimer}. One direct consequence of R-parity is that the decay of a massive supersymmetric particle must include at least one supersymmetric particle in the final state. Necessarily this is the lightest such particle in the theory, denoted the lightest supersymmetric particle (LSP). If the LSP is electrically neutral it may escape detection, creating an imbalance in the net momentum of the event (similar to a neutrino). Therefore, events with a large momentum imbalance are also interesting as potential regions for SUSY.
 
-With this as motivation, we designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the $b\bar{b}$ decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models (known as SMS models \cite{CMS-SUS-11-016} - phenomenological models of SUSY at hadron colliders), seen in Figure~\ref{fig:sms}, to give motivation to the analysis. In this scenario, the proton-proton interaction produces a pair of gluinos $\tilde{g}$ (the blob in the figure indicates we are not interested in the particulars of the gluino production mechanism) which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of quarks.This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a H or Z boson. The neutralino $\tilde{\chi}_{1}^{0}$ is the LSP and escapes detection.
+With this as motivation, we designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the $b\bar{b}$ decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with sparticle pair production which subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
 
 \begin{figure}[hbp!]
 \centering
@@ -23,31 +23,43 @@ With this as motivation, we designed an analysis searching for physics beyond th
 \begin{subfigure}[b]{0.425\textwidth}
 \includegraphics[width=0.95\textwidth]{figs/CMS-SUS-17-006_Figure-aux_001.pdf}
 \caption{The T5ZH SMS model.}
+\label{fig:t5zh}
 \end{subfigure}
 \caption{Diagrams of the benchmark models used for motivation of the targeted signal.}
 \label{fig:sms}
 \end{figure}
 
-\section{Event Selection}
+\section{Baseline Selection and Object Definition}
+\label{sec:baseline}
 
-We establish a baseline selection choosing events with all-hadronic final states and missing transverse momentum (\ptmiss), as motivated by Figure~\ref{fig:sms}. The baseline selection is as follows:
+The salient feature of our analysis is the presence of two high-$p_{T}$ AK8 jets and large \ptmiss. Our most significant backgrounds are those that produce \ptmiss and can be divided into two categories depending on if it comes from a ``true'' or ``fake'' source. True \ptmiss arises from a neutrino or otherwise unobservable particle escaping our detector - a genuine imbalance in the detectable final-state momentum of the event. Fake \ptmiss arises from some sort of ``imperfection'' in our reconstruction process, for example the misidentification of a hadron. 
+
+We approach our background as being constituted of three primary types. Two of them involve the production of neutrinos and the third is a result of jet resolution:
+
+\begin{itemize}
+\item $Z\rightarrow\nu\bar{\nu}$ in which the neutrinos from the Z decay results in true \ptmiss (`Z-invisible').
+\item $W\rightarrow\ell\nu$ in which the lepton $\ell$ is not properly identified, resulting in the event not being vetoed, and the associated neutrino from the leptonic decay creating true \ptmiss (`lost-lepton'). The W boson can be produced through the decay of a top quark, either in single-top or $t\bar{t}$ events; $t\bar{t}$ events generate two W bosons, in which the other may decay into an AK8 jet. A W boson may additionally be produced directly in association with other jets.
+\item Jet production via QCD in which the $p_{T}$ of a jet is mis-measured, most commonly under-measured, creating a fake source of \ptmiss.
+\end{itemize}
+
+To mitigate these backgrounds, we establish a baseline selection choosing events with all-hadronic final states and missing transverse momentum (\ptmiss), as motivated by Figure~\ref{fig:sms}. The baseline selection is as follows:
 
 \begin{itemize}
 \item $\geq2$ AK8 jets, with $p_{T} > 300\,\mathrm{GeV}$ and $50 < \mathrm{mass} < 250\,\mathrm{GeV}$
 \item $p_{T}^{\mathrm{miss}} > 300\,\mathrm{GeV}$;
 \item no isolated electrons with $p_{T}>10\,\textrm{GeV}$:\newline
-To remove events with $W \rightarrow e \nu$. Isolation requires the $p_{T}$ sum of the particles within a cone of $\Delta R < 0.2$ to be less than 10\% of the electron $p_{T}$. (See \cite{miniiso} for details about ``mini-isolation''.)
+Isolation requires the $p_{T}$ sum of the particles within a cone of $\Delta R < 0.2$ to be less than 10\% of the electron $p_{T}$. (See \cite{miniiso} for details about ``mini-isolation''.)
 \item no isolated muons with $p_{T}>10\,\textrm{GeV}$:\newline
-To remove events with $W \rightarrow \mu \nu$. The energy fraction for the isolation requirement is relaxed to 20\%.
+The energy fraction for the isolation requirement is relaxed to 20\%.
 \item no isolated tracks:\newline
 To remove events with top or W production in which the W decays to a tau. The tau branching fraction to states containing at least one charged particle is 85\%. As an isolated track is defined by looser criteria than that of an electron or muon, this cut also serves to increase the efficiency of the isolated electron and muon vetoes. Leptonic tracks must satisfy $p_{T}>5\,\textrm{GeV}$ and have 20\% isolation. Hadronic tracks must satisfy $p_{T}>10\,\textrm{GeV}$ and have 10\% isolation.
 \item $\Delta\phi_{1, 2, 3, 4} > 0.5, 0.5, 0.3, 0.3$; $\Delta\phi_{i}\equiv \Delta\phi(\vec{p_{T}}^{\mathrm{miss}}, \mathrm{AK4\,jet}_{i})$\newline
-The $\Delta\phi$ cut is designed to remove QCD events in which a jet is under-measured leading to an artificial imbalance in the event $p_{T}$. This cut requires that the difference in $\phi$ between the \ptmiss vector and each of the four highest-p$_{T}$ jets is sufficiently large to remove events in which a jet has been under-measured giving rise to fake \ptmiss pointing in the same direction. If less than four AK4 jets are available the additional cuts are removed.
+This cut requires that the difference in $\phi$ between the \ptmiss vector and each of the four highest-p$_{T}$ jets is sufficiently large to remove events in which a jet has been under-measured giving rise to fake \ptmiss. If less than four AK4 jets are available the additional cuts are removed.
 \end{itemize}
 
-To tag jets from $H \rightarrow b\bar{b}$ a dedicated MVA algorithm is used to identify AK8 jets arising from the decay of two b quarks \cite{bbtagger}. The distribution of the output discriminator for the two highest-p$_{T}$ AK8 jets are seen in the left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). The stacked histogram and solid lines shows the distribution after baseline selection for simulation and two representative signal points, respectively.
+To tag jets from $H \rightarrow b\bar{b}$ a dedicated MVA algorithm has been developed by the CMS collaboration to discriminate these signal jets from those produced by QCD processes \cite{bbtagger}. The algorithm makes use of the kinematics expected by having secondary vertices arising from the b-quark decays. Discriminating variables include the number, mass, energy, and position of the secondary vertices in the jets. Additional variables include the distance of closest approach between the vertices and tracks (when projected backwards); tracks arising from displaced vertices are not expected to project back to the primary interaction point. The distribution of this discriminator for the two highest-p$_{T}$ AK8 jets are seen in the left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). The stacked histogram and solid lines shows the distribution after baseline selection for simulation and two representative signal points, respectively.
 
-Further H/Z tagging of an AK8 jet is accomplished by restricting the jet mass window to [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in Figure~\ref{fig:ak8dists}. The signal shown in the solid line is the T5HH model (i.e. Figure~\ref{fig:t5hh}). The same identification criteria are applied to tag an AK8 jet as either an H or Z boson, there is no distinction made.
+Additionally, to tag H or Z bosons a requirement is made on the invariant mass of the jet. We use the mass of the so called ``pruned'' jet - a method involving removal of soft and wide-angle radiation inside the jet \cite{prunedmass}. The pruning is very powerful for discriminating QCD jets from those produced by heavy particle decay. Our tagging requires the jet mass to fall within a window [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in Figure~\ref{fig:ak8dists}. The same identification criteria are applied to tag an AK8 jet as either an H or Z boson (there is no distinction made).
 
 \begin{figure}[hbp!]
 \centering
@@ -70,17 +82,16 @@ The trigger efficiency is defined as $\epsilon = N_{1}/N_{2}$, where $N_{2}$ is 
 
 \section{Event Simulation}
 
-Event simulation of the proton-proton collisions proceeds in several steps. To simulate the hard physics process MadGraph@NLO2.2.2 \cite{Alwall:2014hca} is used to calculate matrix-element amplitudes. The parton distribution functions (PDFs) used in these calculations are from NNPDF 3.0 \cite{Ball:2014uwa}.
-Parton showering and other event dynamics are generated with Pythia \cite{pythiacite}. The final-state particles are traced through the detector using GEANT. For example, this includes the effect of the magnetic field, interactions with both the dead and sensitive detector material, and additional particle decay \cite{Agostinelli:2002hh}. This simulated data is processed in the same manner as that of the physical experiment.
+Event simulation of the proton-proton collisions proceeds in several steps. MadGraph@NLO2.2.2 \cite{Alwall:2014hca} is a MC event generate used to simulate proton-proton events. Parton distribution functions, used to model the quark and gluon momenta distribution within the proton, are taken from NNPDF 3.0 \cite{Ball:2014uwa}. Parton showering, which models quark and gluon evolution into hadrons, or final/initial state radiation, is performed with Pythia \cite{pythiacite}. The final-state particles are traced through the detector using GEANT. For example, this includes the effect of the magnetic field, interactions with both the dead and sensitive detector material, and additional particle decay \cite{Agostinelli:2002hh}. This simulated data is processed in the same manner as that of the physical experiment.
 
 \subsection{Standard Model Processes}
 \label{sec:smp}
 
-The SM samples which enter as the primary backgrounds are listed in Table~\ref{tab:MCsamples} (see Section~\ref{sec:smbkg} for a discussion of the background). All samples are generated with a pileup distribution with an average of 25 interactions per bunch crossing and a 25ns interval between bunches. For acceptable statistics over a wide range of parameter space, the  samples are often binned in $H_{T} \equiv \sum_{AK4\,jets}p_{T}$. As our event selection requires at least two AK8 jets with $p_{T}>300\,\textrm{GeV}$ we roughly operate in the regime of $H_{T}>600\,\textrm{GeV}$.
+The SM samples which enter as the primary backgrounds are listed in Table~\ref{tab:MCsamples} (see Section~\ref{sec:smbkg} for a discussion of the background). All samples are generated with a pileup distribution with an average of 25 interactions per bunch crossing and a 25ns interval between bunches. For acceptable statistics over a wide range of parameter space, the  samples are often binned in $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$. As our event selection requires at least two AK8 jets with $p_{T}>300\,\textrm{GeV}$ we roughly operate in the regime of $\mathrm{H_{T}}>600\,\textrm{GeV}$.
 
 \begin{table}[hbp!]
 \centering
-\caption{SM  samples used in the analysis.}
+\caption[SM  samples used in the analysis.]{SM  samples used in the analysis. $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$ is the total hadronic energy in the event. $\sigma$ is the cross section. $\int\mathcal{L} = N / \sigma$ is an alternative way to express the number of generated events.}
 \label{tab:MCsamples}
 \begin{tabular}{cclll}
 \hline \hline
@@ -179,22 +190,14 @@ The expected \ptmiss distribution from simulation is seen in the stacked histogr
 \subsection{Control Regions within Data}
 \label{sec:smbkg}
 
-We assume the background arises from three main sources:
+%\begin{figure}[hbp!]
+%\centering
+%\includegraphics[width=0.5\textwidth]{figs/CMS-SUS-17-006_Figure-aux_003.pdf}
+%\caption{The fractional composition of expected SM backgrounds in the 6 analysis regions.}
+%\label{fig:bkgfrac}
+%\end{figure}
 
-\begin{itemize}
-\item $Z\rightarrow\nu\bar{\nu}$ in which the neutrinos from the Z decay results in true \ptmiss (`Z-invisible').
-\item $W\rightarrow\ell\nu$ from direct W or top quark production in which the lepton $\ell$ is not identified, resulting in the event not being vetoed, and the associated neutrino from the leptonic decay creating true \ptmiss (`lost-lepton').
-\item Jet production via QCD in which the $p_{T}$ of a jet is substantially under-measured, this creates a fake source of \ptmiss.
-\end{itemize}
-
-\begin{figure}[hbp!]
-\centering
-\includegraphics[width=0.5\textwidth]{figs/CMS-SUS-17-006_Figure-aux_003.pdf}
-\caption{The fractional composition of expected SM backgrounds in the 6 analysis regions.}
-\label{fig:bkgfrac}
-\end{figure}
-
-In order to study these backgrounds in data, we define three control regions which are expected to be enhanced in processes similar to the targeted background. The event selection is the same as applied to the nominal signal and sideband regions, but with some defining orthogonal condition:
+In order to study the expected backgrounds in data ($Z\rightarrow\nu\bar{\nu}$, $W\rightarrow\ell\nu$, QCD), we define three control regions which are enhanced in processes representative to the background. The event selection is the same as applied to the nominal signal and sideband regions, but with some defining orthogonal condition:
 
 \begin{itemize}
 
@@ -261,7 +264,7 @@ A_{1, 2}^{\mathrm{predicted}} = \kappa \cdot \left(B_{1, 2} \cdot \ \frac{C}{D}\
 
 These values of $\kappa$ are those which we have already seen in Figure~\ref{fig:MCclosure}.
 
-The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling of  in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization of  in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost-lepton, and QCD background  samples. Rare processes (e.g. diboson) are taken directly from.
+The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling of  in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization of  in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost-lepton, and QCD background  samples. Rare processes (e.g. diboson) are taken directly from MC
 
 First consider how the yield N predicted by  in an arbitrary bin (of 18) is the sum of the yields in the different  datasets ($t\bar{t}$ and $W\rightarrow\ell\nu$ are grouped as they together represent the lost-lepton background):
 
@@ -452,7 +455,7 @@ $>700$ GeV  & 26.79 $\pm$ 1.50 & 0.99 $\pm$ 0.53 & 0.16 $\pm$ 0.086 & 0 $\pm$ 0 
 
 \subsection{Sideband Yields \& Predictions}
 
-Observed yields in data and the  expectation for the 12 sideband bins (e.g. $\mathrm{B}_{1, 2}$, C, D in Figure~\ref{fig:abcd}) are seen in Figure~\ref{fig:UnblindCR}. Table~\ref{tab:tab} lists these observed yields and calculated background prediction for the 6 signal bins.
+We have studied the background estimation technique in data and found the results to be acceptable. We then calculated $\kappa$, the correction to the ABCD prediction, using scale factors from data to best correct the normalization of the MC components. We can now use the observed yields in the sideband regions to form the background prediction via the ABCD method. Figure~\ref{fig:UnblindCR} shows the sideband yields in both data and the scale factor corrected MC - we see that the two agree within statistical errors. Table~\ref{tab:tab} tabulates the data yields alongside the full background prediction including $\kappa$.
 
 \begin{figure}[hbp!]
 \centering
@@ -582,10 +585,10 @@ Mass Resolution &1-15\% \\ \hline
 \label{tab:SignalSystSummary}
 \end{table}
 
-\section{Results - Yields in the Signal Regions \& Exclusion Curves}
+\section{Observed Yields in the Signal Regions}
 \label{sec:results}
 
-After unblinding the 4x3=12 sideband regions and performing the background estimation the 2x3=6 signal regions were unblinded. The observed yields, along with the background predictions, are seen in Table~\ref{tab:DataPred}. Our signal region yields are consistent with the background expectation. Additionally, Table~\ref{tab:DataPred} shows the expected signal yields for two model points corresponding to gluino $\tilde{g}$ masses of 2000 or 1800 GeV; the mass of the neutralino $\tilde{\chi}_{1}^{0}$ is fixed at 1 GeV; the mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed at 50 GeV.
+The observed yields, along with the background predictions, are seen in Table~\ref{tab:DataPred}. Our signal region yields are consistent with the background expectation. Additionally, Table~\ref{tab:DataPred} shows the expected signal yields for two model points corresponding to gluino $\tilde{g}$ masses of 2000 or 1800 GeV; the mass of the neutralino $\tilde{\chi}_{1}^{0}$ is fixed at 1 GeV; the mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed at 50 GeV.
 
 \begin{figure}[hbp!]
 \centering
@@ -604,7 +607,7 @@ After unblinding the 4x3=12 sideband regions and performing the background estim
 \end{figure}
 
 \begin{table}[hbp!]
-\caption{Signal yields and background predictions.}
+\caption[Yields and predicted background in the signal regions.]{Yields and predicted background in the signal regions. Columns 2, 3, and 4 form the background prediction. Obs. represents the observed yields in data. The last two columns represent the expected yields from two model points (the gluino mass is in parenthesis).}
 \label{tab:DataPred}
 \centering
 \begin{tabular}{l|c|c|c|c||c|c|}
@@ -637,13 +640,17 @@ A visual representation of the one event in the double-H tagged signal bin is se
 \label{fig:fireworks}
 \end{figure}
 
+\section{Exclusion Curves \& Mass Limits}
+
 Interpreting our results in the context of the T5HH or T5ZH models, the absence of signal allows us to place lower limits on the mass of the gluino $\tilde{g}$. For the statistical treatment, we use the Higgs combination tool to encode the ABCD approach in the likelihood. In this approach, the data card for one search bin contains the observed number of events and the expected signal and background in each of the ABCD regions. A likelihood function is built that contains these ABCD regions and explicitly encodes the relation $A=\kappa B \frac{C}{D}$ and its uncertainty. The likelihood for each search bin can be described by:
 
 \begin{equation}
 \mathcal{L}=\prod_{i\in A,B,C,D} Poisson\left(n_i \vert bkg_i + r\cdot sig_i\right) \times \prod^{nuisances}_j Constraints\left(\theta_j , \hat{\theta}_j\right)
 \end{equation}
 
-where the 4 regions are modeled by Poisson distribution and the term Constraints refers to either Gaussian distributions for the $\kappa$ uncertainties or log normal distributions that model the signal systematics. The expected and observed limits are then calculated based on approximations of the profile likelihood ratio using the CLs criterion to place limits at the $95\%$ confidence level. These exclusion curves are seen in Figure~\ref{fig:brazil}. We are able to place lower limits at 95\% confidence level on the gluino $\tilde{g}$ mass at 2010 and 1825 GeV for the T5HH and T5ZH models, respectively. The weaker limit for the T5ZH model is due to the smaller branching fraction of the Z boson to b-quarks and our choice of signal mass window not being optimal for Z reconstruction.
+where the 4 regions are modeled by Poisson distribution and the term Constraints refers to either Gaussian distributions for the $\kappa$ uncertainties or log normal distributions that model the signal systematics. The expected and observed limits are then calculated based on approximations of the profile likelihood ratio using the CLs criterion to place limits at the $95\%$ confidence level. These exclusion curves are seen in Figure~\ref{fig:brazil}.
+
+We are able to place lower limits at 95\% confidence level on the gluino $\tilde{g}$ mass at 2010 and 1825 GeV for the T5HH and T5ZH models, respectively. The weaker limit for the T5ZH model is due to the smaller branching fraction of the Z boson to b-quarks and our choice of signal mass window not being optimal for Z reconstruction.
 
 \begin{figure}[hbp!]
 \centering

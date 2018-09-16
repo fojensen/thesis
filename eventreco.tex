@@ -7,10 +7,10 @@ Depending on their nature, the particles emanating from the collision leave vari
 
 Note that the definition of any object within the detector makes use of additional selection criteria which are not generally discussed here. For instance, one may require that a track in the tracker have at least 3 hits in the pixel detector, or that a calorimeter hit is above some minimum threshold energy. The effects of these criteria are generally a balance between the reconstruction efficiency of any given particle and the probability to misidentify a particle (purity).
 
-\subsection{Tracks and Vertices}
+\subsection{Tracks}% \& Vertices}
 
-Tracker hits are formed in the pixel and strips detectors by clustering any hits in neighboring elements of the detector plane. The cluster position is measured by weighted average of the individual channel positions. Charge sharing among detector channels allow for a finer spatial resolution in the position measurement. Track reconstruction first begins by forming track seeds consisting of a small number of detector hits. These track seeds are then projected onto successive detector layers looking for nearby additional hits. This follows the Kalman filtering procedure, in which track information is updated after the addition of each hit. Electron tracking is performed with a slightly modified algorithm to better account for the energy loss mechanisms as the electron traverses the detector \cite{trackerreco}.
-
+Tracker hits are formed in the pixel and strips detectors by clustering any hits in neighboring elements of the detector plane. The cluster position is measured by weighted average of the individual channel positions. Charge sharing among detector channels allow for a finer spatial resolution in the position measurement. Track reconstruction first begins by forming track seeds consisting of a small number of detector hits. These track seeds are then projected onto successive detector layers looking for nearby additional hits. This follows the Kalman filtering procedure, in which track information is updated after the addition of each hit \cite{trackerreco}.
+ 
 The track building procedure follows an iterative procedure, where the requirements on the quality of the track seed decrease as the iterations proceed. The first iterations begin with seeds consisting of 3 pixel hits and lead to high performance reconstruction of high $p_{T}$ tracks emanating from the collision region. The iterations proceed until essentially only requiring hits in the outer tracker and reconstructs displaced tracks or those missing hits. The iteration procedure provides a balance between reconstruction efficiency, track purity, and computation economics. Table~\ref{tab:itertracks} list these iterations - the requirements on the seed and types of tracks that iteration targets.
 
 \begin{table}[hbp!]
@@ -22,6 +22,8 @@ The track building procedure follows an iterative procedure, where the requireme
 \label{tab:itertracks}
 \end{table}
 
+Electron tracking is performed with a slightly modified algorithm to better account for the electron's energy loss in the detector. Electrons are very light particles and more susceptible to emitting \textit{bremsstrahlung} radiation than ionizing the silicon. Bremsstrahlung radiation occurs when the electron scatters from a charged nucleus within the tracker bulk and emits a photon. This results in both energy loss and momentum changes as the electron traverses the detector. This results in very non-Gaussian energy loss mechanisms in which the Kalman filtering is non-optimal.
+
 \subsection{ECAL \& HCAL Clusters}
 
 \textit{Superclusters} are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (8) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Superclusters are built separately in the barrel and endcap. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width $\sigma$ scale set by the crystal size.
@@ -32,14 +34,14 @@ As there are multiple detector layers within a single muon station, track segmen
 
 \section{Obtaining a Particle-level Description}
 
-Once the elements have been built, the Particle Flow algorithm exploits the information from each of the detectors to form the best possible particle candidate \cite{CMS-PRF-14-001}. As different varieties of particles have unique signatures in the detector, particle identification is aided by the particular combination of elements \textit{linked} with one another. An illustrative example of these combinations are shown in Figure~\ref{fig:schematicview}.  Elements are linked when projections from one element to the other are spatially consistent. There are four primary links:
+Once the elements have been built, the Particle Flow algorithm exploits the information from each of the detectors to form the best possible particle candidate \cite{CMS-PRF-14-001}. As different varieties of particles have unique signatures in the detector, particle identification is aided by the particular combination of elements \textit{linked} with one another. An illustrative example of these combinations are shown in Figure~\ref{fig:schematicview}.  Elements are linked when projections from one element to the other are spatially consistent. There are six primary links:
 
 \begin{itemize}
 \item Tracks formed in the tracker are linked to an ECAL or HCAL cluster if the projection of the track, at a depth of the expected maximum of a shower in the ECAL or at one interaction length inside the HCAL, lies within the cluster area.
 \item ECAL and HCAL clusters are linked if the ECAL cluster falls within the envelope of the HCAL cluster; ECAL provides finer spatial resolution compared to the HCAL.
-\item A tracker track and a muon track are linked if their projections onto a common surface are spatially consistent.
-\item To collect bremsstrahlung radiation (photons) associated to an electron track, an ECAL cluster is linked to tracker tracks if projections tangent to the track at any of the tracker layers lies within the cluster volume. Additionally, as the probability for a photon to convert to an $e^{+}e^{-}$ pair is significant within the tracker, track pairs are linked if they are consistent with photon conversion.
 \item If a Preshower cluster is within the envelope of an ECAL cluster the two are linked; Preshower has finer spatial granularity.
+\item A tracker track and a muon track are linked if their projections onto a common surface are spatially consistent.
+\item To collect bremsstrahlung radiation (photons) associated to an electron track, an ECAL cluster is linked to tracker tracks if projections tangent to the track at any of the tracker layers lies within the cluster volume. To catch these bremsstrahlung photons which additionally then convert into an $e^{+}e^{-}$ pair in the tracker, track pairs consistent with $e^{+}e^{-}$ conversion as linked if their common momentum points to one of the track tangents.
 \item Tracks consistent with arising from a secondary vertex are linked to allow for reconstruction of nuclear-interactions.
 \end{itemize}
 
@@ -52,22 +54,22 @@ There are three types of tracks which can be used for muon reconstruction:
 \item
 \textit{\textbf{standalone}} muons are built from tracks reconstructed solely in the muon system.
 \item
-\textit{\textbf{tracker}} muons are built from tracks reconstructed solely in the inner silicon tracker. It is tagged as being from a muon if, when projected onto a common surface, it is spatially consistent with a muon solely reconstructed from the muon chambers. 
+\textit{\textbf{tracker}} muons are built from tracks reconstructed solely in the inner silicon tracker. They are tagged as such if the track projection is consistent with any track segments found in the muon system.
 \item
-\textit{\textbf{global}} muons are reconstructed using the hits from both the inner silicon tracker and the muon stations.  The track pairing is the same done for tracker muons. For momenta above 200 GeV, the use of the muon system for tracks improves the momentum measurement.
+\textit{\textbf{global}} muons are reconstructed using the hits from both the inner silicon tracker and the muon stations. Global muons are reconstructed when a track in the tracker and a track in the muon system are compatible.
 \end{itemize}
 
 Any ECAL or HCAL clusters associated with the muon track are used as muon selection/definition criteria if those clusters are found to be consistent with the muon hypothesis.
 
-\item \textbf{Electrons \& Isolated Photons}:
+\item \textbf{Electrons \& Photons}:
 
-An electron is formed by combining a track in the silicon tracker with a cluster in the ECAL. Its energy assignment uses a combination of both elements. The momentum direction is made using the track in the silicon tracker, as it gives greater spatial resolution.  A photon is defined as an ECAL cluster not associated with a track. Photon isolation is a requirement on the sum of the track $p_{T}$ within a cone $\Delta R = 0.3$ around the photon; photons which arise during hadron fragmentation (i.e. poor isolation) are treated in the next section. 
+An electron is formed by combining a track in the silicon tracker with a cluster in the ECAL. Its energy assignment uses a combination of both elements. The momentum direction is made using the track in the silicon tracker, as it gives greater spatial resolution.  A photon is defined as an ECAL cluster not associated with a track. Surrounding energy in the HCAL must not exceed 10\% of the ECAL supercluster energy.
 
 Electrons and isolated photons are reconstructed within the same Particle Flow step to account for similar behavior within the tracker bulk. There is a large probability for both a) an electron to radiate a brehmsstrahlung photon and b) for a photon to convert to an e$^{+}$e$^{-}$ pair. Therefore in object reconstruction care must be taken to collect the photons radiated from electrons in order to make appropriate measurements of the particles.
 
-\item \textbf{Hadrons \& non-isolated Photons}:
+\item \textbf{Hadrons \& Photons}:
 
-Hadrons \& non-isolated photons result from hadronization/fragmentation of jets. ECAL clusters not associated to any tracks are assigned to be photons. Neutral hadrons ($K^{0}_{L}$, neutrons) are reconstructed from HCAL clusters with no associated track; neutral hadrons leave a very small amount of energy in the ECAL. Charged hadrons ($\pi^{\pm}$, K$^{\pm}$, protons) are reconstructed using the remaining tracks and HCAL deposits. Charged hadrons do not radiate bremsstrahlung photons nor cause $e^{+}e^{-}$ pair creation and thus do not leave signals in the ECAL.
+Hadrons \& non-isolated photons result from hadronization/fragmentation of jets. ECAL clusters not associated to any tracks are assigned to be photons. Neutral hadrons ($K^{0}_{L}$, neutrons) are reconstructed from HCAL clusters with no associated track; neutral hadrons leave a very small amount of energy in the ECAL. Charged hadrons ($\pi^{\pm}$, K$^{\pm}$, protons) are reconstructed using the remaining tracks and HCAL deposits.
 
 \item \textbf{Nuclear Interactions}:
 
