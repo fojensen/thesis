@@ -13,7 +13,7 @@ The Minimal Supersymmetric SM contains a $\mathbb{Z}_{2}$ symmetry in which all 
 
 With this as motivation, we designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the $b\bar{b}$ decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with sparticle pair production which subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.425\textwidth}
 \includegraphics[width=0.95\textwidth]{figs/CMS-SUS-17-006_Figure_001.pdf}
@@ -61,7 +61,7 @@ To tag jets from $H \rightarrow b\bar{b}$ a dedicated MVA algorithm has been dev
 
 Additionally, to tag H or Z bosons a requirement is made on the invariant mass of the jet. We use the mass of the so called ``pruned'' jet - a method involving removal of soft and wide-angle radiation inside the jet \cite{prunedmass}. The pruning is very powerful for discriminating QCD jets from those produced by heavy particle decay. Our tagging requires the jet mass to fall within a window [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in Figure~\ref{fig:ak8dists}. The same identification criteria are applied to tag an AK8 jet as either an H or Z boson (there is no distinction made).
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.425\linewidth]{figs/J1BB_LooseJetMass.pdf}
 \includegraphics[width=0.425\linewidth]{figs/J2pt_BBtag_baseline.pdf}\\
@@ -89,7 +89,7 @@ Event simulation of the proton-proton collisions proceeds in several steps. MadG
 
 The SM samples which enter as the primary backgrounds are listed in Table~\ref{tab:MCsamples} (see Section~\ref{sec:smbkg} for a discussion of the background). All samples are generated with a pileup distribution with an average of 25 interactions per bunch crossing and a 25ns interval between bunches. For acceptable statistics over a wide range of parameter space, the  samples are often binned in $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$. As our event selection requires at least two AK8 jets with $p_{T}>300\,\textrm{GeV}$ we roughly operate in the regime of $\mathrm{H_{T}}>600\,\textrm{GeV}$.
 
-\begin{table}[hbp!]
+\begin{table}
 \centering
 \caption[SM  samples used in the analysis.]{SM  samples used in the analysis. $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$ is the total hadronic energy in the event. $\sigma$ is the cross section. $\int\mathcal{L} = N / \sigma$ is an alternative way to express the number of generated events.}
 \label{tab:MCsamples}
@@ -134,7 +134,7 @@ W+jets & $\ell{\nu}$ & [2500, $\infty$] & 0.039 & 6497.28\\
 
 For commissioning of the analysis technique (as well as the limit-setting procedure, see Section~\ref{sec:results}) Monte Carlo samples with our final-state signal topology were generated, based on the processes in Figure~\ref{fig:sms}. The signal sample follows the same processing chain as the SM samples. The mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed to 50 GeV, resulting in low $p_{T}$ SM quarks produced in the gluino $\tilde{g}$ decays. The mass of the neutralino $\chi^{0}_{1}$ (LSP) is fixed to 1 GeV. We have samples with a range of gluino $\tilde{g}$ masses from 750 to 2200 GeV. The $p_{T}$ distribution for the generated H bosons in these samples is seen in Figure~\ref{fig:GenHiggsBoost} for a number of gluino $\tilde{g}$ masses. Additionally the angular separation $\Delta R \equiv \sqrt{\Delta\phi^{2}+\Delta\eta^{2}}$ between the $b\bar{b}$ pair is shown. As the $p_{T}$ of a parent boson increases the $b\bar{b}$ pair from its decay tend to align, allowing complete reconstruction with a single AK8 jet.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.45\linewidth]{figs/leadHiggsPt.pdf}
 \includegraphics[width=0.45\linewidth]{figs/leadHiggsDr.pdf}\\
@@ -150,7 +150,7 @@ For commissioning of the analysis technique (as well as the limit-setting proced
 
 The background estimation procedure makes use of what is known as an ``ABCD'' prediction in which the analysis phase space is divided into signal and sideband regions; scaling relations are applied to sideband yields to make predictions for the background in the signal regions. The events are categorized according to whether the two highest p$_{T}$ AK8 jets are a) in the signal or sideband mass region and b) have or have not been $\mathrm{b}\bar{\mathrm{b}}$ tagged.  A diagram of this partitioning is seen in Figure~\ref{fig:abcd}. An additional dimension is added by binning in \ptmiss: [300, 500 GeV], [500, 700 GeV], [700, $\infty$ GeV]. This gives a total of 2x3=6 signal and 4x3=12 sideband bins. The two signal regions A$_{1}$ and A$_{2}$ contain events with exactly one and exactly two jets being consistent with H/Z boson decay, respectively.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{figs/CMS-SUS-17-006_Figure-aux_002.pdf}
 \caption[Partitioning of the signal and sideband regions for event binning.]{Partitioning of the signal and sideband regions for event binning. Additional binning in \ptmiss brings the total to 6x3=18.}
@@ -171,7 +171,7 @@ Rearranging this gives a prediction for the events in the signal regions
 
 The expected \ptmiss distribution from simulation is seen in the stacked histograms of Figure~\ref{fig:MCclosure}. The prediction using the ABCD method on the same simulated samples is seen in the red hash. The performance of the method within simulation can be determined by dividing the true content in the signal region with the prediction. This ratio, denoted $\kappa$, is seen in the bottom panel of Figure~\ref{fig:MCclosure}. $\kappa=1$ represents perfect modeling. As will be discussed in Section~\ref{sec:kappa}, $\kappa$ is used as a correction in the background estimation procedure.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.49\textwidth}
 \centering
@@ -190,7 +190,7 @@ The expected \ptmiss distribution from simulation is seen in the stacked histogr
 \subsection{Control Regions within Data}
 \label{sec:smbkg}
 
-%\begin{figure}[hbp!]
+%\begin{figure}
 %\centering
 %\includegraphics[width=0.5\textwidth]{figs/CMS-SUS-17-006_Figure-aux_003.pdf}
 %\caption{The fractional composition of expected SM backgrounds in the 6 analysis regions.}
@@ -211,7 +211,7 @@ In order to study the expected backgrounds in data ($Z\rightarrow\nu\bar{\nu}$, 
 
 As they are orthogonal to the analysis region, we are able to test the validity of the background estimation technique independently \textbf{within} each of the three control regions. By comparing the prediction of the yields using the ABCD method with those observed, the validity of the technique can be verified for that particular background category. The comparisons for the single-photon, single-lepton and low-$\Delta\phi$ control regions can be seen in Figure~\ref{fig:closure}. $\kappa$ in the bottom panel is defined as the ratio of the true event yield to the prediction. $\kappa=1$ represents the case in which the prediction perfectly matches the observation. These comparisons are used for commissioning of the background estimation technique only.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.425\textwidth}
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/dataClosure_single-tagSR_photon.pdf}
@@ -280,7 +280,7 @@ N_{corrected}^{MC} = \left(\frac{N_{single-\gamma}^{data}}{N_{single-\gamma}^{MC
 
 The \ptmiss distribution within the control regions is shown for both data and  in Figures~\ref{fig:closurephoton},~\ref{fig:closuresinglelep},~\ref{fig:closurelowdphi} for the single photon, single lepton, and low-$\Delta\phi$ control regions, respectively. The ratio in the bottom panel of each plot represents the scale factor for that \ptmiss bin. The dotted horizontal line shows the average scale factor inclusive in \ptmiss. The scale factors for the single-photon and low-$\Delta\phi$ control regions show no \ptmiss dependence and are determined integrated over \ptmiss$>300\,\textrm{GeV}$. The values of the scale factors are summarized in Table~\ref{tab:ScaleFactorVR}. The Single-lepton region, shown in Figure~\ref{fig:closuresinglelep}, does show \ptmiss dependence and are summarized in Tables~\ref{tab:ScaleFactorVR}~and~\ref{tab:ScaleFactorMET}.  In order to improve statistics for the single-lepton region, the low-$\Delta\phi$ requirement has been removed.
 
-\begin{figure}[hbp!]
+\begin{figure}
  \centering
  \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_antitagSB_photon.pdf}
  \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_antitagSR_photon.pdf}\\
@@ -294,7 +294,7 @@ The \ptmiss distribution within the control regions is shown for both data and  
 \label{fig:closurephoton}
 \end{figure}
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_antitagSB_lowDeltaPhi_singleLep.pdf}
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_antitagSR_lowDeltaPhi_singleLep.pdf}\\
@@ -308,7 +308,7 @@ The \ptmiss distribution within the control regions is shown for both data and  
 \label{fig:closuresinglelep}
 \end{figure}
 
-\begin{figure}[hbp!]
+\begin{figure}
  \centering
  \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_antitagSB_lowDphi.pdf}
  \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_antitagSR_lowDphi.pdf}\\
@@ -322,7 +322,7 @@ The \ptmiss distribution within the control regions is shown for both data and  
 \label{fig:closurelowdphi}
 \end{figure}
 
-\begin{table}[hbp!]
+\begin{table}
 \centering
 \caption{Summary of the control region scale-factors integrated over \ptmiss.}
 \label{tab:ScaleFactorVR}
@@ -347,7 +347,7 @@ $A^{1H}_{SF}$ & $A^{2H}_{SF}$ & $C_{SF}$ & $B^{1}_{SF}$ & $B^{2}_{SF}$ & $D_{SF}
 \end{tabular}
 \end{table}
 
-\begin{table}[hbp!]
+\begin{table}
 \caption{Single lepton control region scale-factors in the anti-tag sideband region.}
 \label{tab:ScaleFactorMET}
 \centering
@@ -366,7 +366,7 @@ $0.49\pm0.02$ & $0.40\pm0.05$ & $0.35\pm 0.08$ \\
 
 The scale factors are then applied to the  samples to give yields which better reflect data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the  yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} ~and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosure} relative to Figure~\ref{fig:MCclosuresf} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian toys for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
 
-\begin{table}[hbp!]
+\begin{table}
 \caption{The $\kappa$ factor computed by throwing Gaussian toys for the scale factors.}
 \label{tab:TotalKappa}
 \centering
@@ -385,7 +385,7 @@ The scale factors are then applied to the  samples to give yields which better r
 \end{tabular}
 \end{table}
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.425\textwidth}
 \centering
@@ -457,7 +457,7 @@ $>700$ GeV  & 26.79 $\pm$ 1.50 & 0.99 $\pm$ 0.53 & 0.16 $\pm$ 0.086 & 0 $\pm$ 0 
 
 We have studied the background estimation technique in data and found the results to be acceptable. We then calculated $\kappa$, the correction to the ABCD prediction, using scale factors from data to best correct the normalization of the MC components. We can now use the observed yields in the sideband regions to form the background prediction via the ABCD method. Figure~\ref{fig:UnblindCR} shows the sideband yields in both data and the scale factor corrected MC - we see that the two agree within statistical errors. Table~\ref{tab:tab} tabulates the data yields alongside the full background prediction including $\kappa$.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/Unblinding_antitagSB.pdf}
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/Unblinding_antitagSR.pdf}\\
@@ -468,7 +468,7 @@ We have studied the background estimation technique in data and found the result
 \label{fig:UnblindCR}
 \end{figure}
 
-\begin{table}[hbp!]
+\begin{table}
 \centering
 \caption{
 Sideband region yields, $\kappa$, and background predictions for the 6 signal bins.
@@ -530,8 +530,7 @@ propogated to the final signal efficiency using POG recommendations. The pruned 
 The summary of the signal systematics and their effect on the signal yields is shown in Table~\ref{tab:SignalSystSummary}. The dominant effect is from the mass resolution uncertainty.
 %\item The pruned mass scale-factor is found to be consistent with 1.0 for the pruned mass-scale with an uncertainty based on the Jet-Energy scale uncertainty: $\sqrt{JES^2 + 0.02^2}$. The pruned jet mass-resolution scale-factor is found to $7\%$ with an uncertainty of $\sqrt{JER^2+0.103^2}$
 
-
-\begin{figure}[hbp!]
+\begin{figure}
 \begin{center}
 \includegraphics[width=0.5\linewidth]{figs/WMassPeakDataMC.png}
 \end{center}
@@ -541,7 +540,7 @@ The summary of the signal systematics and their effect on the signal yields is s
 \label{fig:WMassPeak}
 \end{figure}
 
-\begin{table}[hbp!]
+\begin{table}
 \caption{Fit results for W-mass resolution in data and simulation.}
 \label{tab:WMassFit}
 \centering
@@ -559,7 +558,7 @@ Sigma & 10.10$\pm$0.67 & 7.23$\pm$0.48\\
 \end{tabular}
 \end{table}
 
-\begin{table}[hbp!]
+\begin{table}
 \centering
 \begin{tabular}{c|c}
 \hline \hline
@@ -590,7 +589,7 @@ Mass Resolution &1-15\% \\ \hline
 
 The observed yields, along with the background predictions, are seen in Table~\ref{tab:DataPred}. Our signal region yields are consistent with the background expectation. Additionally, Table~\ref{tab:DataPred} shows the expected signal yields for two model points corresponding to gluino $\tilde{g}$ masses of 2000 or 1800 GeV; the mass of the neutralino $\tilde{\chi}_{1}^{0}$ is fixed at 1 GeV; the mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed at 50 GeV.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.425\textwidth}
 \centering
@@ -606,7 +605,7 @@ The observed yields, along with the background predictions, are seen in Table~\r
 \label{fig:datayields}
 \end{figure}
 
-\begin{table}[hbp!]
+\begin{table}
 \caption[Yields and predicted background in the signal regions.]{Yields and predicted background in the signal regions. Columns 2, 3, and 4 form the background prediction. Obs. represents the observed yields in data. The last two columns represent the expected yields from two model points (the gluino mass is in parenthesis).}
 \label{tab:DataPred}
 \centering
@@ -628,7 +627,7 @@ The observed yields, along with the background predictions, are seen in Table~\r
 
 A visual representation of the one event in the double-H tagged signal bin is seen in Figure~\ref{fig:fireworks}. The purple line represents \ptmiss=426 GeV. The three yellow cones represent the AK8 jets labeled with $p_{T}$.  Note the two additional objects not satisfying our object definition but still plotted in the representation a) the additional low-$p_{T}$ and low mass AK8 jet b) the $p_{T}$=18 GeV muon (red line) suffers from poor reconstruction properties.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.4\textwidth}
 \includegraphics[width=\textwidth]{figs/fireworks_ak8barrel.png}
@@ -652,7 +651,7 @@ where the 4 regions are modeled by Poisson distribution and the term Constraints
 
 We are able to place lower limits at 95\% confidence level on the gluino $\tilde{g}$ mass at 2010 and 1825 GeV for the T5HH and T5ZH models, respectively. The weaker limit for the T5ZH model is due to the smaller branching fraction of the Z boson to b-quarks and our choice of signal mass window not being optimal for Z reconstruction.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[b]{0.49\textwidth}
 \includegraphics[width=\textwidth]{figs/brazilT5HHResults.pdf}

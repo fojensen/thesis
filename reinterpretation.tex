@@ -9,7 +9,7 @@ In the analysis, each event is categorized depending on the mass and $b\bar{b}$-
 
 \textbf{For each event}, we form ``primitive weights'' which combine the status of the mass and $b\bar{b}$-tagging, these are seen in Table~\ref{tab:evtwht}. j$_{0, bb}$ represents the probability the leading AK8 jet is $b\bar{b}$-tagged, j$_{0, m\text{-}sig}$ represents the probability the leading AK8 jet falls within the signal mass window [85, 135 GeV], and j$_{0, m\text{-}side}$ represents the probability the leading AK8 jet falls within the sideband mass window [50, 85]+[135, 250 GeV].
 
-\begin{table}[hbp!]
+\begin{table}
 \caption{Effective event weights for $b\bar{b}$ and mass tagging of AK8 jets.}
 \label{tab:evtwht}
 \begin{tabular}{rrl}
@@ -25,14 +25,14 @@ both jets are mass-tagged & W$_{m}$ & = $j_{0, m\text{-}sig} \cdot j_{1,m\text{-
 
 Now that these weights are formed we can combine them appropriately to make event weights for the individual analysis bins. The weights for a given bin are then summed over the total number of events in the sample. The weights for each analysis bin are shown in Figure \ref{fig:wdiag}.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.4\linewidth]{figs/weights.png}
 \caption[Diagram for compiling the weights into each of the 6 analysis bins.]{Diagram for compiling the weights into each of the 6 analysis bins. (See Figure~\ref{fig:abcd})}
 \label{fig:wdiag}
 \end{figure}
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_006.pdf}
 \includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_007.pdf}
@@ -46,7 +46,7 @@ Now that these weights are formed we can combine them appropriately to make even
 \label{fig:effH}
 \end{figure}
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_011.pdf}
 \includegraphics[width=0.425\linewidth]{figs/CMS-SUS-17-006_Figure-aux_012.pdf}
@@ -58,7 +58,7 @@ Now that these weights are formed we can combine them appropriately to make even
 
 As a test of closure, the prescription is tested using the T5HH model with a gluino mass of 2200 GeV. The yields in each of the 6 analysis bins for this model point (inclusive in \ptmiss) are listed in Table~\ref{tab:predclos} under the heading ``RECO truth''. As the efficiency maps are $p_{T}$ dependent, we have the choice of using the momentum of the reconstructed or the generated bosons. The ``RECO prediction'' column in the table uses the reconstructed momentum as input, ``GEN prediction'' uses the generated momentum. The largest deficit is in the D region, with a difference of -36\% difference from nominal. The greatest over-prediction is found in the B2 region, with a surplus of +8.2\% events relative to nominal. The closure in the other bins fall somewhere in this range.
 
-\begin{table}[hbp!]
+\begin{table}
 \centering
 \caption[Comparison of the event yields in the 6 analysis regions with those obtained via the prediction.]{
 Comparison of the event yields in the 6 analysis regions with those obtained via the prediction. The prediction was made using the T5HH signal MC with a gluino mass of 2200 GeV.

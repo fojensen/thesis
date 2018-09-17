@@ -11,21 +11,21 @@ Many of the particles produced in the interaction are unstable and decay before 
 
 This chapter will discuss the main elements of the CMS detector, beginning with the innermost (closest to the beam pipe) silicon tracker and concluding with the muon system. The detector can generically be divided into central \textit{barrel} and forward \textit{endcap} regions. The geometry either takes the form of concentric cylinders (in the barrel) or flat planes of detectors (in the endcaps). This is most apparent in Figure~\ref{fig:detectoreta}, where the beamline is seen as the thin cyan line at the bottom of the image. The origin is defined as the center of the detector. The radial coordinate $r$ is the distance from the beam line, in the transverse plane. The z axis is the direction parallel to the beamline, counterclockwise when viewed from above. The coordinate $\eta\equiv-\tan{\ln{\theta/2}}$ is used to represent the polar angle above the beamline. The $\phi$ coordinate is the azimuth angle about the beamline, with $\phi=0$ aligning with the x-axis pointing towards the center of the LHC ring. The y-axis points up.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{figs/howcmsworks.png}
 \caption[A diagram of the CMS detector.]{A diagram of the CMS detector. Specific detector subsystems are labeled.}
 \label{fig:howcmsworks}
 \end{figure}
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{figs/CMS-PRF-14-001_Figure_001.pdf}
 \caption[A diagram of the CMS detector in the r-$\phi$ plane; particle signatures are shown.]{A diagram of the CMS detector in the r-$\phi$ plane; the beam axis is perpendicular to the page; SM particle signatures within the detector are shown.}
 \label{fig:schematicview}
 \end{figure}
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{figs/img41.pdf}
 \caption[A diagram of the CMS detector in the r-z plane.]{A diagram of the CMS detector in the r-z plane; the beampipe is the thin cyan sliver along the bottom. The detector subtends a large solid angle about the interaction region.}
@@ -38,7 +38,7 @@ The silicon tracker is responsible for the reconstruction of charged particles, 
 
 The tracker is built of modules consisting of a layer of sensitive silicon bonded on top readout electronics. The silicon is arranged as a p-n junction, reversed-biased and fully-depleted. As a charged particle travels through the material, it ionizes the silicon creating electron-hole pairs within the depletion zone. Electric fields accelerate the charge through the silicon to the readout electronics bonded to the back of the sensor. The readout chips amplify, digitize, and store the hit information before being piped outside the detector. The silicon is very thin ($\sim300\,\mu m$), the tracker is constructed of as little material as possible so as not to perturb the trajectory of the particle.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{figs/TrackerLayoutNew.pdf}
 \caption[The CMS silicon tracker]{The CMS silicon tracker. The vertical and horizontal lines represent layers of silicon modules. Lines in blue represent layers with ``stereo'' hits, formed from two silicon layers.}
@@ -63,7 +63,7 @@ Electromagnetic showers are created when high energy photons or electrons enter 
 
 The electromagnetic calorimeter is divided into barrel ($|\eta|<1.5$) and endcap ($1.5<|\eta|<3$) regions comprising 75,848 crystals. The crystals measure 2.2$\,$x$\,$2.2$\,$x$\,$23$\,$cm in the barrel and 3$\,$x$\,$3$\,$x$\,$22$\,$cm in the endcaps; they are oriented radially outward from the interaction region. A schematic of the detector is seen in Figure~\ref{fig:ecal}. Additionally, the electromagnetic calorimeter serves as an absorber for the hadronic calorimeter, initiating a shower in approximately 1/3 of the hadrons that are headed the HCAL.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[c]{0.35\textwidth}
 \includegraphics[width=\textwidth]{figs/ecalcrystal.jpg}
@@ -96,7 +96,7 @@ The HO sits \textbf{outside} the magnet in the barrel region $|\eta|<1.2$ and co
 
 An addition to HB, HO, and HE, there is a steel calorimeter HF which detects radiation in the very forward region $3<|\eta|<5.2$ on each side of the interaction point. This forward region has a very large radiation flux - the majority of the proton-proton interactions are ``glancing blows'' in which there is very little momentum transfer and the particles are deflected only slightly, directly into this region of the detector - this environment requires a different approach than in the rest of the HCAL. Each detector is comprised of 165cm thick steel interspersed with radiation-hard quartz fibers (parallel to the beamlime) to collect light which is read out by photomultipliers. The tower size in this detector is about 0.175x0.175 in $\eta-\phi$.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{figs/hcal.pdf}
 \caption[The CMS hadron calorimeter.]{The CMS hadron calorimeter \cite{cosmichcal}.}
@@ -107,7 +107,7 @@ An addition to HB, HO, and HE, there is a steel calorimeter HF which detects rad
 
 The solenoidal magnet provides the magnetic field necessary to deflect charged particles within the tracker volume to allow for a measurement of the momentum. The tracker, ECAL, and HCAL all fit inside the magnet bore diameter of 6m and length of 12.5m. It delivers a 3.8T solenoidal field (parallel to the beampipe) within the tracker volume. The field is produced by running current through coils of superconducting NbTi wires cooled to less than 5K. The magnetic field lines are returned via steel yokes sitting outside the magnet interspaced within the muon tracker volume, the field strength throughout the muon system is approximately 2T \cite{magnettdr}. A simulation of the magnetic field within the whole of CMS is seen in Figure~\ref{fig:magnet} \cite{magnet}.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{figs/magnet.png}
 \caption[A simulation of the 4T CMS magnetic field.]
@@ -129,7 +129,7 @@ The drift tubes are used for muon tracking in the barrel portion of the detector
 
 The drift tubes are divided into four barrel regions (each called a station) at different radii within the magnetic return yoke. Each station contains 3 \textit{superlayers}, where a superlayer is composed of four layers of stacked tubes, each layer staggered by one half width. For each station, two of the superlayers are oriented parallel to the beamline for $r-\phi$ measurements and one superlayer is perpendicular to the beamline to allow for measurements of the r-z position. An image of a DT station is seen in Figure~\ref{fig:superlayer}.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[c]{0.475\textwidth}
 \includegraphics[width=\textwidth]{figs/dtcell.png}
@@ -147,7 +147,7 @@ The drift tubes are divided into four barrel regions (each called a station) at 
 
 The cathode strip chambers are used for muon tracking in the endcap portion of the detector ($0.9<|\eta|<2.4$). The system is divided up into 468 trapezoidal chambers arranged in 2 or 3 concentric rings on a disk. There are 4 discs on either side of the detector ($\pm z$). The geometry of the chambers on a disk are seen in Figure~\ref{fig:cscring} (an example image of the hit occupancy of a disc during cosmic ray runs). Each chamber (diagram in Figure~\ref{fig:cscchamber}) consists of 6 layers of electrode planes separated by a gas layer of C$_{2}$H$_{2}$F$_{4}$ (freon) and C$_{4}$H$_{10}$ (isobutane). Wires are strung in the phi direction (concentric circles about the z axis) and therefore make a measurement of the radial coordinate of the hit. The electron shower generates an image charge in cathode planes. For each layer, one of the planes is segmented into strips which are perpendicular to the wires providing an good measure of the $\phi$ coordinate \cite{cscperformance}.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \begin{subfigure}[c]{0.55\textwidth}
 \includegraphics[width=0.8\textwidth]{figs/cscring.png}
@@ -168,7 +168,7 @@ Resistive plate chambers cover the region $|\eta| < 1.6$ and are interspersed wi
 
 The resistive plate chambers consist of an airtight system of two parallel high-resistivity planes separated by a $1\,\textrm{cm}$ gas gap. The outside of each plate is coated to form an electrode for the high-voltage bias. On top of each electrode sits aluminum strips which are insulated from the electrode and serve as the readout. Electron showers created in the gas bulk induce an image charge on the strips which is then recorded. The gas mixture is 95/5\% C$_{2}$H$_{2}$F$_{4}$ (freon) and C$_{4}$H$_{10}$ (isobutane), with trace amounts of SF$_{6}$. A diagram of an RPC chamber is seen in Figure~\ref{fig:rpc}.
 
-\begin{figure}[hbp!]
+\begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{figs/rpc.png}
 \caption[The CMS muon resistive plate chamber.]{The CMS muon resistive plate chamber \cite{rpc}.}
@@ -182,7 +182,7 @@ While in operation mode, the LHC provides collisions at a rate of 40 MHz (25ns p
 The trigger consists of two stages known as the Level-1 (L1) and High-Level Trigger (HLT). L1 is a hardware based trigger which combines information from the calorimeters and muon systems to make a decision if the event will be passed to HLT for further processing. L1 is able to reduce the event rate from 40 MHz to 100 kHz and must make the decision within $4\,\mu s$. Primitive objects such as calorimeter energy deposits or muon track segments are first constructed locally within the detector before being combined to form the global decision at L1. If the decision is made at L1 that the event is of potential interest, it is passed to HLT. HLT is a software based trigger which makes use of more sophisticated reconstruction algorithms which can be tuned to select events of choice.
 
 %The flowchart seen in Figure~\ref{fig:trigger} illustrates the L1 system. 
-%\begin{figure}[hbp!]
+%\begin{figure}
 %\centering
 %\includegraphics[width=0.6\textwidth]{figs/CMS-TRG-12-001_Figure_002.pdf}
 %\caption
