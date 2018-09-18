@@ -1,17 +1,14 @@
-\newcommand{\ttbar}{$\textrm{t}\bar{\textrm{t}}~$}
-\newcommand{\bbbar}{$\textrm{b}\bar{\textrm{b}}~$}
-\newcommand{\ptmiss}{$p_{T}^{\mathrm{miss}}~$}
-
 \chapter{Search for new physics using boosted H bosons and missing energy}
 \label{chap:analysis}
 
 \section{Motivation \& Strategy}
+\label{sec:mot}
 
-If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in nature which have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics - if the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more mome=ntum is imparted upon the particles involved in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating sufficiently to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC, one could suspect that there exists non-zero coupling with the electroweak H, Z, or W bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
+If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in nature which have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics - if the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more momentum is imparted upon the particles involved in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating enough to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC, one could suspect that there exists non-zero coupling with the electroweak H, Z, or W bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
 
 The Minimal Supersymmetric SM contains a $\mathbb{Z}_{2}$ symmetry in which all SM particles have charge -1 and all supersymmetric particles have charge +1, this is called R-parity \cite{susyprimer}. One direct consequence of R-parity is that the decay of a massive supersymmetric particle must include at least one supersymmetric particle in the final state. Necessarily this is the lightest such particle in the theory, denoted the lightest supersymmetric particle (LSP). If the LSP is electrically neutral it may escape detection, creating an imbalance in the net momentum of the event (similar to a neutrino). Therefore, events with a large momentum imbalance are also interesting as potential regions for SUSY.
 
-With this as motivation, we designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the $b\bar{b}$ decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with sparticle pair production which subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
+With this as motivation, we designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the \bbbar decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with sparticle pair production which subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
 
 \begin{figure}
 \centering
@@ -32,14 +29,14 @@ With this as motivation, we designed an analysis searching for physics beyond th
 \section{Baseline Selection and Object Definition}
 \label{sec:baseline}
 
-The salient feature of our analysis is the presence of two high-$p_{T}$ AK8 jets and large \ptmiss. Our most significant backgrounds are those that produce \ptmiss and can be divided into two categories depending on if it comes from a ``true'' or ``fake'' source. True \ptmiss arises from a neutrino or otherwise unobservable particle escaping our detector - a genuine imbalance in the detectable final-state momentum of the event. Fake \ptmiss arises from some sort of ``imperfection'' in our reconstruction process, for example the misidentification of a hadron. 
+The salient feature of our analysis is the presence of two high-\pt AK8 jets and large \ptmiss. Our most significant backgrounds are those that produce \ptmiss and can be divided into two categories depending on if it comes from a ``true'' or ``fake'' source. True \ptmiss arises from a neutrino or otherwise unobservable particle escaping our detector - a genuine imbalance in the detectable final-state momentum of the event. Fake \ptmiss arises from some sort of ``imperfection'' in our reconstruction process, for example the misidentification of a hadron. 
 
 We approach our background as being constituted of three primary types. Two of them involve the production of neutrinos and the third is a result of jet resolution:
 
 \begin{itemize}
 \item $Z\rightarrow\nu\bar{\nu}$ in which the neutrinos from the Z decay results in true \ptmiss (`Z-invisible').
-\item $W\rightarrow\ell\nu$ in which the lepton $\ell$ is not properly identified, resulting in the event not being vetoed, and the associated neutrino from the leptonic decay creating true \ptmiss (`lost-lepton'). The W boson can be produced through the decay of a top quark, either in single-top or $t\bar{t}$ events; $t\bar{t}$ events generate two W bosons, in which the other may decay into an AK8 jet. A W boson may additionally be produced directly in association with other jets.
-\item Jet production via QCD in which the $p_{T}$ of a jet is mis-measured, most commonly under-measured, creating a fake source of \ptmiss.
+\item $W\rightarrow\ell\nu$ in which the lepton $\ell$ is not properly identified, resulting in the event not being vetoed, and the associated neutrino from the leptonic decay creating true \ptmiss (`lost-lepton'). The W boson can be produced through the decay of a top quark, either in single-top or \ttbar events; \ttbar events generate two W bosons, in which the other may decay into an AK8 jet. A W boson may additionally be produced directly in association with other jets.
+\item Jet production via QCD in which the \pt of a jet is mis-measured, most commonly under-measured, creating a fake source of \ptmiss.
 \end{itemize}
 
 To mitigate these backgrounds, we establish a baseline selection choosing events with all-hadronic final states and missing transverse momentum (\ptmiss), as motivated by Figure~\ref{fig:sms}. The baseline selection is as follows:
@@ -91,7 +88,7 @@ The SM samples which enter as the primary backgrounds are listed in Table~\ref{t
 
 \begin{table}
 \centering
-\caption[SM  samples used in the analysis.]{SM  samples used in the analysis. $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$ is the total hadronic energy in the event. $\sigma$ is the cross section. $\int\mathcal{L} = N / \sigma$ is an alternative way to express the number of generated events.}
+\caption[SM samples used in the analysis.]{SM  samples used in the analysis. $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$ is the total hadronic energy in the event. $\sigma$ is the cross section. $\int\mathcal{L} = N / \sigma$ is an alternative way to express the number of generated events.}
 \label{tab:MCsamples}
 \begin{tabular}{cclll}
 \hline \hline
@@ -132,23 +129,23 @@ W+jets & $\ell{\nu}$ & [2500, $\infty$] & 0.039 & 6497.28\\
 \subsection{Signal Models}
 \label{sec:signal-models}
 
-For commissioning of the analysis technique (as well as the limit-setting procedure, see Section~\ref{sec:results}) Monte Carlo samples with our final-state signal topology were generated, based on the processes in Figure~\ref{fig:sms}. The signal sample follows the same processing chain as the SM samples. The mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed to 50 GeV, resulting in low $p_{T}$ SM quarks produced in the gluino $\tilde{g}$ decays. The mass of the neutralino $\chi^{0}_{1}$ (LSP) is fixed to 1 GeV. We have samples with a range of gluino $\tilde{g}$ masses from 750 to 2200 GeV. The $p_{T}$ distribution for the generated H bosons in these samples is seen in Figure~\ref{fig:GenHiggsBoost} for a number of gluino $\tilde{g}$ masses. Additionally the angular separation $\Delta R \equiv \sqrt{\Delta\phi^{2}+\Delta\eta^{2}}$ between the $b\bar{b}$ pair is shown. As the $p_{T}$ of a parent boson increases the $b\bar{b}$ pair from its decay tend to align, allowing complete reconstruction with a single AK8 jet.
+For commissioning of the analysis technique (as well as the limit-setting procedure, see Section~\ref{sec:results}) Monte Carlo samples with our final-state signal topology were generated, based on the processes in Figure~\ref{fig:sms}. The signal sample follows the same processing chain as the SM samples. The mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed to 50 GeV, resulting in low $p_{T}$ SM quarks produced in the gluino $\tilde{g}$ decays. The mass of the neutralino $\chi^{0}_{1}$ (LSP) is fixed to 1 GeV. We have samples with a range of gluino $\tilde{g}$ masses from 750 to 2200 GeV. The $p_{T}$ distribution for the generated H bosons in these samples is seen in Figure~\ref{fig:GenHiggsBoost} for a number of gluino $\tilde{g}$ masses. Additionally the angular separation $\Delta R \equiv \sqrt{\Delta\phi^{2}+\Delta\eta^{2}}$ between the $b\bar{b}$ pair is shown. As the $p_{T}$ of a parent boson increases the $b\bar{b}$ pair from its decay tend to align, allowing complete reconstruction with a single AK8 jet. It are the distributions in Figure~\ref{fig:GenHiggsBoost} which warrant our use of two such high-\pt AK8 jets.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.45\linewidth]{figs/leadHiggsPt.pdf}
-\includegraphics[width=0.45\linewidth]{figs/leadHiggsDr.pdf}\\
-\includegraphics[width=0.45\linewidth]{figs/subleadHiggsPt.pdf}
-\includegraphics[width=0.45\linewidth]{figs/subleadHiggsDr.pdf}\\
+\includegraphics[width=0.425\linewidth]{figs/leadHiggsPt.pdf}
+\includegraphics[width=0.425\linewidth]{figs/leadHiggsDr.pdf}\\
+\includegraphics[width=0.425\linewidth]{figs/subleadHiggsPt.pdf}
+\includegraphics[width=0.425\linewidth]{figs/subleadHiggsDr.pdf}\\
 \caption
 [Generator level distributions for the H bosons in the T5HH model.]
-{Generator level distributions for the highest (top row) and second highest (bottom row) p$_{T}$ H boson in the T5HH model. The plot on the left shows the $p_{T}$ of the H boson. The plot on right shows $\Delta R$ between the b-quark daughters - for large H $p_{T}$ the daughters become collimated.}
+{Generator level distributions for the highest (top row) and second highest (bottom row) \pt H boson in the T5HH model. The plot on the left shows the \pt of the H boson. The plot on right shows $\Delta R$ between the b-quark daughters - for large H \pt the daughters become collimated.}
 \label{fig:GenHiggsBoost}
 \end{figure}
 
 \section{Event Binning \& Background Estimation}
 
-The background estimation procedure makes use of what is known as an ``ABCD'' prediction in which the analysis phase space is divided into signal and sideband regions; scaling relations are applied to sideband yields to make predictions for the background in the signal regions. The events are categorized according to whether the two highest p$_{T}$ AK8 jets are a) in the signal or sideband mass region and b) have or have not been $\mathrm{b}\bar{\mathrm{b}}$ tagged.  A diagram of this partitioning is seen in Figure~\ref{fig:abcd}. An additional dimension is added by binning in \ptmiss: [300, 500 GeV], [500, 700 GeV], [700, $\infty$ GeV]. This gives a total of 2x3=6 signal and 4x3=12 sideband bins. The two signal regions A$_{1}$ and A$_{2}$ contain events with exactly one and exactly two jets being consistent with H/Z boson decay, respectively.
+The background estimation procedure makes use of what is known as an ``ABCD'' prediction in which the analysis phase space is divided into signal and sideband regions; scaling relations are applied to sideband yields to make predictions for the background in the signal regions. The events are categorized according to whether the two highest p$_{T}$ AK8 jets are a) in the signal or sideband mass region and b) have or have not been \bbbar tagged. A diagram of this partitioning is seen in Figure~\ref{fig:abcd}. An additional dimension is added by binning in \ptmiss: [300, 500 GeV], [500, 700 GeV], [700, $\infty$ GeV]. This additional binning, motivated by the \ptmiss distributions of Figure \ref{fig:met}, allows us to maximize sensitivity for both low and high \ptmiss signal. This gives a total of 2x3=6 signal and 4x3=12 sideband bins. The two signal regions A$_{1}$ and A$_{2}$ contain events with exactly one and exactly two jets being consistent with H/Z boson decay, respectively.
 
 \begin{figure}
 \centering
@@ -157,7 +154,17 @@ The background estimation procedure makes use of what is known as an ``ABCD'' pr
 \label{fig:abcd}
 \end{figure}
 
-Assuming that there is no correlation between the jet mass and the $b\bar{b}$ tagging one would expect that
+\begin{figure}
+\centering
+\includegraphics[width=0.425\textwidth]{figs/MET_baseline_LogY.pdf}
+\includegraphics[width=0.425\textwidth]{figs/MET_singleHiggsTag_LogY.pdf}
+\includegraphics[width=0.425\textwidth]{figs/MET_doubleHiggsTag_LogY.pdf}
+\includegraphics[width=0.425\textwidth]{figs/blankcanvas.pdf}
+\caption[MC distributions of \ptmiss after baseline selection.]{MC distributions of \ptmiss after baseline selection. The top right plot shows the single H-tagged region $A_{1}$, the bottom left plot shows the double H-tagged region $A_{2}$.}
+\label{fig:met}
+\end{figure}
+
+Assuming that there is no correlation between the jet mass and the \bbbar-tagging one would expect that:
 
 \begin{equation}
 \frac{A_{1}}{B_{1}} = \frac{A_{2}}{B_{2}} = \frac{C}{D}
@@ -173,12 +180,12 @@ The expected \ptmiss distribution from simulation is seen in the stacked histogr
 
 \begin{figure}
 \centering
-\begin{subfigure}[b]{0.49\textwidth}
+\begin{subfigure}[b]{0.425\textwidth}
 \centering
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/MCclosure_singleHiggsRegionTotal.pdf}
 \caption{The single Higgs tag region (A$_{1}$).}
 \end{subfigure}
-\begin{subfigure}[b]{0.49\textwidth}
+\begin{subfigure}[b]{0.425\textwidth}
 \centering
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/MCclosure_doubleHiggsRegionTotal.pdf} 
 \caption{The double Higgs tag region (A$_{2}$).}
