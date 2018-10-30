@@ -3,7 +3,7 @@
 
 \section{Basic Elements From the Detector} 
 
-Depending on their nature, the particles emanating from the collision leave various forms of energy deposits in the different subdetectors. All these signals need to be aggregated and processed to allow for the reconstruction of what could be considered particle-levefl information. The first step in this process consists of building \textit{Particle Flow elements} using information only locally within each subdetector. There are four primary elements from the subdetectors: tracks from the tracker, calorimeter deposits in each of the ECAL and HCAL, and tracks from the muon detector. The elements are eventually combined via the \textit{Particle Flow algorithm}, yielding reconstructed particles used for physics analysis.
+Depending on their nature, the particles emanating from the collision leave various forms of energy deposits in the different subdetectors. All these signals need to be aggregated and processed to allow for the reconstruction of what could be considered particle-level information. The first step in this process consists of building \textit{Particle Flow elements} using information only locally within each subdetector. There are four primary elements from the subdetectors: tracks from the tracker, calorimeter deposits in each of the ECAL and HCAL, and tracks from the muon detector. The elements are eventually combined via the \textit{Particle Flow algorithm}, yielding reconstructed particles used for physics analysis.
 
 Note that the definition of any object within the detector makes use of additional selection criteria which are not generally discussed here. For instance, one may require that a track in the tracker have at least 3 hits in the pixel detector, or that a calorimeter hit is above some minimum threshold energy. The effects of these criteria are generally a balance between the reconstruction efficiency of any given particle and the probability to misidentify a particle (purity).
 
@@ -26,7 +26,7 @@ Electron tracking is performed with a slightly modified algorithm to better acco
 
 \subsection{ECAL \& HCAL Clusters}
 
-\textit{Superclusters} are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (8) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Superclusters are built separately in the barrel and endcap. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width $\sigma$ scale set by the crystal size.
+\textit{Superclusters} in the ECAL are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (up to 8) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Superclusters are built separately in the barrel and endcap. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width $\sigma$ scale set by the crystal size.
 
 \subsection{Muon Tracks}
 
@@ -91,16 +91,10 @@ In addition to tagging jets as originating from a single b quark, tagging of jet
 
 \subsection{Invisible Particles $\rightarrow p_{T}^{\mathrm{miss}}$}
 
-Neutrinos are so weakly interacting that they leave no energy deposits in CMS and cannot be detected by our experiment. Although direct detection is not possible, we are able to infer their presence. The net momentum of the protons involved in the collisions are zero, but the individual partons (quarks and gluons) within the proton carry unknown fractions of this total (longitudinal) momentum. Only in the transverse direction may we require momentum conservation. We define this imbalance as:
+Neutrinos are so weakly interacting that they leave no energy deposits in CMS and are not detected by our experiment. Although direct detection is not possible, we are able to infer their presence. The net momentum of the protons involved in the collisions are zero, but the individual partons (quarks and gluons) within the proton carry unknown fractions of this total (longitudinal) momentum. Only in the transverse direction may we require momentum conservation. We define this imbalance as:
 
 \begin{equation}
 p_{T}^{\mathrm{miss}}  \equiv \left | - \sum_{i} \vec{p_{T}} \right |,~\forall~\textrm{particles~i}.
 \end{equation}
 
-In the case all the particles in the event are perfectly reconstructed, $p_{T}^{\mathrm{miss}}$ would equal zero. Large values indicate the presence of an undetected particle, such as a SM neutrino or something more exotic like the light supersymmetric neutralinos $\chi^{0}_{0}, \chi^{0}_{1}$. This quantity is sometimes labeled as \textit{MET}.
-
-\subsection{$\pi^{0}$ meson}
-
-Charged and neutral $\pi$ mesons are the lightest of all hadrons with masses of 140 and 135 MeV, respectively. Pions are copiously produced within hadronic interactions and often contain much of the jet energy. As a rule-of-thumb, the charged to neutral energy fraction within a jet is approximately two-thirds to one-third (to match the respective pion multiplicities).
-
-Because the neutral pion branching to photons is over 98\% and its lifetime is relatively short (25.5$\,$nm), the detection of neutral pions therefore involves reconstruction of photon pairs with the appropriate invariant mass. This is simple enough in principle, but as the pion $p_{T}$ increases the photons from the pion decay become more and more collimated. Eventually, for pions above about 7 GeV, individual photons are not able to be resolved because of the ECAL resolution (crystal size), the same crystal gets the energy from both photons. This was the primary motivation for the Preshower ECAL detector.
+If all particles in the event are perfectly reconstructed, $p_{T}^{\mathrm{miss}}$ would equal zero. Large values indicate the presence of an undetected particle, such as a SM neutrino or something more exotic like the light supersymmetric neutralinos $\chi^{0}_{0}, \chi^{0}_{1}$. This quantity is sometimes labeled as \textit{MET}.

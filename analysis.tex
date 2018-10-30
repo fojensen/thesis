@@ -1,14 +1,14 @@
-\chapter{Search for new physics using boosted H bosons and missing energy}
+\chapter{Search for supersymmetry using boosted Higgs bosons and missing transverse momentum in proton-proton collisions at 13 TeV}
 \label{chap:analysis}
 
 \section{Motivation \& Strategy}
 \label{sec:mot}
 
-If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in nature which have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics - if the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more momentum is imparted upon the particles involved in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating enough to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC, one could suspect that there exists non-zero coupling with the electroweak H, Z, or W bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
+If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in nature that have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics. If the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more momentum is imparted upon the particles in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating enough to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC it is possible that there exists non-zero coupling with the electroweak H, Z, or W$^{\pm}$ bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
 
-The Minimal Supersymmetric SM contains a $\mathbb{Z}_{2}$ symmetry in which all SM particles have charge -1 and all supersymmetric particles have charge +1, this is called R-parity \cite{susyprimer}. One direct consequence of R-parity is that the decay of a massive supersymmetric particle must include at least one supersymmetric particle in the final state. Necessarily this is the lightest such particle in the theory, denoted the lightest supersymmetric particle (LSP). If the LSP is electrically neutral it may escape detection, creating an imbalance in the net momentum of the event (similar to a neutrino). Therefore, events with a large momentum imbalance are also interesting as potential regions for SUSY.
+The Minimal Supersymmetric SM contains a $\mathbb{Z}_{2}$ symmetry in which all SM particles have charge ${-}1$ and all supersymmetric particles have charge ${+}1$, this is called R-parity \cite{susyprimer}. One direct consequence of R-parity conservation is that the decay of a massive supersymmetric particle must include at least one supersymmetric particle in the final state. Necessarily this is the lightest such particle in the theory, denoted the lightest supersymmetric particle (LSP). If the LSP is electrically neutral it may escape detection, creating an imbalance in the net momentum of the event (similar to a neutrino). Therefore, events with a large momentum imbalance are also interesting as potential regions for SUSY. For this thesis, we assume R-parity is conserved.
 
-With this as motivation, we designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the \bbbar decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with sparticle pair production which subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
+With this as a motivation, the authors (\cite{CMS-SUS-17-006}) designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the \bbbar decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with sparticle pair production which subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
 
 \begin{figure}
 \centering
@@ -29,7 +29,7 @@ With this as motivation, we designed an analysis searching for physics beyond th
 \section{Baseline Selection and Object Definition}
 \label{sec:baseline}
 
-The salient feature of our analysis is the presence of two high-\pt AK8 jets and large \ptmiss. Our most significant backgrounds are those that produce \ptmiss and can be divided into two categories depending on if it comes from a ``true'' or ``fake'' source. True \ptmiss arises from a neutrino or otherwise unobservable particle escaping our detector - a genuine imbalance in the detectable final-state momentum of the event. Fake \ptmiss arises from some sort of ``imperfection'' in our reconstruction process, for example the misidentification of a hadron. 
+The salient feature of our analysis is the presence of two high-\pt AK8 jets and large \ptmiss. Our most significant backgrounds are those which produce a large amount of \ptmiss; these are divided into two categories depending on if it comes from a ``true'' or ``fake'' source. True \ptmiss arises from a neutrino or otherwise unobservable particle escaping our detector, i.e. a genuine imbalance in the detectable final-state momentum of the event. Fake \ptmiss arises from some sort of ``imperfection'' in our detector or reconstruction process, primarily when the \pt of a jet is measured poorly.
 
 We approach our background as being constituted of three primary types. Two of them involve the production of neutrinos and the third is a result of jet resolution:
 
@@ -54,9 +54,9 @@ To remove events with top or W production in which the W decays to a tau. As an 
 This cut requires that the difference in $\phi$ between the \ptmiss vector and each of the four highest-p$_{T}$ jets is sufficiently large to remove events in which a jet has been under-measured giving rise to fake \ptmiss. If less than four AK4 jets are available the additional cuts are removed.
 \end{itemize}
 
-To tag jets from $H \rightarrow b\bar{b}$ a dedicated MVA algorithm has been developed by the CMS collaboration to discriminate these signal jets from those produced by QCD processes \cite{bbtagger}. The algorithm makes use of the kinematics expected by having secondary vertices arising from the b-quark decays. Discriminating variables include the number, mass, energy, and position of the secondary vertices in the jets. Additional variables include the distance of closest approach between the vertices and tracks (when projected backwards); tracks arising from displaced vertices are not expected to project back to the primary interaction point. The distribution of this discriminator for the two highest-p$_{T}$ AK8 jets are seen in the left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). The stacked histogram and solid lines shows the distribution after baseline selection for simulation and two representative signal points, respectively. Appendix~\ref{chap:bb} details the \bbbar-tagger in more depth.
+To tag jets from $H \rightarrow b\bar{b}$ decay, a dedicated machine learning algorithm has been developed by the CMS collaboration to discriminate these from those produced by QCD processes \cite{bbtagger}. The algorithm makes use of the kinematics expected by having secondary vertices arising from the b-quark decays. Discriminating variables include the number, mass, energy, and position of the secondary vertices in the jets. Additional variables include the distance of closest approach between the vertices and tracks (when projected backwards); tracks arising from displaced vertices are not expected to project back to the primary interaction point. The distributions of this discriminator for the two highest-p$_{T}$ AK8 jets are seen in the left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. The stacked histogram and solid lines shows the distribution after baseline selection for simulation and two representative signal points, respectively. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). Appendix~\ref{chap:bb} details the \bbbar-tagger in more depth. 
 
-Additionally, to tag H or Z bosons a requirement is made on the invariant mass of the jet. We use the mass of the so called ``pruned'' jet - a method involving removal of soft and wide-angle radiation inside the jet \cite{prunedmass}. The pruning is very powerful for discriminating QCD jets from those produced by heavy particle decay. Our tagging requires the jet mass to fall within a window [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in Figure~\ref{fig:ak8dists}. The same identification criteria are applied to tag an AK8 jet as either an H or Z boson (there is no distinction made).
+Additionally, to tag H or Z bosons, a requirement is made on the invariant mass of the jet. We use the mass of the so called ``pruned'' jet, which is a method involving removal of soft and wide-angle radiation inside the jet \cite{prunedmass}. The pruning is very powerful for discriminating QCD jets from those produced by heavy particle decays. Our tagging requires the jet mass to fall within a window [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in Figure~\ref{fig:ak8dists}. The same identification criteria are applied to tag an AK8 jet as either an H or Z boson (there is no distinction made).
 
 \begin{figure}
 \centering
@@ -71,20 +71,20 @@ Additionally, to tag H or Z bosons a requirement is made on the invariant mass o
 
 \section{Dataset \& Trigger}
 
-We use a total of 35.9 fb$^{-1}$ of data collected by the CMS experiment in 2016. Events are selected with the requirement of at least 100 GeV of \ptmiss calculated at high-level trigger (\texttt{HLT\_PFMET100\_PFMHT100\_IDTight}, HLT). To improve the trigger efficiency, the logical OR of similar triggers of thresholds 110, 120$\,$GeV are included.
+We use a total of 35.9 fb$^{-1}$ of data collected by the CMS experiment in 2016. Events are selected with the requirement of at least 100 GeV of \ptmiss calculated at the high-level trigger (\texttt{HLT\_PFMET100\_PFMHT100\_IDTight}, HLT). To improve the trigger efficiency, the logical OR of similar triggers of thresholds 110 and 120$\,$GeV are included.
 
 The HLT is seeded at level-1 (L1) by the requirement of at least 100 GeV of missing transverse energy (\texttt{L1\_ETM100}). Missing transverse energy is calculated by the vectorial sums of the regional energy deposits in the calorimeters (and rotation by 180$^{\circ}$). This is additionally ORed with similar seeds of thresholds 90, 80, 70, 60, 50 GeV. Two additional ORed seeds require calorimeter jets with $p_{T}$ of at least 60 GeV (\texttt{L1\_ETM60\_Jet60\_dPhi\_Min0p4, L1\_DoubleJetC60\_ETM60}).
 
-The trigger efficiency is defined as $\epsilon = N_{1}/N_{2}$, where $N_{2}$ is the total number of events passing baseline selection and $N_{1}$ is the total number of events selected by the trigger and passing baseline selection. In order to calculate this efficiency, we need to form an additional (hopefully independent) dataset by selecting events via a \textit{reference trigger}. Our reference trigger requires a single electron of $p_{T}>27\,\textrm{GeV}$, in addition to the baseline selection we require these events to contain at least three AK4 jets and exactly one reconstructed electron of $p_{T}>25\,\textrm{GeV}$. The signal region trigger is found to be greater than 98\% for events with \ptmiss$>$250 GeV and $H_{T}>300\,\textrm{GeV}$ \cite{CMS-SUS-16-033}. This is applied as a systematic error to the final results.
+The trigger efficiency is defined as $\epsilon = N_{1}/N_{2}$, where $N_{2}$ is the total number of events passing baseline selection and $N_{1}$ is the total number of events selected by the trigger and passing baseline selection. In order to calculate this efficiency, we need to form an additional (hopefully independent) dataset by selecting events via a \textit{reference trigger}. Our reference trigger requires a single electron of $p_{T}>27\,\textrm{GeV}$, in addition to the baseline selection we require these events to contain at least three AK4 jets and exactly one reconstructed electron of $p_{T}>25\,\textrm{GeV}$. The signal region trigger is found to be greater than 98\% for events with \ptmiss$>$250 GeV and $H_{T}>300\,\textrm{GeV}$ \cite{CMS-SUS-16-033}. A correction for the trigger inefficiency is accounted for by introducing a systematic error of 2\% to the final results.
 
 \section{Event Simulation}
 
-Event simulation of the proton-proton collisions proceeds in several steps. MadGraph@NLO2.2.2 \cite{Alwall:2014hca} is a MC event generate used to simulate proton-proton events. Parton distribution functions, used to model the quark and gluon momenta distribution within the proton, are taken from NNPDF 3.0 \cite{Ball:2014uwa}. Parton showering, which models quark and gluon evolution into hadrons, or final/initial state radiation, is performed with Pythia \cite{pythiacite}. The final-state particles are traced through the detector using GEANT. For example, this includes the effect of the magnetic field, interactions with both the dead and sensitive detector material, and additional particle decay \cite{Agostinelli:2002hh}. This simulated data is processed in the same manner as that of the physical experiment.
+Event simulation of the proton-proton collisions proceeds in several steps. MadGraph@NLO2.2.2 \cite{Alwall:2014hca} is a MC event generator used to simulate proton-proton events. Parton distribution functions, used to model the quark and gluon momentum distributions within the proton, are taken from NNPDF 3.0 \cite{Ball:2014uwa}. Parton showering, which models quark and gluon evolution into hadrons, or final/initial state radiation, is performed with Pythia \cite{pythiacite}. The final-state particles are traced through the detector using GEANT. This includes the effect of the magnetic field, interactions with both the inert and sensitive detector material, and additional particle decays \cite{Agostinelli:2002hh}. This simulated data is processed in the same manner as that of the physical experiment.
 
 \subsection{Standard Model Processes}
 \label{sec:smp}
 
-The SM samples which enter as the primary backgrounds are listed in Table~\ref{tab:MCsamples} (see Section~\ref{sec:smbkg} for a discussion of the background). All samples are generated with a pileup distribution with an average of 25 interactions per bunch crossing and a 25ns interval between bunches. For acceptable statistics over a wide range of parameter space, the  samples are often binned in $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$. As our event selection requires at least two AK8 jets with $p_{T}>300\,\textrm{GeV}$ we roughly operate in the regime of $\mathrm{H_{T}}>600\,\textrm{GeV}$.
+The SM samples that enter as the primary backgrounds are listed in Table~\ref{tab:MCsamples} (see Section~\ref{sec:smbkg} for a discussion of the background). All samples are generated with a pileup distribution with an average of 25 interactions per bunch crossing and a 25 ns interval between bunches. For acceptable statistics over a wide range of parameter space, the  samples are often binned in $\mathrm{H_{T}} \equiv \sum_{AK4\,jets}p_{T}$. As our event selection requires at least two AK8 jets with $p_{T}>300\,\textrm{GeV}$ we roughly operate in the regime of $\mathrm{H_{T}}>600\,\textrm{GeV}$.
 
 \begin{table}
 \centering
@@ -129,7 +129,9 @@ W+jets & $\ell{\nu}$ & [2500, $\infty$] & 0.039 & 6497.28\\
 \subsection{Signal Models}
 \label{sec:signal-models}
 
-For commissioning of the analysis technique (as well as the limit-setting procedure, see Section~\ref{sec:results}) Monte Carlo samples with our final-state signal topology were generated, based on the processes in Figure~\ref{fig:sms}. The signal sample follows the same processing chain as the SM samples. The mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is fixed to 50 GeV, resulting in low $p_{T}$ SM quarks produced in the gluino $\tilde{g}$ decays. The mass of the neutralino $\chi^{0}_{1}$ (LSP) is fixed to 1 GeV. We have samples with a range of gluino $\tilde{g}$ masses from 750 to 2200 GeV. The $p_{T}$ distribution for the generated H bosons in these samples is seen in Figure~\ref{fig:GenHiggsBoost} for a number of gluino $\tilde{g}$ masses. Additionally the angular separation $\Delta R \equiv \sqrt{\Delta\phi^{2}+\Delta\eta^{2}}$ between the $b\bar{b}$ pair is shown. As the $p_{T}$ of a parent boson increases the $b\bar{b}$ pair from its decay tend to align, allowing complete reconstruction with a single AK8 jet. The distributions in Figure~\ref{fig:GenHiggsBoost} motivate our use of two such high-\pt AK8 jets.
+For commissioning of the analysis technique (as well as the limit-setting procedure, see Section~\ref{sec:results}) Monte Carlo samples with our final-state signal topology were generated, based on the processes in Figure~\ref{fig:sms}. The signal sample follows the same processing chain as the SM samples. Samples are generated with a range of gluino $\tilde{g}$ masses from 750 to 2200 GeV. The mass splitting between the gluino $\tilde{g}$ and neutralino $\tilde{\chi}_{2}^{0}$ is chosen to be fixed at 50 GeV, resulting in low $p_{T}$ SM quarks produced at the decay vertex. The mass of the neutralino $\chi^{0}_{1}$ (LSP) is fixed to 1~GeV.
+
+The $p_{T}$ distribution for the generated H bosons in these samples is seen in Figure~\ref{fig:GenHiggsBoost} for a number of gluino $\tilde{g}$ masses. Additionally, the angular separation $\Delta R \equiv \sqrt{\Delta\phi^{2}+\Delta\eta^{2}}$ between the $b\bar{b}$ pair is shown. As the $p_{T}$ of a parent boson increases, the $b\bar{b}$ pair from its decay tend to align, allowing complete reconstruction with a single AK8 jet. The distributions in Figure~\ref{fig:GenHiggsBoost} motivate our use of two such high-\pt AK8 jets.
 
 \begin{figure}
 \centering
@@ -139,7 +141,7 @@ For commissioning of the analysis technique (as well as the limit-setting proced
 \includegraphics[width=0.425\linewidth]{figs/subleadHiggsDr.pdf}\\
 \caption
 [Generator level distributions for the H bosons in the T5HH model.]
-{Generator level distributions for the highest (top row) and second highest (bottom row) \pt H boson in the T5HH model. The plot on the left shows the \pt of the H boson. The plot on right shows $\Delta R$ between the b-quark daughters - for large H \pt the daughters become collimated.}
+{Generator level distributions for the highest (top row) and second highest (bottom row) \pt H boson in the T5HH model. The plot on the left shows the \pt of the H boson. The plot on right shows $\Delta R$ between the b-quark daughters; for large H \pt the daughters become collimated.}
 \label{fig:GenHiggsBoost}
 \end{figure}
 
@@ -160,11 +162,11 @@ The background estimation procedure makes use of what is known as an ``ABCD'' pr
 \includegraphics[width=0.425\textwidth]{figs/MET_singleHiggsTag_LogY.pdf}
 \includegraphics[width=0.425\textwidth]{figs/MET_doubleHiggsTag_LogY.pdf}
 \includegraphics[width=0.425\textwidth]{figs/blankcanvas.pdf}
-\caption[MC distributions of \ptmiss after baseline selection.]{MC distributions of \ptmiss after baseline selection. The top right plot shows the single H-tagged region $A_{1}$, the bottom left plot shows the double H-tagged region $A_{2}$.}
+\caption[MC distributions of \ptmiss after baseline selection.]{MC distributions of \ptmiss after baseline selection. Clockwise from top left: inclusive, the single H-tagged region $A_{1}$, the double H-tagged region $A_{2}$.}
 \label{fig:met}
 \end{figure}
 
-Assuming that there is no correlation between the jet mass and the \bbbar-tagging one would expect that:
+Assuming that there is no correlation between the jet mass and the \bbbar-tagging, one would expect that:
 
 \begin{equation}
 \frac{A_{1}}{B_{1}} = \frac{A_{2}}{B_{2}} = \frac{C}{D}
@@ -180,14 +182,14 @@ The expected \ptmiss distribution from simulation is seen in the stacked histogr
 
 \begin{figure}
 \centering
-\begin{subfigure}[b]{0.425\textwidth}
+\begin{subfigure}[b]{0.49\textwidth}
 \centering
-\includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/MCclosure_singleHiggsRegionTotal.pdf}
+\includegraphics[trim={5px 5px 5px 5px},clip,width=0.99\textwidth]{figs/MCclosure_singleHiggsRegionTotal.pdf}
 \caption{The single Higgs tag region (A$_{1}$).}
 \end{subfigure}
-\begin{subfigure}[b]{0.425\textwidth}
+\begin{subfigure}[b]{0.49\textwidth}
 \centering
-\includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/MCclosure_doubleHiggsRegionTotal.pdf} 
+\includegraphics[trim={5px 5px 5px 5px},clip,width=0.99\textwidth]{figs/MCclosure_doubleHiggsRegionTotal.pdf} 
 \caption{The double Higgs tag region (A$_{2}$).}
 \end{subfigure}
 \caption{\ptmiss distributions and predictions in the signal regions using simulation only.}
@@ -204,19 +206,19 @@ The expected \ptmiss distribution from simulation is seen in the stacked histogr
 %\label{fig:bkgfrac}
 %\end{figure}
 
-In order to study the expected backgrounds in data ($Z\rightarrow\nu\bar{\nu}$, $\mathrm{t}\bar{\mathrm{t}} \rightarrow \ell \nu q q'$ $W\rightarrow\ell\nu$, QCD), we define three control regions which are enhanced in processes representative to the background. The event selection is the same as applied to the nominal signal and sideband regions, but with some defining orthogonal condition:
+In order to study the expected backgrounds in data ($Z\rightarrow\nu\bar{\nu}$, $\mathrm{t}\bar{\mathrm{t}} \rightarrow \ell \nu q q'$, $W\rightarrow\ell\nu$, QCD), we define three control regions that are enhanced in processes representative of the background. The event selection is the same as applied to the nominal signal and sideband regions, but with some defining orthogonal condition:
 
 \begin{itemize}
 
-\item A control region with a single photon. For high-$p_{T}$, photons and Z bosons are both massless, neutral, gauge bosons and therefore their kinematics are expected to be similar.  ``Artificial'' removal of the photon from the reconstruction (i.e. ignore its calorimeter deposit) results in event topologies phenomenologically similar to $Z\rightarrow\nu\bar{\nu}$.
+\item A control region with a single photon. When a Z boson has sufficiently large $p_{T}$ such that its mass is negligible, it will be expected to have similar kinematics to the photon (the other massless, neutral, electroweak gauge boson). ``Artificial'' removal of the photon from the reconstruction (i.e. ignoring its calorimeter clusters) results in events similar to those of $Z\rightarrow\nu\bar{\nu}$ events.
 
 \item A control region with a single lepton. The topology of events from direct W or top quark production is the same regardless if the electron or muon is identified as such. 
 
-\item A control region defined by the logical inversion of the low-$\Delta\phi$ cut. This explicitly selects events in which the AK4 jet momentum was likely under-measured, resulting in close alignment with \ptmiss.
+\item A control region defined by the logical inversion of the low-$\Delta\phi$ cut. This explicitly selects events in which the AK4 jet momentum was likely under-measured, resulting in close alignment with the \ptmiss vector.
 
 \end{itemize}
 
-As they are orthogonal to the analysis region, we are able to test the validity of the background estimation technique independently \textbf{within} each of the three control regions. By comparing the prediction of the yields using the ABCD method with those observed, the validity of the technique can be verified for that particular background category. The comparisons for the single-photon, single-lepton and low-$\Delta\phi$ control regions can be seen in Figure~\ref{fig:closure}. $\kappa$ in the bottom panel is defined as the ratio of the true event yield to the prediction. $\kappa=1$ represents the case in which the prediction perfectly matches the observation. These comparisons are used for commissioning of the background estimation technique only.
+As they are orthogonal to the analysis region, we are able to test the validity of the background estimation technique independently \textbf{within} each of the three control regions. By comparing the prediction of the yields using the ABCD method with those observed, the validity of the technique can be verified for that particular background category. The comparisons for the single-photon, single-lepton and low-$\Delta\phi$ control regions can be seen in Figure~\ref{fig:closure}. $\kappa$ in the bottom panel is defined as the ratio of the true event yield to the prediction. $\kappa=1$ represents the case in which the prediction perfectly matches the observation. These results are used for commissioning of the background estimation technique only.
 
 \begin{figure}
 \centering
@@ -271,7 +273,7 @@ A_{1, 2}^{\mathrm{predicted}} = \kappa \cdot \left(B_{1, 2} \cdot \ \frac{C}{D}\
 
 These values of $\kappa$ are those which we have already seen in Figure~\ref{fig:MCclosure}.
 
-The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling of  in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization of  in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost-lepton, and QCD background  samples. Rare processes (e.g. diboson) are taken directly from MC
+The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization of  in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost-lepton, and QCD background  samples. Rare processes (e.g. diboson) are taken directly from MC
 
 First consider how the yield N predicted by  in an arbitrary bin (of 18) is the sum of the yields in the different  datasets ($t\bar{t}$ and $W\rightarrow\ell\nu$ are grouped as they together represent the lost-lepton background):
 
@@ -371,7 +373,7 @@ $0.49\pm0.02$ & $0.40\pm0.05$ & $0.35\pm 0.08$ \\
 \end{tabular}
 \end{table}
 
-The scale factors are then applied to the  samples to give yields which better reflect data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the  yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} ~and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosure} relative to Figure~\ref{fig:MCclosuresf} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian toys for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
+The scale factors are then applied to the samples to give yields which better reflect data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the  yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} ~and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosure} relative to Figure~\ref{fig:MCclosuresf} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian toys for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
 
 \begin{table}
 \caption{The $\kappa$ factor computed by throwing Gaussian toys for the scale factors.}
@@ -394,14 +396,14 @@ The scale factors are then applied to the  samples to give yields which better r
 
 \begin{figure}
 \centering
-\begin{subfigure}[b]{0.425\textwidth}
+\begin{subfigure}[b]{0.49\textwidth}
 \centering
-\includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/MCclosureSF_singleHiggsRegionTotal.pdf}
+\includegraphics[trim={5px 5px 5px 5px},clip,width=0.99\textwidth]{figs/MCclosureSF_singleHiggsRegionTotal.pdf}
 \caption{The single Higgs tag region (A$_{1}$).}
 \end{subfigure}
-\begin{subfigure}[b]{0.425\textwidth}
+\begin{subfigure}[b]{0.49\textwidth}
 \centering
-\includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/MCclosureSF_doubleHiggsRegionTotal.pdf} 
+\includegraphics[trim={5px 5px 5px 5px},clip,width=0.99\textwidth]{figs/MCclosureSF_doubleHiggsRegionTotal.pdf} 
 \caption{The double Higgs tag region (A$_{2}$).}
 \end{subfigure}
 \caption{Signal region \ptmiss distributions using scale-factor corrected simulation.}
@@ -462,7 +464,7 @@ $>700$ GeV  & 26.79 $\pm$ 1.50 & 0.99 $\pm$ 0.53 & 0.16 $\pm$ 0.086 & 0 $\pm$ 0 
 
 \subsection{Sideband Yields \& Predictions}
 
-We have studied the background estimation technique in data and found the results to be acceptable. We then calculated $\kappa$, the correction to the ABCD prediction, using scale factors from data to best correct the normalization of the MC components. We can now use the observed yields in the sideband regions to form the background prediction via the ABCD method. Figure~\ref{fig:UnblindCR} shows the sideband yields in both data and the scale factor corrected MC - we see that the two agree within statistical errors. Table~\ref{tab:tab} tabulates the data yields alongside the full background prediction including $\kappa$.
+We have studied the background estimation technique in data control regions and found the predictions to be statistically consistent with the observed yields. We then calculated the correction to the ABCD prediction $\kappa$, using scale factors derived from control regions in data to best correct the normalization of the MC components. We can now use the observed yields in the sideband regions to form the background prediction via the ABCD method. Figure~\ref{fig:UnblindCR} shows the sideband yields in both data and the scale factor corrected MC. We see that the two agree within statistical errors. Table~\ref{tab:tab} tabulates the data yields alongside the full background prediction including $\kappa$.
 
 \begin{figure}
 \centering
@@ -471,7 +473,7 @@ We have studied the background estimation technique in data and found the result
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/Unblinding_tagSB.pdf}
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/Unblinding_doubletagSB.pdf}\\
 \caption
-[Sideband region \ptmiss distributions of data and scale-factor corrected simulation.]{Sideband region \ptmiss distributions comparing data and scale-factor corrected simulation. The hashed red distribution denote the prediction from simulation; the solid points denote the observed yields in data.}
+[Sideband region \ptmiss distributions of data and scale-factor corrected simulation.]{Sideband region \ptmiss distributions comparing data and scale-factor corrected simulation. The hatched black region denotes the prediction from simulation; the solid points denote the observed yields in data.}
 \label{fig:UnblindCR}
 \end{figure}
 
@@ -497,23 +499,23 @@ $A_{2}$ & [700, $\infty$ GeV] & 1     & 4     & 28   & 0.62 $\pm$ 0.30 & 0.09$^{
 \label{tab:tab}
 \end{table}
 
-\section{Signal Systematics}
+\section{Signal Systematic Uncertainties}
 \label{sec:signalsys}
 We consider a variety of systematic uncertainties on the signal efficiency and distribution. Some are common to more 
-inclusive SUSY analyses \cite{RA2b:Moriond} and there are additional systematics related to $b\bar{b}$ tagging efficiency and 
+inclusive SUSY analyses \cite{RA2b:Moriond} and there are additional systematic uncertainties related to $b\bar{b}$ tagging efficiency and 
 the effect of the pruned mass scale and resolution on the signal efficiency.  
 \begin{itemize}
-\item {\bf Luminosity:} The recommendation for the 2016 dataset is currently a flat uncertainty of 2.5\%.
-\item {\bf Isolated track veto:} A flat uncertainty of 2\% is assigned to the signal samples to account for any data/ differences based on the study from the 2015 analysis \cite{RA2b:Moriond}.
-\item {\bf  statistics:} The sign fal  sample statistical uncertainty is generally 2-4\% .
-\item {\bf Trigger efficiency:} The effect of the uncertainty on the signal yield is about 2\%.
-\item {\bf Pileup reweighting:} The sensitivity to the pileup distribution was studied for various benchmark signal models by comparing events with $n_{\textrm{vtx}} < 20$ (low PU) or $n_{\textrm{vtx}} \geq 20$ (high PU). Accordingly, no pileup reweighting is applied to the signal  samples and no associated uncertainty is assessed.
+\item {\bf Luminosity:} The calculated uncertainty for the for the 2016 dataset is 2.5\% \cite{CMS-PAS-LUM-17-001}.
+\item {\bf Isolated Track Veto:} An uncertainty of 2\% is assigned to the signal samples to account for any data/MC differences based on the study from the 2015 analysis \cite{RA2b:Moriond}.
+\item {\bf Statistical Uncertainty:} The signal sample statistical uncertainty is generally 2-4\%.
+\item {\bf Trigger Efficiency:} The effect of the uncertainty on the signal yield is about 2\%.
+\item {\bf Pileup Reweighting:} The sensitivity to the pileup distribution was studied for various benchmark signal models by comparing events with $n_{\textrm{vtx}} < 20$ (low PU) or $n_{\textrm{vtx}} \geq 20$ (high PU). As no difference was observed, pileup reweighting is not applied and no associated uncertainty is assessed.
 \item {\bf ISR:} An ISR correction is derived from tt events, with a selection requiring two lep-
 tons (electrons or muons) and two b-tagged jets, implying that any other jets in the
 event arise from ISR. The correction factors are 1.000, 0.920, 0.821, 0.715, 0.662, 0.561,
-0.511 for NISR = 0, 1, 2, 3, 4, 5, 6+. The corrections are applied to the simulated signal jet
-samples with an additional normalization factor, typically ∼1.15 (depending on the signal model), to ensure the overall cross section of the sample remains constant. The systematic uncertainty in these corrections is chosen to be half of the deviation from unity for each correction factor. The effect on the yield ranges from $0.0–1\%$, with the largest effect at high \ptmiss.
-\item {\bf Scales:} The uncertainty is calculated using the envelope of the weights from varying the renormalization and factorization scales, $\mu_{R}$ and $\mu_{F}$,by a factor of 2 \cite{Cacciari:2003fi, Catani:2003zt}. The effect on the yield of is less than 0.1\%.
+0.511 for NISR = 0, 1, 2, 3, 4, 5, 6+.
+The corrections are applied to the simulated signal jet samples with an additional normalization factor, typically about 1.15 (depending on the signal model), to ensure the overall cross section of the sample remains constant. The systematic uncertainty in these corrections is chosen to be half of the deviation from unity for each correction factor, with the largest effect at high \ptmiss.
+\item {\bf Scales:} The uncertainty is calculated using the envelope of the weights from varying the renormalization and factorization scales, $\mu_{R}$ and $\mu_{F}$,by a factor of 2 \cite{Cacciari:2003fi, Catani:2003zt}. The effect on the yield is less than 0.1\%.
 \item {\bf Jet Energy Corrections:} The jet energy corrections (JECs) are varied using the $p_{T}$-
 and $\eta$-dependent jet energy scale uncertainties from the official database.
 These variations are propagated into the various jet-dependent variables, including: $H_{T}$, MET, $\Delta\phi(\textrm{MET},j_{i})$.
@@ -632,7 +634,7 @@ The observed yields, along with the background predictions, are seen in Table~\r
 \end{tabular}
 \end{table}
 
-A visual representation of the one event in the double-H tagged signal bin is seen in Figure~\ref{fig:fireworks}. The purple line represents \ptmiss=426 GeV. The three yellow cones represent the AK8 jets labeled with $p_{T}$.  Note the two additional objects not satisfying our object definition but still plotted in the representation a) the additional low-$p_{T}$ and low mass AK8 jet b) the $p_{T}$=18 GeV muon (red line) suffers from poor reconstruction properties.
+A visual representation of the one event in the double-H tagged signal bin is seen in Figure~\ref{fig:fireworks}. The purple line represents \ptmiss=426 GeV. The three yellow cones represent the AK8 jets labeled with $p_{T}$.  Note two additional objects not satisfying our object definition but still plotted in the representation: a) The additional low-$p_{T}$ and low mass jet likely from SM QCD and b) the $p_{T}$=18 GeV muon (red line) which suffers from poor reconstruction properties.
 
 \begin{figure}
 \centering
@@ -648,7 +650,7 @@ A visual representation of the one event in the double-H tagged signal bin is se
 
 \section{Exclusion Curves \& Mass Limits}
 
-Interpreting our results in the context of the T5HH or T5ZH models, the absence of signal allows us to place lower limits on the cross section of gluino $\tilde{g}$ pair production. For the statistical treatment, we use a profile-likelihood to combine the observed yields, expected background, and expected signal in all analysis bins to calculate a 95\% upper limit on the signal cross section. The ABCD background estimation is explicitly coded in the likelihood, allowing the correlations in the estimations to be taken into account. The likelihood function can be expressed as:
+Interpreting our results in the context of the T5HH or T5ZH models, the absence of signal allows us to place upper limits on the cross section of gluino $\tilde{g}$ pair production. For the statistical treatment, we use a profile-likelihood to combine the observed yields, expected background, and expected signal in all analysis bins to calculate a 95\% upper limit on the signal cross section. The ABCD background estimation is explicitly coded in the likelihood, allowing the correlations in the estimations to be taken into account. The likelihood function can be expressed as:
 
 \begin{equation}
 \mathcal{L}=\prod_{i \in A, B, C, D}\mathrm{Poisson}\left(n_i \vert bkg_i + r\cdot sig_i\right) \times \prod^{nuisances}_j \mathrm{Constraints}\left(\theta_j , \hat{\theta}_j\right)
@@ -656,7 +658,7 @@ Interpreting our results in the context of the T5HH or T5ZH models, the absence 
 
 where the regions are modeled by Poisson distributions, n$_{i}$, $bkg_{i}$, and $sig_{i}$ represent the yield, expected background, and  expected signal in bin i. The constraints term encode the nuisance parameters $\theta_{j}$: $\kappa$ is modeled by a normal distribution, and the signal systematics are modeled as log-normal. The term $\hat{\theta}_{j}$ represents the profiled minima of $\theta_{j}$. 
 
-The expected and observed limits are then calculated based on approximations of the profile likelihood ratio using the CLs criterion to place upper limits at the $95\%$ confidence level on the production cross section, as seen in Figure~\ref{fig:brazil}. The allowed regions lie below the red and blue lines. Calculations of the gluino pair production cross section \cite{ggcs}, seen in the black line, allow us to rule out gluinos with mass lower than 2010 and 1825 GeV for the T5HH and T5ZH models, respectively. The weaker limit for the T5ZH model is due to the smaller branching fraction of the Z boson to b-quarks and our choice of signal mass window not being optimal for Z reconstruction.
+The expected and observed limits are then calculated based on approximations of the profile likelihood ratio using the CLs criterion to place upper limits at the $95\%$ confidence level on the production cross section, as seen in Figure~\ref{fig:brazil}. The branching fraction of the gluino to the NLSP and SM quarks, as seen in Figure \ref{fig:sms}, is assumed to be 100\%. The allowed regions of phasespace lie below the red and blue lines. Calculations of the gluino pair production cross section \cite{ggcs}, seen in the black line, allow us to exclude gluinos with mass lower than 2010 and 1825 GeV for the T5HH and T5ZH models, respectively. The weaker limit for the T5ZH model is due to the smaller branching fraction of the Z boson to b-quarks and our choice of signal mass window not being optimal for Z reconstruction.
 
 \begin{figure}
 \centering
