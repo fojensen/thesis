@@ -273,9 +273,9 @@ A_{1, 2}^{\mathrm{predicted}} = \kappa \cdot \left(B_{1, 2} \cdot \ \frac{C}{D}\
 
 These values of $\kappa$ are those which we have already seen in Figure~\ref{fig:MCclosure}.
 
-The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization of  in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost-lepton, and QCD background  samples. Rare processes (e.g. diboson) are taken directly from MC
+The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost lepton, and QCD background  samples. Rare processes (e.g. diboson production) are taken directly from MC.
 
-First consider how the yield N predicted by  in an arbitrary bin (of 18) is the sum of the yields in the different  datasets ($t\bar{t}$ and $W\rightarrow\ell\nu$ are grouped as they together represent the lost-lepton background):
+First consider how the yield N predicted in an arbitrary bin (of 18) is the sum of the yields in the different  datasets ($t\bar{t}$ and $W\rightarrow\ell\nu$ are grouped as they together represent the lost-lepton background):
 
 \begin{equation}
 N^{MC} = N_{Z\rightarrow\nu\bar{\nu}}^{MC} + N_{t\bar{t},\,W\rightarrow\ell\nu}^{MC} + N_{QCD}^{MC} + N_{rare}
@@ -287,7 +287,7 @@ Scale factors are defined for this bin using the corresponding control regions i
 N_{corrected}^{MC} = \left(\frac{N_{single-\gamma}^{data}}{N_{single-\gamma}^{MC}}\right) \cdot N_{Z\rightarrow\nu\bar{\nu}}^{MC} + \left(\frac{N^{data}_{single-\ell}}{N^{MC}_{single-\ell}}\right) \cdot N^{MC}_{t\bar{t},\,W\rightarrow\ell\nu} + \left(\frac{N^{data}_{low-\Delta\phi}}{N^{MC}_{low-\Delta\phi}}\right) \cdot N_{QCD}^{MC} + N_{rare}
 \end{equation}
 
-The \ptmiss distribution within the control regions is shown for both data and  in Figures~\ref{fig:closurephoton},~\ref{fig:closuresinglelep},~\ref{fig:closurelowdphi} for the single photon, single lepton, and low-$\Delta\phi$ control regions, respectively. The ratio in the bottom panel of each plot represents the scale factor for that \ptmiss bin. The dotted horizontal line shows the average scale factor inclusive in \ptmiss. The scale factors for the single-photon and low-$\Delta\phi$ control regions show no \ptmiss dependence and are determined integrated over \ptmiss$>300\,\textrm{GeV}$. The values of the scale factors are summarized in Table~\ref{tab:ScaleFactorVR}. The Single-lepton region, shown in Figure~\ref{fig:closuresinglelep}, does show \ptmiss dependence and are summarized in Tables~\ref{tab:ScaleFactorVR}~and~\ref{tab:ScaleFactorMET}.  In order to improve statistics for the single-lepton region, the low-$\Delta\phi$ requirement has been removed.
+The \ptmiss distribution within the control regions is shown in Figures~\ref{fig:closurephoton},~\ref{fig:closuresinglelep},~\ref{fig:closurelowdphi} for the single photon, single lepton, and low-$\Delta\phi$ control regions, respectively. The ratio in the bottom panel of each plot represents the scale factor for that \ptmiss bin. The dotted horizontal line shows the average scale factor inclusive in \ptmiss. The scale factors for the single-photon and low-$\Delta\phi$ control regions show no \ptmiss dependence and are determined integrated over \ptmiss$>300\,\textrm{GeV}$. The values of the scale factors are summarized in Table~\ref{tab:ScaleFactorVR}. The scale factors in the single lepton region, shown in Figure~\ref{fig:closuresinglelep}, do show a \ptmiss dependence and are summarized in Tables~\ref{tab:ScaleFactorVR}~and~\ref{tab:ScaleFactorMET}.  In order to improve the statistical accuracy for the single lepton region, the low-$\Delta\phi$ requirement was removed.
 
 \begin{figure}
  \centering
@@ -373,7 +373,7 @@ $0.49\pm0.02$ & $0.40\pm0.05$ & $0.35\pm 0.08$ \\
 \end{tabular}
 \end{table}
 
-The scale factors are then applied to the samples to give yields which better reflect data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the  yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} ~and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosure} relative to Figure~\ref{fig:MCclosuresf} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian toys for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
+The scale factors are then applied to the samples to give yields better representative of data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosure} relative to Figure~\ref{fig:MCclosuresf} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian toys for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
 
 \begin{table}
 \caption{The $\kappa$ factor computed by throwing Gaussian toys for the scale factors.}
@@ -413,7 +413,8 @@ The scale factors are then applied to the samples to give yields which better re
 \begin{landscape}
 \begin{table}
 \centering
-\caption{Corrected  yields in the signal regions. $\kappa$ = AD / BC}
+\caption{Corrected yields in the signal regions. $\kappa$ = AD / BC}
+\label{tab:CorrSignal}
 \begin{tabular}{c|c|c|c|c|c|c|c|}
 \hline \hline
 \ptmiss &  Z+Jets  & W+Jets & TTbar & QCD & Rare & Total  & Data \\ \hline \hline
@@ -429,11 +430,13 @@ $[500,700]$ GeV & 0.07 $\pm$ 0.045 & 0.049 $\pm$ 0.031 & 0.022 $\pm$ 0.0098 & 0 
 $>700$ GeV  & 0.044 $\pm$ 0.032& 0.005$\pm$ 0.005 & 0 $\pm$ 0 & 0 $\pm$ 0 & 0.002 $\pm$ 0.016  & 0.051 $\pm$ 0.036 &  0\\  \hline 
 \end{tabular}
 \end{table}
+\end{landscape}
+
+\begin{landscape}
 \begin{table}
 \centering
-\caption{Corrected  yields in the sideband regions. $\kappa$ = AD / BC} 
-\label{tab:CorrSignal}
-
+\caption{Corrected yields in the sideband regions. $\kappa$ = AD / BC}
+\label{tab:CorrControl}
 \begin{tabular}{c|c|c|c|c|c|c|c|}
 \hline \hline
 \ptmiss &  Z+Jets  & W+Jets & TTbar & QCD & Rare & Total  & Data \\
@@ -458,7 +461,7 @@ $[300,500]$ GeV & 164.82$\pm$ 8.31 & 61.24 $\pm$ 3.70 & 33.20 $\pm$ 2.16 & 8.50 
 $[500,700]$ GeV & 47.37 $\pm$ 2.52 & 6.36 $\pm$ 1.39 & 2.37 $\pm$ 0.55 & 0 $\pm$ 0 & 4.42$\pm$ 1.46 &   60.51 $\pm$ 3.27 & 60\\  \hline
 $>700$ GeV  & 26.79 $\pm$ 1.50 & 0.99 $\pm$ 0.53 & 0.16 $\pm$ 0.086 & 0 $\pm$ 0 & 3.48 $\pm$ 1.01  & 31.42 $\pm$ 1.88& 28  \\  \hline  
 \end{tabular}
-\label{tab:CorrControl}
+
 \end{table}
 \end{landscape}
 

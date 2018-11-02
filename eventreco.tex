@@ -3,15 +3,15 @@
 
 \section{Basic Elements From the Detector} 
 
-Depending on their nature, the particles emanating from the collision leave various forms of energy deposits in the different subdetectors. All these signals need to be aggregated and processed to allow for the reconstruction of what could be considered particle-level information. The first step in this process consists of building \textit{Particle Flow elements} using information only locally within each subdetector. There are four primary elements from the subdetectors: tracks from the tracker, calorimeter deposits in each of the ECAL and HCAL, and tracks from the muon detector. The elements are eventually combined via the \textit{Particle Flow algorithm}, yielding reconstructed particles used for physics analysis.
+Depending on their nature, the particles emanating from the collision leave various forms of energy deposits in the different subdetectors. All these signals need to be aggregated and processed to allow for the reconstruction of what could be considered particle-level information. The first step in this process consists of building \textit{Particle Flow elements} using information within each subdetector. There are four primary elements from the subdetectors: tracks from the tracker, calorimeter deposits in each of the ECAL and HCAL, and tracks from the muon detector. The elements are eventually combined via the \textit{Particle Flow algorithm}, yielding reconstructed particles used for physics analysis.
 
 Note that the definition of any object within the detector makes use of additional selection criteria which are not generally discussed here. For instance, one may require that a track in the tracker have at least 3 hits in the pixel detector, or that a calorimeter hit is above some minimum threshold energy. The effects of these criteria are generally a balance between the reconstruction efficiency of any given particle and the probability to misidentify a particle (purity).
 
 \subsection{Tracks}% \& Vertices}
 
-Tracker hits are formed in the pixel and strips detectors by clustering any hits in neighboring elements of the detector plane. The cluster position is measured by weighted average of the individual channel positions. Charge sharing among detector channels allow for a finer spatial resolution in the position measurement. Track reconstruction first begins by forming track seeds consisting of a small number of detector hits. These track seeds are then projected onto successive detector layers looking for nearby additional hits. This follows the Kalman filtering procedure, in which track information is updated after the addition of each hit \cite{trackerreco}.
+Tracker hits are formed in the pixel and strips detectors by clustering any hits in neighboring elements of the detector plane. The cluster position is a weighted average of the individual channel positions. Charge sharing among detector channels allow for a finer spatial resolution in the position measurement. Track reconstruction first begins by forming track seeds consisting of a small number of detector hits. These track seeds are then projected onto successive detector layers looking for additional hits. This follows the Kalman filtering procedure, in which track information is updated after the addition of each hit \cite{trackerreco}.
  
-The track building procedure follows an iterative procedure, where the requirements on the quality of the track seed decrease as the iterations proceed. The first iterations begin with seeds consisting of 3 pixel hits and lead to high performance reconstruction of high $p_{T}$ tracks emanating from the collision region. The iterations proceed until essentially only requiring hits in the outer tracker and reconstructs displaced tracks or those missing hits. The iteration procedure provides a balance between reconstruction efficiency, track purity, and computation economics. Table~\ref{tab:itertracks} list these iterations - the requirements on the seed and types of tracks that iteration targets.
+The track building procedure follows an iterative procedure, where the requirements on the quality of the track seed decrease as the iterations proceed. After a given iteration the hits used in building the tracks are removed from subsequent iterations. The first iterations begin with seeds consisting of 3 pixel hits and lead to high performance reconstruction of high $p_{T}$ tracks emanating from the collision region. The iterations proceed until essentially only requiring hits in the outer tracker to reconstruct displaced tracks or tracks with missing hits. The iteration procedure provides a balance between reconstruction efficiency, purity, and computation economics. Table~\ref{tab:itertracks} lists these iterations; the requirements on the seeds and the type of tracks which are targeted.
 
 \begin{table}[hbp!]
 \caption
@@ -22,7 +22,7 @@ The track building procedure follows an iterative procedure, where the requireme
 \label{tab:itertracks}
 \end{table}
 
-Electron tracking is performed with a slightly modified algorithm to better account for the electron's energy loss in the detector. Electrons are very light particles and more susceptible to emitting \textit{bremsstrahlung} radiation than ionizing the silicon. Bremsstrahlung radiation occurs when the electron scatters from a charged nucleus within the tracker bulk and emits a photon. This results in both energy loss and momentum changes as the electron traverses the detector. This results in very non-Gaussian energy loss mechanisms in which the Kalman filtering is non-optimal.
+Electron tracking is performed with a modified Gaussian sum filter to account for the electron's energy loss in the detector. Electrons are very light and susceptible to emitting \textit{bremsstrahlung} radiation, occuring when the electron scatters from nucleus within the tracker and emits a photon. This results in non-neglible energy loss and changes in direction as the electron traverses the detector. This results in very non-Gaussian energy loss mechanisms in which the Kalman filtering is non-optimal.
 
 \subsection{ECAL \& HCAL Clusters}
 
@@ -73,7 +73,7 @@ Hadrons \& non-isolated photons result from hadronization/fragmentation of jets.
 
 \item \textbf{Nuclear Interactions}:
 
-Nuclear interactions can occur when hadrons from the pp collision interact within the detector material causing a shower of secondary particles. If multiple tracks are linked through a common secondary vertex they will be be summed to create a single charged hadron particle which replaces its constituents in the particle list of the event.
+A nuclear interaction may occur when a hadron from the pp collision interacts with the detector material causing a shower of (charged and neutral) secondary particles. The tracks from the shower may be linked through a common (displaced) secondary vertex, in this case they will be replaced by a single charged hadron under the assumption of the pion mass.
 
 \end{enumerate}
 
@@ -81,7 +81,7 @@ Nuclear interactions can occur when hadrons from the pp collision interact withi
 
 \subsection{Jets}
 
-Bare quarks and gluons can never be observed in Nature due to a QCD phenomenon called \textit{color confinement}. Therefore, quark and gluon production manifests as a ``jet'' of color-neutral particles emanating from the production point. These particles can be clustered together to reconstruct the original parton. The jets used in this analysis are made by clustering particles with the ``anti-kt`` algorithm with cone sizes of $\Delta R$ = 0.4, 0.8 \cite{1126-6708-2008-04-063}, denoted as AK4 and AK8 jets respectively. This algorithm produces nearly conical jets and is infrared and collinear safe. The AK4 jets subtend less solid angle and are used to capture the hadronisation of single quarks and gluons. AK8 jets subtend a larger solid angle and are used for reconstruction of boosted objects that decay to multiple jets (e.g. $t$, H, Z, W).
+Bare quarks and gluons can never be observed in Nature due to a QCD phenomenon called \textit{color confinement}. Therefore, quark and gluon production manifests as a ``jet'' of color-neutral particles emanating from the production point. These particles can be clustered together to reconstruct the original parton. The jets used in this analysis are made by clustering particles with the ``anti-kt`` algorithm with cone sizes of $\Delta R$ = 0.4, 0.8 \cite{1126-6708-2008-04-063}, denoted as AK4 and AK8 jets respectively. This algorithm produces nearly conical jets and is infrared and collinear safe. The AK4 jets subtend less solid angle and are used to capture the hadronisation of single quarks and gluons. AK8 jets subtend a larger solid angle and are used for reconstruction of boosted objects that decay to multiple jets.
 
 \subsection{b-tagging of Jets}
 
