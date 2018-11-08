@@ -4,11 +4,11 @@
 \section{Motivation \& Strategy}
 \label{sec:mot}
 
-If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in nature that have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics. If the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more momentum is imparted upon the particles in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating enough to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC it is possible that there exists non-zero coupling with the electroweak H, Z, or W$^{\pm}$ bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
+If a more unifying theory than the SM exists it certainly has not been forthright in its manifestation. One possibility for the lack of discoveries of phenomena not explained within the SM is that there are indeed particles existing in Nature that have not been observed, but they have such a large mass that the energy of the proton-proton collisions provided by the LHC is insufficient to directly create them. The outcome of many searches for new particles is thus the setting of limits placed on the cross section of their production mechanism. As these cross sections are dependent on the particle mass, the limits can be interpreted as setting lower bounds on the mass of any new physics. If the particle were any lighter than this limit it would have been produced copiously enough for its unambiguous detection (see for example \cite{CMS-SUS-16-033, CMS-SUS-15-002}). As these particles become more massive more momentum is imparted upon the particles in the final state; any SM particles resulting from the decay of higher mass states will be produced with large momentum (this is called high boost). As a particle becomes more boosted its decay products are emitted at smaller angles, eventually collimating enough to be reconstructed as a single jet. If new physics exists with masses accessible at the LHC it is possible that there exists non-zero coupling with the electroweak H, Z, or W$^{\pm}$ bosons. Observation of events containing high-$p_{T}$ ($>$300 GeV) electroweak bosons are thus of considerable interest for finding new particles of large mass.
 
-The Minimal Supersymmetric SM contains a $\mathbb{Z}_{2}$ symmetry in which all SM particles have charge ${-}1$ and all supersymmetric particles have charge ${+}1$, this is called R-parity \cite{susyprimer}. One direct consequence of R-parity conservation is that the decay of a massive supersymmetric particle must include at least one supersymmetric particle in the final state. Necessarily this is the lightest such particle in the theory, denoted the lightest supersymmetric particle (LSP). If the LSP is electrically neutral it may escape detection, creating an imbalance in the net momentum of the event (similar to a neutrino). Therefore, events with a large momentum imbalance are also interesting as potential regions for SUSY. For this thesis, we assume R-parity is conserved.
+The Minimal Supersymmetric SM contains a discrete symmetry called R-parity in which all SM and supersymmetric particles have charges ${-1}$ and ${+1}$, respectively \cite{susyprimer}. One direct consequence of R-parity conservation is that the decay of a massive supersymmetric particle must include an odd number of supersymmetric particles in the final state. This decay cascade will continue until the final state consists of the lightest such particle in the theory, denoted the lightest supersymmetric particle (LSP). If the LSP is electrically neutral it may escape detection, creating an imbalance in the net momentum of the event (similar to a neutrino). Therefore, events with a large momentum imbalance are also interesting as potential signals for SUSY. For this thesis, we assume R-parity is conserved.
 
-With this as a motivation, the authors (\cite{CMS-SUS-17-006}) designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the \bbbar decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with sparticle pair production which subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
+With this as a motivation, the authors (\cite{CMS-SUS-17-006}) designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the \bbbar decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with production of a pair of sparticles that subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
 
 \begin{figure}
 \centering
@@ -29,7 +29,7 @@ With this as a motivation, the authors (\cite{CMS-SUS-17-006}) designed an analy
 \section{Baseline Selection and Object Definition}
 \label{sec:baseline}
 
-The salient feature of our analysis is the presence of two high-\pt AK8 jets and large \ptmiss. Our most significant backgrounds are those which produce a large amount of \ptmiss; these are divided into two categories depending on if it comes from a ``true'' or ``fake'' source. True \ptmiss arises from a neutrino or otherwise unobservable particle escaping our detector, i.e. a genuine imbalance in the detectable final-state momentum of the event. Fake \ptmiss arises from some sort of ``imperfection'' in our detector or reconstruction process, primarily when the \pt of a jet is measured poorly.
+The salient feature of our analysis is the presence of two high-\pt AK8 jets and large \ptmiss. Our most significant backgrounds are those which produce a large amount of \ptmiss; these are divided into two categories depending on whether it comes from a ``true'' or ``fake'' source. True \ptmiss arises from a neutrino or otherwise unobservable particle escaping our detector, i.e. a genuine imbalance in the detectable final-state momentum of the event. Fake \ptmiss arises from some sort of ``imperfection'' in our detector or reconstruction process, typically an under-measurement of the energy of a jet.
 
 We approach our background as being constituted of three primary types. Two of them involve the production of neutrinos and the third is a result of jet resolution:
 
@@ -49,23 +49,23 @@ Isolation requires the $p_{T}$ sum of the particles within a cone of $\Delta R <
 \item no isolated muons with $p_{T}>10\,\textrm{GeV}$:\newline
 The energy fraction for the isolation requirement is relaxed to 20\%.
 \item no isolated tracks:\newline
-To remove events with top or W production in which the W decays to a tau. As an isolated track is defined by looser criteria than that of an electron or muon, this cut also serves to increase the efficiency of the isolated electron and muon vetoes. Leptonic tracks must satisfy $p_{T}>5\,\textrm{GeV}$ and have 20\% isolation. Hadronic tracks must satisfy $p_{T}>10\,\textrm{GeV}$ and have 10\% isolation.
+To remove events with top or W production in which the W decays to a lepton. As an isolated track is defined by looser criteria than that of an electron or muon, this cut also serves to increase the efficiency of the isolated electron and muon vetoes. Leptonic tracks must satisfy $p_{T}>5\,\textrm{GeV}$ and have 20\% isolation. Hadronic tracks must satisfy $p_{T}>10\,\textrm{GeV}$ and have 10\% isolation.
 \item $\Delta\phi_{1, 2, 3, 4} > 0.5, 0.5, 0.3, 0.3$; $\Delta\phi_{i}\equiv \Delta\phi(\vec{p_{T}}^{\mathrm{miss}}, \mathrm{AK4\,jet}_{i})$\newline
-This cut requires that the difference in $\phi$ between the \ptmiss vector and each of the four highest-p$_{T}$ jets is sufficiently large to remove events in which a jet has been under-measured giving rise to fake \ptmiss. If less than four AK4 jets are available the additional cuts are removed.
+This cut requires that the difference in $\phi$ between the \ptmiss vector and each of the four highest-p$_{T}$ jets is sufficiently large to remove events in which a jet has been under-measured giving rise to fake \ptmiss. If fewer than four AK4 jets are available the additional cuts are removed.
 \end{itemize}
 
-To tag jets from $H \rightarrow b\bar{b}$ decay, a dedicated machine learning algorithm has been developed by the CMS collaboration to discriminate these from those produced by QCD processes \cite{bbtagger}. The algorithm makes use of the kinematics expected by having secondary vertices arising from the b-quark decays. Discriminating variables include the number, mass, energy, and position of the secondary vertices in the jets. Additional variables include the distance of closest approach between the vertices and tracks (when projected backwards); tracks arising from displaced vertices are not expected to project back to the primary interaction point. The distributions of this discriminator for the two highest-p$_{T}$ AK8 jets are seen in the left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. The stacked histogram and solid lines shows the distribution after baseline selection for simulation and two representative signal points, respectively. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). Appendix~\ref{chap:bb} details the \bbbar-tagger in more depth. 
+To tag jets from $H \rightarrow b\bar{b}$ decay, a dedicated machine learning algorithm has been developed by the CMS collaboration to discriminate these from those produced by QCD processes \cite{bbtagger}. The algorithm makes use of the kinematics expected by having secondary vertices arising from the b-quark decays. Discriminating variables include the number, mass, energy, and position of the secondary vertices in the jets. Additional variables include the distance of closest approach between the vertices and tracks (when projected backwards); tracks arising from displaced vertices are not expected to project back to the primary interaction point. The distributions of this discriminator for the two highest-p$_{T}$ AK8 jets are seen in the upper left and right panels of Figure~\ref{fig:ak8dists}; signal-like events peak towards larger values. The stacked histogram and solid lines shows the distribution after baseline selection for simulated SM processes and two representative signal points, respectively. To $b\bar{b}$ tag the AK8 jets we choose the loose working-point ($>$0.3) corresponding to an efficiency of approximately $70-80\%$ for $H \rightarrow b \bar{b}$ (see Figure~\ref{fig:effH}). Appendix~\ref{chap:bb} details the \bbbar-tagger in more depth. 
 
-Additionally, to tag H or Z bosons, a requirement is made on the invariant mass of the jet. We use the mass of the so called ``pruned'' jet, which is a method involving removal of soft and wide-angle radiation inside the jet \cite{prunedmass}. The pruning is very powerful for discriminating QCD jets from those produced by heavy particle decays. Our tagging requires the jet mass to fall within a window [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in Figure~\ref{fig:ak8dists}. The same identification criteria are applied to tag an AK8 jet as either an H or Z boson (there is no distinction made).
+Additionally, to tag H or Z bosons, a requirement is made on the invariant mass of the jet. We use the mass of the so called ``pruned'' jet, which is a method involving removal of soft and wide-angle radiation inside the jet \cite{prunedmass}. The pruning is very powerful for discriminating QCD jets from those produced by heavy particle decays. Our tagging requires the jet mass to fall within a window [85, 135 GeV] to be consistent with that of the H boson. The distributions of the jet mass are seen in the lower frames of Figure~\ref{fig:ak8dists}. The same identification criteria are applied to tag an AK8 jet as either an H or Z boson (there is no distinction made between the two).
 
 \begin{figure}
 \centering
 \includegraphics[width=0.425\linewidth]{figs/J1BB_LooseJetMass.pdf}
-\includegraphics[width=0.425\linewidth]{figs/J2pt_BBtag_baseline.pdf}\\
+\includegraphics[width=0.425\linewidth]{figs/J2BB_LooseJetMass.pdf}\\
 \includegraphics[width=0.425\linewidth]{figs/J1Mwide_JetPt.pdf}
 \includegraphics[width=0.425\linewidth]{figs/J2Mwide_JetPt.pdf}\\
 \caption[Distributions of the bb-tagging discriminator and jet mass for AK8 jets.]
-{Distributions of the bb-tagging discriminator (top row) and the jet mass (bottom row) for the highest (left column) and second highest (right column) $p_{T}$ AK8 jets. In the signal models, the H bosons are allowed to decay inclusively.}
+{Distributions of the bb-tagging discriminator (top row) and jet mass (bottom row) for the highest (left column) and second highest (right column) $p_{T}$ AK8 jets. In the signal models, the H bosons are allowed to decay inclusively.}
 \label{fig:ak8dists}
 \end{figure}
 
@@ -79,7 +79,7 @@ The trigger efficiency is defined as $\epsilon = N_{1}/N_{2}$, where $N_{2}$ is 
 
 \section{Event Simulation}
 
-Event simulation of the proton-proton collisions proceeds in several steps. MadGraph@NLO2.2.2 \cite{Alwall:2014hca} is a MC event generator used to simulate proton-proton events. Parton distribution functions, used to model the quark and gluon momentum distributions within the proton, are taken from NNPDF 3.0 \cite{Ball:2014uwa}. Parton showering, which models quark and gluon evolution into hadrons, or final/initial state radiation, is performed with Pythia \cite{pythiacite}. The final-state particles are traced through the detector using GEANT. This includes the effect of the magnetic field, interactions with both the inert and sensitive detector material, and additional particle decays \cite{Agostinelli:2002hh}. This simulated data is processed in the same manner as that of the physical experiment.
+Event simulation of the proton-proton collisions proceeds in several steps. MadGraph@NLO2.2.2 \cite{Alwall:2014hca} is a MC event generator used to simulate proton-proton events. Parton distribution functions, used to model the quark and gluon momentum distributions within the proton, are taken from NNPDF 3.0 \cite{Ball:2014uwa}. Parton showering, which models quark and gluon evolution into hadrons, or final/initial state radiation, is performed with Pythia \cite{pythiacite}. The final-state particles are traced through the detector using GEANT. This includes the effect of the magnetic field, interactions with both the inert and sensitive detector material, and additional particle decays \cite{Agostinelli:2002hh}. These simulated data are processed in the same manner as those of the physical experiment.
 
 \subsection{Standard Model Processes}
 \label{sec:smp}
@@ -141,7 +141,7 @@ The $p_{T}$ distribution for the generated H bosons in these samples is seen in 
 \includegraphics[width=0.425\linewidth]{figs/subleadHiggsDr.pdf}\\
 \caption
 [Generator level distributions for the H bosons in the T5HH model.]
-{Generator level distributions for the highest (top row) and second highest (bottom row) \pt H boson in the T5HH model. The plot on the left shows the \pt of the H boson. The plot on right shows $\Delta R$ between the b-quark daughters; for large H \pt the daughters become collimated.}
+{Generator level distributions for the leading (top row) and sub-leading (bottom row) H boson in the T5HH model. The left column shows the \pt distribution. The right column shows $\Delta R$ between the b-quark daughters; for large H \pt the daughters become collimated. \cite{boostedan}}
 \label{fig:GenHiggsBoost}
 \end{figure}
 
@@ -212,7 +212,7 @@ In order to study the expected backgrounds in data ($Z\rightarrow\nu\bar{\nu}$, 
 
 \item A control region with a single photon. When a Z boson has sufficiently large $p_{T}$ such that its mass is negligible, it will be expected to have similar kinematics to the photon (the other massless, neutral, electroweak gauge boson). ``Artificial'' removal of the photon from the reconstruction (i.e. ignoring its calorimeter clusters) results in events similar to those of $Z\rightarrow\nu\bar{\nu}$ events.
 
-\item A control region with a single lepton. The topology of events from direct W or top quark production is the same regardless if the electron or muon is identified as such. 
+\item A control region with a single lepton. The topology of events from direct W or top quark production is the same regardless of whether the electron or muon is identified as such. 
 
 \item A control region defined by the logical inversion of the low-$\Delta\phi$ cut. This explicitly selects events in which the AK4 jet momentum was likely under-measured, resulting in close alignment with the \ptmiss vector.
 
@@ -251,7 +251,7 @@ As they are orthogonal to the analysis region, we are able to test the validity 
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.95\textwidth]{figs/dataClosure_double-tagSR_lowDphi.pdf} 
 \caption{low-$\Delta\phi$ A$_{2}$}
 \end{subfigure}
-\caption{Comparisons of the predicted and observed yields within the data control regions.}
+\caption[Comparisons of the predicted and observed yields within the data control regions]{Comparisons of the predicted and observed yields within the data control regions. \cite{boostedan}}
 \label{fig:closure}
 \end{figure}
 
@@ -271,7 +271,7 @@ There are 2x3=6 values of $\kappa$, one for each signal bin. $\kappa=1$ represen
 A_{1, 2}^{\mathrm{predicted}} = \kappa \cdot \left(B_{1, 2} \cdot \ \frac{C}{D}\right)^{\textrm{observed}}
 \end{equation}
 
-These values of $\kappa$ are those which we have already seen in Figure~\ref{fig:MCclosure}.
+These values of $\kappa$ are those that we have already seen in Figure~\ref{fig:MCclosure}.
 
 The value of $\kappa$ is dependent on the yields of each analysis bin and is therefore sensitive to the accuracy of the modeling in each of the 18 analysis bins. To improve the determination of $\kappa$, scale factors are derived using the data control regions to correct the normalization in each of these bins. Different scale factors are assigned separately to the Z-invisible, lost lepton, and QCD background  samples. Rare processes (e.g. diboson production) are taken directly from MC.
 
@@ -287,7 +287,7 @@ Scale factors are defined for this bin using the corresponding control regions i
 N_{corrected}^{MC} = \left(\frac{N_{single-\gamma}^{data}}{N_{single-\gamma}^{MC}}\right) \cdot N_{Z\rightarrow\nu\bar{\nu}}^{MC} + \left(\frac{N^{data}_{single-\ell}}{N^{MC}_{single-\ell}}\right) \cdot N^{MC}_{t\bar{t},\,W\rightarrow\ell\nu} + \left(\frac{N^{data}_{low-\Delta\phi}}{N^{MC}_{low-\Delta\phi}}\right) \cdot N_{QCD}^{MC} + N_{rare}
 \end{equation}
 
-The \ptmiss distribution within the control regions is shown in Figures~\ref{fig:closurephoton},~\ref{fig:closuresinglelep},~\ref{fig:closurelowdphi} for the single photon, single lepton, and low-$\Delta\phi$ control regions, respectively. The ratio in the bottom panel of each plot represents the scale factor for that \ptmiss bin. The dotted horizontal line shows the average scale factor inclusive in \ptmiss. The scale factors for the single-photon and low-$\Delta\phi$ control regions show no \ptmiss dependence and are determined integrated over \ptmiss$>300\,\textrm{GeV}$. The values of the scale factors are summarized in Table~\ref{tab:ScaleFactorVR}. The scale factors in the single lepton region, shown in Figure~\ref{fig:closuresinglelep}, do show a \ptmiss dependence and are summarized in Tables~\ref{tab:ScaleFactorVR}~and~\ref{tab:ScaleFactorMET}.  In order to improve the statistical accuracy for the single lepton region, the low-$\Delta\phi$ requirement was removed.
+The \ptmiss distribution within the control regions is shown in Figures \ref{fig:closurephoton}, \ref{fig:closuresinglelep}, and \ref{fig:closurelowdphi} for the single photon, single lepton, and low-$\Delta\phi$ control regions, respectively. The ratio in the bottom panel of each plot represents the scale factor for that \ptmiss bin. The dotted horizontal line shows the average scale factor inclusive in \ptmiss. These values are summarized in Table \ref{tab:ScaleFactorVR}. The scale factors for the single-photon and low-$\Delta\phi$ control regions show no \ptmiss dependence and are determined inclusive for \ptmiss$>300\,\textrm{GeV}$. Some of the scale factors in the single lepton region do show a \ptmiss dependence and are summarized in Table \ref{tab:ScaleFactorMET}. In order to improve the statistical accuracy for the single lepton region, the low-$\Delta\phi$ requirement was removed.
 
 \begin{figure}
  \centering
@@ -299,7 +299,7 @@ The \ptmiss distribution within the control regions is shown in Figures~\ref{fig
  \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_double-tagSR_photon.pdf}\\
  \caption
  [Signal and sideband yields in the single photon control region.]
- {Signal and sideband yields in the single photon control region. The hashed red band denotes the prediction from simulation; the solid black points denote the observed yields in data. The Data/ ratio in the lower panel of each plot represents the scale factor for that bin. }
+ {Signal and sideband yields in the single photon control region. The hashed red band denotes the prediction from simulation; the solid black points denote the observed yields in data. The Data/ ratio in the lower panel of each plot represents the scale factor for that bin. \cite{boostedan}}
 \label{fig:closurephoton}
 \end{figure}
 
@@ -313,7 +313,7 @@ The \ptmiss distribution within the control regions is shown in Figures~\ref{fig
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_double-tagSR_lowDeltaPhi_singleLep.pdf}\\
 \caption
 [Signal and sideband yields in the single lepton control region.]
-{Signal and sideband yields in the single lepton control region. The hashed red band denotes the prediction from simulation; the solid black points denote the observed yields in data. The Data/ ratio in the lower panel of each plot represents the scale factor for that bin. The low-$\Delta\phi$ requirement has been removed to improve statistics.}
+{Signal and sideband yields in the single lepton control region. The hashed red band denotes the prediction from simulation; the solid black points denote the observed yields in data. The Data/ ratio in the lower panel of each plot represents the scale factor for that bin. The low-$\Delta\phi$ requirement has been removed to improve statistics. \cite{boostedan}}
 \label{fig:closuresinglelep}
 \end{figure}
 
@@ -327,7 +327,7 @@ The \ptmiss distribution within the control regions is shown in Figures~\ref{fig
  \includegraphics[trim={5px 5px 5px 5px},clip,width=0.425\linewidth]{figs/ABCDscaleFactors_MET_double-tagSR_lowDphi.pdf}\\
  \caption
  [Signal and sideband yields in the the low-$\Delta\phi$ control region.]
- {Signal and sideband yields in the the low-$\Delta\phi$ control region.The hashed red band denotes the prediction from simulation; the solid black points denote the observed yields in data. The Data/ ratio in the lower panel of each plot represents the scale factor for that bin. }
+ {Signal and sideband yields in the the low-$\Delta\phi$ control region.The hashed red band denotes the prediction from simulation; the solid black points denote the observed yields in data. The Data/ ratio in the lower panel of each plot represents the scale factor for that bin. \cite{boostedan}}
 \label{fig:closurelowdphi}
 \end{figure}
 
@@ -373,7 +373,7 @@ $0.49\pm0.02$ & $0.40\pm0.05$ & $0.35\pm 0.08$ \\
 \end{tabular}
 \end{table}
 
-The scale factors are then applied to the samples to give yields better representative of data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosure} relative to Figure~\ref{fig:MCclosuresf} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian toys for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
+The scale factors are then applied to the samples to give yields better representative of data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosuresf} relative to Figure~\ref{fig:MCclosure} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian pseudo-experiments for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
 
 \begin{table}
 \caption{The $\kappa$ factor computed by throwing Gaussian toys for the scale factors.}
@@ -406,7 +406,7 @@ The scale factors are then applied to the samples to give yields better represen
 \includegraphics[trim={5px 5px 5px 5px},clip,width=0.99\textwidth]{figs/MCclosureSF_doubleHiggsRegionTotal.pdf} 
 \caption{The double Higgs tag region (A$_{2}$).}
 \end{subfigure}
-\caption{Signal region \ptmiss distributions using scale-factor corrected simulation.}
+\caption[Signal region \ptmiss distributions using scale-factor corrected simulation.]{Signal region \ptmiss distributions using scale-factor corrected simulation. \cite{boostedan}}
 \label{fig:MCclosuresf}
 \end{figure}
 
@@ -529,13 +529,12 @@ The overall effect ranges from 0.01\%.
 \item {\bf PDFs:} The LHC4PDF prescription for the uncertainty on the total cross section is included as $\pm 1$ sigma bands in the results plots. No
 additional uncertainty is considered for the uncertainty in the acceptance due to PDFs, as per SUSY group recommendation.
 \end{itemize}
-The above signal systematics are applied as an uncertainty on the signal normalization. These uncertainties are in general small. The main signal systematics 
-come from the AK8 Jet Double-b tagging efficiency data/ scale factors and the uncertainty on the pruned mass resolution.
-The AK8 Jet Double-b tagging efficiency has an uncertainty which is propagated to the signal efficiency. This uncertainty is applied 
-as a shape uncertainty across the Higgs tag regions and the anti-tag region. Also the pruned jet mass scale and resolution uncertainties are 
-propogated to the final signal efficiency using POG recommendations. The pruned mass scale factor is derived using W-jets in semi-leptonic \ttbar and extrapolating to the H mass. This uncertainty is assigned a shape uncertainty on the signal mass window and the sideband. \\
+
+The above signal systematics are applied as an uncertainty on the signal normalization and are small in general. The main signal systematics 
+come from the scale factors used to correct the data/MC differences seen in the AK8 jet double-b tagging efficiency, and from the uncertainty on the pruned mass resolution. The pruned mass scale factor is derived using W-jets in semi-leptonic \ttbar and extrapolating to the Higgs mass. Both of these are accounted for by assigning a shape uncertainty within the signal and the sideband mass windows.
+
 \begin{itemize}
-\item A data/ scale-factor is derived from double-muon tag data selected with HLT Trigger \texttt{HLT\_BTagMu\_AK8Jet300\_Mu5\_v} and muon enriched QCD Monte-Carlo. The scale factors have mainly a statistical error along with a smaller set of systematic errors due to shape systematics, Jet-Energy scale uncertainty, Pile-up corrections, uncertainty on the number of tracks, uncertainty of b-fragmentation and  c-fragmentation, and the uncertainty on $K_{s}$ and $\Lambda$ fraction. 
+\item A data/MC  scale-factor is derived from double-muon tag data selected with HLT Trigger \texttt{HLT\_BTagMu\_AK8Jet300\_Mu5\_v} and muon enriched QCD Monte-Carlo. The scale factors have mainly a statistical error along with a smaller set of systematic errors due to shape systematics, Jet-Energy scale uncertainty, Pile-up corrections, uncertainty on the number of tracks, uncertainty of b-fragmentation and  c-fragmentation, and the uncertainty on $K_{s}$ and $\Lambda$ fraction. 
 \item The pruned mass scale-factor is derived by comparing the efficiency to select W-jets in data and  within a mass window of $\left[65,85\right]$ GeV.  The fit for the gaussian resolution of the W-mass peak is shown in Figure~\ref{fig:WMassPeak} and the fit results are shown in Table~\ref{tab:WMassFit}. The mass scale between  and data is consistent though  predicts a narrower mass resolution compared to data. The jet mass in each event is smeared to mimic the pruned jet mass resolution in data and an uncertainty is assigned based on the ratio of efficiencies between the smeared and un-smeared cases~\cite{CMS_AN_2016-215}.
 \end{itemize} 
 
@@ -548,7 +547,7 @@ The summary of the signal systematics and their effect on the signal yields is s
 \end{center}
 \caption
 [Pruned jet mass in semi-leptonic \ttbar events.]
-{Pruned jet mass in semi-leptonic \ttbar events. The mass peak for the W-jets is used to derive the mass resolution uncertainty.}
+{Pruned jet mass in semi-leptonic \ttbar events. The mass peak for the W-jets is used to derive the mass resolution uncertainty. \cite{boostedan}}
 \label{fig:WMassPeak}
 \end{figure}
 
@@ -637,17 +636,13 @@ The observed yields, along with the background predictions, are seen in Table~\r
 \end{tabular}
 \end{table}
 
-A visual representation of the one event in the double-H tagged signal bin is seen in Figure~\ref{fig:fireworks}. The purple line represents \ptmiss=426 GeV. The three yellow cones represent the AK8 jets labeled with $p_{T}$.  Note two additional objects not satisfying our object definition but still plotted in the representation: a) The additional low-$p_{T}$ and low mass jet likely from SM QCD and b) the $p_{T}$=18 GeV muon (red line) which suffers from poor reconstruction properties.
+A visual representation of the single event in the double-H tagged signal bin is seen in Figure~\ref{fig:fireworks}.
 
 \begin{figure}
 \centering
-\begin{subfigure}[b]{0.4\textwidth}
-\includegraphics[width=\textwidth]{figs/fireworks_ak8barrel.png}
-\end{subfigure}
-\begin{subfigure}[b]{0.4\textwidth}
-\includegraphics[width=\textwidth]{figs/fireworks_ak8rhophi.png}
-\end{subfigure}
-\caption{The single event in the $A_{2}$ region.}
+\includegraphics[width=0.5\textwidth]{figs/fireworks_ak8barrel.png}\\
+\includegraphics[width=0.5\textwidth]{figs/fireworks_ak8rhophi.png}
+\caption[The single event in the $A_{2}$ region.]{The single event in the $A_{2}$ region. The purple line represents $p_{T}^{miss}=426\,\textrm{GeV}$. The three yellow cones represent the AK8 jets labeled with $p_{T}$.  Note two additional objects not satisfying our object definition but still plotted in the representation: a) The additional low $p_{T}$ and low mass jet likely from SM QCD and b) the $p_{T}=18\,\textrm{GeV}$ muon (red line) that suffers from poor reconstruction properties.}
 \label{fig:fireworks}
 \end{figure}
 
@@ -659,9 +654,9 @@ Interpreting our results in the context of the T5HH or T5ZH models, the absence 
 \mathcal{L}=\prod_{i \in A, B, C, D}\mathrm{Poisson}\left(n_i \vert bkg_i + r\cdot sig_i\right) \times \prod^{nuisances}_j \mathrm{Constraints}\left(\theta_j , \hat{\theta}_j\right)
 \end{equation}
 
-where the regions are modeled by Poisson distributions, n$_{i}$, $bkg_{i}$, and $sig_{i}$ represent the yield, expected background, and  expected signal in bin i. The constraints term encode the nuisance parameters $\theta_{j}$: $\kappa$ is modeled by a normal distribution, and the signal systematics are modeled as log-normal. The term $\hat{\theta}_{j}$ represents the profiled minima of $\theta_{j}$. 
+where the regions are modeled by Poisson distributions, n$_{i}$, $bkg_{i}$, and $sig_{i}$ represent the yield, expected background, and  expected signal in bin i. The constraints term encode the nuisance parameters $\theta_{j}$: $\kappa$ is modeled by a normal distribution, and the signal systematics are modeled as log-normal. The term $\hat{\theta}_{j}$ represents the profiled minimum of $\theta_{j}$. 
 
-The expected and observed limits are then calculated based on approximations of the profile likelihood ratio using the CLs criterion to place upper limits at the $95\%$ confidence level on the production cross section, as seen in Figure~\ref{fig:brazil}. The branching fraction of the gluino to the NLSP and SM quarks, as seen in Figure \ref{fig:sms}, is assumed to be 100\%. The allowed regions of phasespace lie below the red and blue lines. Calculations of the gluino pair production cross section \cite{ggcs}, seen in the black line, allow us to exclude gluinos with mass lower than 2010 and 1825 GeV for the T5HH and T5ZH models, respectively. The weaker limit for the T5ZH model is due to the smaller branching fraction of the Z boson to b-quarks and our choice of signal mass window not being optimal for Z reconstruction.
+The expected and observed limits are then calculated based on approximations of the profile likelihood ratio using the CLs criterion \cite{0954-3899-28-10-313} to place upper limits at the $95\%$ confidence level on the production cross section, as seen in Figure~\ref{fig:brazil}. The branching fraction of the gluino to the NLSP and SM quarks, as seen in Figure \ref{fig:sms}, is assumed to be 100\%. The allowed regions of phasespace lie below the red and blue lines. Calculations of the gluino pair production cross section \cite{ggcs}, seen in the black line, allow us to exclude gluinos with mass lower than 2010 and 1825 GeV for the T5HH and T5ZH models, respectively. The weaker limit for the T5ZH model is due to the smaller branching fraction of the Z boson to b-quarks and our choice of signal mass window not being optimal for Z reconstruction.
 
 \begin{figure}
 \centering

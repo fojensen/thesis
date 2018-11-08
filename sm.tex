@@ -3,7 +3,7 @@
 
 \section{Introduction}
 
-The Standard Model (SM) is a mathematical framework for the quantum mechanical description of matter and physical forces. It provides a description of the weak, strong, and electromagnetic interactions as mediated via ``messenger'' particles (gravity has so far eluded a quantum mechanical description). The particles constituting matter are all fermions and can be classified as \textit{quarks} or \textit{leptons} - quarks participate in the weak and strong force, leptons participate in the weak force; any charged particle experiences the electromagnetic force. \textit{Gauge bosons} are the particles responsible for the force interactions. The Higgs field is important for the generation of particle mass. This particle content has been seen in Figure~\ref{fig:sm}. We now turn to the field theory approach for these objects.
+The Standard Model (SM) is a mathematical framework for the quantum mechanical description of matter and physical forces. It provides a description of the weak, strong, and electromagnetic interactions as mediated via ``messenger'' particles (gravity has so far eluded a quantum mechanical description). The particles constituting matter are all fermions and can be classified as \textit{quarks} or \textit{leptons} - quarks participate in the weak and strong force, leptons participate in the weak force; any charged particle experiences the electromagnetic force. \textit{Gauge bosons} are the particles responsible for the force interactions. The Higgs field is important for the generation of particle mass. This particle content has been seen in Figure~\ref{fig:sm}. We now turn to the field theory approach for these objects. This chapter is adapted from \cite{halzmar, thomson, griffiths}.
 
 Matter particles are massive spin-1/2 fermions represented as solutions to the free-particle Dirac equation. The Lagrangian, and resulting equation of motion, are as follows:
 
@@ -50,7 +50,7 @@ Gauge Sector & Matter Fields & Gauge Fields \\
 
 \section{Quantum Electrodynamics}
 
-Quantum electrodynamics describes the interactions of particles with electric charge. Beginning with a free-particle Dirac fermion we see the Lagrangian is invariant under the following U(1) transformation:
+Quantum electrodynamics describes the interactions of particles with electric charge. Beginning with a free-particle Dirac fermion we see that the Lagrangian is invariant under the following U(1) transformation:
 
 \begin{equation}
 \psi(x)  \xrightarrow[]{\text{U(1)}} e^{i q \alpha}\,\psi(x)
@@ -77,7 +77,7 @@ i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi
 \end{equation},
 where $\mathrm{F}_{\mu\nu}\equiv\partial_{\mu}\mathrm{A}_{\nu} - \partial_{\nu}\mathrm{A}_{\mu}$ is the field strength tensor.
 
-We see that in order for the Lagrangian to remain invariant under this U(1) transformation we introduced an additional term which links the (conserved) electromagnetic current with the spin-1 field: $e\bar{\psi}\gamma^{\mu}\psi \mathrm{A}_{\mu} = j^{\mu}A_{\mu}$. This new field is to be identified with the photon, it acts as a mediator of the force between two particles with electric charge. A photon mass term of the form $\frac{1}{2}m^{2}\mathrm{A}^{\mu}\mathrm{A}_{\mu}$ is forbidden as it is not invariant under the transformation rule, and hence the photon must be massless.
+We see that in order for the Lagrangian to remain invariant under this U(1) transformation we introduced an additional term that links the (conserved) electromagnetic current with the spin-1 field: $e\bar{\psi}\gamma^{\mu}\psi \mathrm{A}_{\mu} = j^{\mu}A_{\mu}$. This new field is to be identified with the photon, it acts as a mediator of the force between two particles with electric charge. A photon mass term of the form $\frac{1}{2}m^{2}\mathrm{A}^{\mu}\mathrm{A}_{\mu}$ is forbidden as it is not invariant under the transformation rule; the photon remains massless.
 
 \section{Quantum Chromodynamics} 
 
@@ -108,11 +108,11 @@ i \bar{q} \gamma^{\mu} \partial_{\mu} q
 \end{equation}
 where $\mathrm{G}^{\mu\nu}_{i} \equiv \partial^{\mu} \mathrm{G}^{\nu}_{i} - \partial^{\nu} \mathrm{G}^{\mu}_{i} - g_{s} f_{ijk} \mathrm{G}^{\mu}_{j} \mathrm{G}^{\nu}_{k}$ is the field strength tensor for the gluon field $i$. We see the non-Abelian nature of SU(3) manifests itself as self-couplings within the gluon field, giving rise to interaction vertices with 3 or 4 gluons. The 8 conserved color currents, analogous to the electromagnetic current, are seen as interaction terms between two quarks and a gluon $(\frac{1}{2} g_{s} \bar{q} \gamma^{\mu} \bm{\lambda} q) \cdot \bm{\mathrm{G}}_{\mu} = \bm{j}^{\mu} \cdot \bm{\mathrm{G}}_{\mu}$.
 
-To conserve color charge at the QCD vertices, gluons themselves must carry both color and anti-color. The color charge allows for self interactions of the gluons. The 8 physical gluons are members of a color/anticolor octet of which 6 of them represented as ladder operators within SU(3) and two other as diagonal matrices. A gluon mass term of the form $\frac{1}{2}m^{2}\bm{\mathrm{G}}^{\mu} \cdot \bm{\mathrm{G}}_{\mu}$ is forbidden as it is not invariant under the transformation rule, so the gluons are massless.
+To conserve color charge at the QCD vertices, gluons themselves must carry both color and anti-color. The color charge allows for self interactions of the gluons. The eight physical gluons are members of an SU(3) color/anticolor octet, with six of them represented as ladder operators and two as diagonal matrices. A gluon mass term of the form $\frac{1}{2}m^{2}\bm{\mathrm{G}}^{\mu} \cdot \bm{\mathrm{G}}_{\mu}$ is forbidden as it is not invariant under the transformation rule; the gluons remain massless.
 
 \subsection{Confinement, Hadrons, \& the Quark Model}
 
-Experimentally we have never detected a free quark. The physical manifestation of quark production results in a final state consisting of many lower energy particles produced collinear with the original quark. This ``spray'' of particles is known as a \textit{jet}. This behavior is explained as arising from a phenomena known as \textit{color confinement}: all objects with color charge are confined to colorless singlets. The origins of color confinement may be traced to the self interactions of the gluon fields resulting in the strong force between two quarks \textbf{increasing} as they separate. It eventually becomes energetically favorable to create quark-antiquark pairs from the vacuum, which can subsequently combine with other quarks to form the colorless objects (constituting the jets).
+Experimentally we have never detected a free quark. The physical manifestation of quark production results in a final state consisting of many lower energy particles collinear with the original quark. This ``spray'' of particles is known as a \textit{jet}. This behavior is explained as arising from a phenomena known as \textit{color confinement}: all objects with color charge are confined to colorless singlets. The origins of color confinement may be traced to the self interactions of the gluon fields causing the strong force between two quarks \textbf{increasing} as they separate. It eventually becomes energetically favorable to create quark-antiquark pairs from the vacuum, which can subsequently combine with other quarks to form the colorless objects (constituting the jets).
 
 \textit{Hadrons} are bound states of quarks, interacting via the strong force. Color confinement limits the possible combinations of quarks and antiquarks that can exist together in a bound state (antiquarks carry anticolor). Among states consisting of two quarks+antiquarks, the only possible color singlet wave function is a $q\bar{q}$ pair: $\psi = \frac{1}{\sqrt{3}} (r\bar{r} + g\bar{g} + b\bar{b})$ --- these states are called \textit{mesons}. For systems of three quarks+antiquarks, the only color singlet consists of three quarks (or antiquarks) $qqq$: $\psi = \frac{1}{\sqrt{6}} (rgb - rbg + gbr - grb +brg-bgr)$ --- these states are called \textit{baryons}.
 
@@ -148,8 +148,6 @@ The strength of the strong force between two quarks is independent of their flav
 
 \section{Electroweak Theory} 
 
-\subsection{Introduction}
-
 The electroweak theory provides a unified and self-consistent description of both the electromagnetic and weak forces. The complete theory is generated by demanding local invariance of the Lagrangian under a combined SU(2)$\times$U(1) symmetry. The SU(2) invariance requires the addition of three new vector bosons, two of which are used to construct the physical W$^{\pm}$ bosons responsible for the weak \textit{charged current} interactions. An additional gauge boson is required for the U(1) symmetry. A mixing between the remaining (neutral) SU(2) gauge field and the U(1) gauge field yield the Z boson and photon, responsible for weak \textit{neutral current} and electromagnetic interactions, respectively. 
 
 Consider the following U(1) transformation on a fermion $\psi$, and SU(2) transformation on an \textit{isospin doublet} $\Psi$:
@@ -160,7 +158,7 @@ Consider the following U(1) transformation on a fermion $\psi$, and SU(2) transf
 \Psi(x) \xrightarrow[]{\text{SU(2)}} e^{i g_{W} \bm{\xi}(x) \cdot \frac{1}{2} \bm{\sigma} } \, \Psi(x) 
 \end{array}
 \end{equation}
-where $g'$ is the hypercharge coupling constant, Y is the hypercharge operator, $g_{W}$ is the weak coupling constant, $\alpha$ and $\bm{\xi}$ are arbitrary functions of spacetime, and $\bm{\sigma}$ represents the 3 2x2 Pauli spin matrices.
+where $g'$ is the hypercharge coupling constant, Y is the hypercharge operator, $g_{W}$ is the weak coupling constant, $\alpha$ and $\bm{\xi}$ are arbitrary functions of spacetime, and $\bm{\sigma}$ represents the three 2x2 Pauli spin matrices.
 
 As usual, SU(2) and U(1) gauge-invariance requires us to modify the definition of the partial derivative to include three spin-1 vector fields $\bm{\mathrm{W}}^{\mu}$ and a single spin-1 vector field B$^{\mu}$:
 
@@ -173,7 +171,7 @@ As usual, SU(2) and U(1) gauge-invariance requires us to modify the definition o
 \end{equation}
 where $\epsilon_{ijk}$ is the totally antisymmetric Levi-Civita tensor (the structure constants of SU(2)).
 
-The charged current interaction connects two elements within an isospin doublet $\Psi$; by convention, the upper element has electric charge +1 relative to the lower element. There are doublets that connect the leptons with a corresponding neutrino (massless spin-1/2 particles), and there are doublets that connect an 'up-type' quark (top entry of the doublet) to a 'down-type' quark (bottom entry):
+The charged current interaction connects two elements within an isospin doublet $\Psi$; by convention, the upper element has electric charge +1 relative to the lower element. There are doublets that connect the leptons with a corresponding neutrino (massless spin-1/2 particle), and there are doublets that connect an 'up-type' quark (top entry of the doublet) to a 'down-type' quark (bottom entry):
 
 \begin{equation*}
 \begin{pmatrix} \nu_{e} \\ e^{-} \end{pmatrix},
@@ -184,9 +182,9 @@ The charged current interaction connects two elements within an isospin doublet 
 \begin{pmatrix} t \\ b' \end{pmatrix}
 \end{equation*}
 
-As Nature has it, the weak force is a \textit{chiral} theory which does not treat the left and right-chiral components of a Dirac fermion on equal footings.  The projection operator $P_{R/L} = \frac{1}{2} ( 1 \pm \gamma^{5})$ is used to define these left and right chiral states, all Dirac fermions can be decomposed as $\psi = \psi_{L} + \psi_{R}$ using these operators. In the Standard Model, only left-handed particle and right-handed antiparticle states enter into the isospin doublets participating in the electrically-charged weak interaction. This is summarized in Table~\ref{tab:sm}.
+As Nature has it, the weak force is a \textit{chiral} theory, which does not treat the left and right-chiral components of a Dirac fermion on equal footings.  The projection operator $P_{R/L} = \frac{1}{2} ( 1 \pm \gamma^{5})$ is used to define these left and right chiral states. All Dirac fermions can be decomposed as $\psi = \psi_{L} + \psi_{R}$ using these operators. In the Standard Model, only left-handed particle and right-handed antiparticle states enter into the isospin doublets participating in the electrically-charged weak interaction. This is summarized in Table~\ref{tab:sm}.
 
-Because of the SU(2) symmetry and doublet nature, we must introduce \textbf{two} fermions to the theory, where the left and right chiral components may transform differently under gauge interactions. Consider fields  $\chi$ and  $\tau$; the left handed components are members of an isospin doublet $\overline{\psi_{L}}=(\overline{\chi_{L}},\,\overline{\tau_{L}})$, all components participate in the U(1) transformation. The complete electroweak Lagrangian becomes:
+Because of the SU(2) symmetry and doublet nature, we must introduce \textbf{two} fermions to the theory, where the left and right chiral components may transform differently under gauge interactions. Consider fields  $\chi$ and  $\tau$; the left handed components are members of an isospin doublet $\overline{\psi_{L}}=(\overline{\chi_{L}},\,\overline{\tau_{L}})$, and all components participate in the U(1) transformation. The complete electroweak Lagrangian becomes:
 
 \begin{equation}
 \begin{array}{l}
@@ -201,20 +199,19 @@ i \bar{\chi} \gamma^{\mu} \partial_{\mu} \chi - m \bar{\chi} \chi
 \end{array}
 \end{equation}
 
-Mass terms of the form $\frac{1}{2}m^{2}\mathrm{A}^{\mu}\mathrm{A}_{\mu}$ are forbidden as they are not invariant under the transformation rule. Therefore the B and $\bm{\mathrm{W}}$ bosons remain massless.
+Mass terms of the form $\frac{1}{2}m^{2}\mathrm{A}^{\mu}\mathrm{A}_{\mu}$ are forbidden as they are not invariant under the transformation rule; the $\bm{\mathrm{W}}$ bosons remain massless.
 
 \subsection{The Higgs Mechanism}
 
-The gauge bosons responsible for the electroweak force have observationally been determined to have mass, which is a problem as the gauge symmetry requires them to be massless. Surely there must be some mechanism that can be introduced to achieve this, while (at least initially) preserving the SU(2)$\times$U(1) symmetry. The \textit{Higgs field} is introduced to generate mass terms for the electroweak gauge bosons. The discovery of the Higgs boson was the final particle contained within the SM to be observed, its discovery in 2012 was monumental \cite{higgsdisc}.
+The gauge bosons responsible for the electroweak force have observationally been determined to have mass, which is a problem as the SU(2) gauge symmetry requires them to be massless. Surely there must be some mechanism that can be introduced to achieve this, while (at least initially) preserving the SU(2)$\times$U(1) symmetry. The \textit{Higgs field} is introduced to generate mass terms for the electroweak gauge bosons. The Higgs mechanism proceeds by introducing a massive spin-0 complex scalar field with the following Lagrangian:
 
-The Higgs mechanism proceeds by introducing a massive spin-0 complex scalar field with Lagrangian
 \begin{equation}
 \label{higgslag}
 \mathcal{L} = \frac{1}{2} (\partial_{\mu}\phi^{\dagger})(\partial^{\mu}\phi) - \frac{1}{2}\mu^{2} \phi^{\dagger}\phi + \lambda(\phi^{\dagger}\phi)^{2},
 \end{equation}
 where $\mu$ and $\lambda$ are the strengths of the self-coupling terms.
 
-Within the SM, the field is implemented as an isospin doublet which consists of electrically neutral and charged components:
+Within the SM, the field is implemented as an isospin doublet consisting of electrically neutral and charged components:
 \begin{equation}
 \phi = \begin{pmatrix} \phi^{+} \\ \phi^{0} \end{pmatrix} = \begin{pmatrix} \phi_{1} + i\phi_{2} \\  \phi_{3} + i\phi_{4} \end{pmatrix},
 \end{equation}
@@ -233,7 +230,7 @@ where we see that we have generated a mass term $m_{\mathrm{h}} = \sqrt{2 \lambd
 
 \subsubsection{Masses of the W$^{\pm}$ and Z bosons}
 
-The kinetic energy term $\frac{1}{2} (\partial_{\mu}\phi^{\dagger})(\partial^{\mu}\phi)$ for the Higgs field introduces a coupling with the $\bm{\mathrm{W}}^{\mu}$ and B$^{\mu}$ bosons when they are added to the covariant derivate:
+The kinetic energy term $\frac{1}{2} (\partial_{\mu}\phi^{\dagger})(\partial^{\mu}\phi)$ for the Higgs field introduces a coupling with the $\bm{\mathrm{W}}^{\mu}$ and B$^{\mu}$ bosons when they are added to the covariant derivative:
 
 \begin{equation}
 \partial_{\mu}\phi = \left( \frac{1}{2}\partial_{\mu} + \frac{1}{2} i g_{W}\bm{\sigma}\cdot\bm{\mathrm{W}} + i g' \frac{Y}{2} \mathrm{B}^{\mu} \right) \begin{pmatrix} 0 \\ v + h(x) \end{pmatrix}
@@ -264,7 +261,7 @@ We have seen how the Higgs mechanism is able to generate mass terms for the gaug
 
 \subsubsection{Masses of the Fermions}
 
-It has not been mentioned that the fermion mass terms $-m\bar{\psi}\psi = -m( \overline{\psi_{R}} \psi_{L} + \overline{\psi_{L}}\psi_{R})$ are in fact forbidden within the SM; the chiral nature of SU(2) treats the two chiral states differently and therefore this term is not invariant under the transformation rules. Masses for the fermions are created by introducing \textit{Yukawa interactions} with the Higgs field. Consider the following terms, which are invariant under the U(1)$\times$SU(2) transformation,:
+It has not been mentioned that the fermion mass terms $-m\bar{\psi}\psi = -m( \overline{\psi_{R}} \psi_{L} + \overline{\psi_{L}}\psi_{R})$ are in fact forbidden within the SM --- the chiral nature of SU(2) treats the two chiral states differently and therefore this term is not invariant under the transformation rules. Masses for the fermions are created by introducing \textit{Yukawa interactions} with the Higgs field. Consider the following terms, which are invariant under the U(1)$\times$SU(2) transformation,:
 
 \begin{equation}
 \begin{array}{l}
@@ -285,7 +282,7 @@ After spontaneous symmetry breaking, this reduces to:
 \hspace{4mm} = - \frac{1}{\sqrt{2}} yv \bar{\ell}\ell - \frac{1}{\sqrt{2}} y h \bar{\ell}\ell
 \end{array}
 \end{equation}
-and we see we have obtained a mass term for the fermion $m_{\ell} = \frac{1}{\sqrt{2}} yv$ and an interaction term $\frac{1}{\sqrt{2}} y h \bar{\ell}\ell$ between the fermion in the lower member of the isospin double and a single Higgs boson.
+and we see we have obtained a mass term for the fermion $m_{\ell} = \frac{1}{\sqrt{2}} yv$ and an interaction term $\frac{1}{\sqrt{2}} y h \bar{\ell}\ell$ between the fermion in the lower member of the isospin double tand a single Higgs boson.
 
 To generate a mass term for the upper component of the isospin doublet we need to follow the same prescription but with the \textit{conjugate} Higgs field:
 
@@ -319,7 +316,7 @@ where the same story plays out.
 
 \subsection{Quark Mixing: the CKM Matrix}
 
-The charged weak current acts on isospin doublets connecting quarks of different flavors - the flavor eigenstates: u, d, s, c, b, t. The quarks propagate as mass eigenstates of the free-particle Hamiltonian. This introduces mixing between these two bases and is represented by the \textit{Cabibo-Kobayashi-Maskawa matrix}. The probability of a transition between two states is proportional to a matrix element $|V|^{2}$ in the matrix. It is a unitary 3x3 matrix with 4 independent terms (3 amplitudes and 1 phase).
+As seen at the beginning of this section, the charged weak current acts on isospin doublets connecting quarks of flavor eigenstates, labeled as u, d', s', c, b', t. As Nature has it, these are not the same as the mass eigenstates of the free-particle Hamiltonian, labeled as u, d, s, c, b, t. This introduces mixing between these two bases and is represented by the \textit{Cabibo-Kobayashi-Maskawa matrix}. The probability of a transition between two states is proportional to the square of a matrix element $|V|^{2}$ in the matrix. It is a unitary 3x3 matrix with 4 independent terms (3 amplitudes and 1 phase).
 
 \begin{equation}
 \label{eq:ckmv}
@@ -338,7 +335,7 @@ The best estimate of these parameters \cite{ckm} are:
 
 \subsection{Brief Electroweak Summary}
 
-We started with a theory of two fields each governed by the Dirac equation. We demanded that the theory be gauge-invariant under combined U(1)$\times$SU(2) symmetry operations. The gauge bosons are required to be massless as their transformation rules do not allow their kinetic energy term to be invariant. The Higgs field was introduced, the action of the covariant derivate on the Higgs field generates an interaction term between the gauge bosons and the Higgs field. The Higgs field obtained a vacuum expectation value, re-expressing the field about this ground state led us to mass terms for the gauge bosons. The physical W$^{\pm}$ and Z bosons become mixtures of these states. Fermion mass terms are not initially allowed as the chiral SU(2) symmetry treats the left and right components differently and therefore can not remain invariant. Fermion mass terms are generated by introducing Yukawa interactions between the Higgs field and fermions, which generate appropriate mass terms after the Higgs field expansion about the vacuum. In addition, under the charged-current interaction, quark flavor and mass eigenstates are not the same, this introduces the CKM matrix parametrizing the mixing.
+We started with a theory of two fields each governed by the Dirac equation. We demanded that the theory be gauge-invariant under combined U(1)$\times$SU(2) symmetry operations. The gauge bosons are required to be massless as their transformation rules do not allow their kinetic energy term to be invariant. The Higgs field was introduced, the action of the covariant derivate on the Higgs field generates an interaction term between the gauge bosons and the Higgs field. The Higgs field obtained a vacuum expectation value, and re-expressing the field about this ground state led us to mass terms for the gauge bosons. The physical W$^{\pm}$ and Z bosons become mixtures of these states. Fermion mass terms are not initially allowed as the chiral SU(2) symmetry treats the left and right components differently and therefore they cannot remain invariant. Fermion mass terms are generated by introducing Yukawa interactions between the Higgs field and fermions, which generate appropriate mass terms after the Higgs field expansion about the ground state. In addition, under the charged-current interaction, quark flavor and mass eigenstates are not the same, this introduces the CKM matrix parametrizing the mixing.
 
 \section{Parameters of the Standard Model}
 
@@ -362,10 +359,10 @@ G_{F} \equiv \sqrt{2} g^{2}_{W} / 8 m_{W}^{2}, & G_{F} (q^{2}\approx0) = 1.16637
 
 \section{Neutrino Mass}
 
-Within the 'canonical' SM the neutrinos are assumed to be massless spin-1/2 fermions. In the last decade, experiments have shown that neutrinos go through \textit{flavor oscillations} wherein they change flavor as they propagate through space. This flavor oscillation is dependent on \textbf{massive} neutrinos and can be described by a mixing between the mass and flavor eigenstates. The mixing is described by a 3x3 unitary matrix known as the \textit{PMNS matrix} (analogous to the CKM matrix). One could consider giving the neutrinos a Yukawa coupling with the Higgs and give them a Dirac mass $-m\bar{\nu}\nu = -m(\overline{\nu_{R}}\nu_{L} + m\overline{\nu_{L}}\nu_{R})$, but the non-observation of right-handed neutrinos does not allow that approach. The correct implementation of the neutrino mass is still an open question in the field. The currently known estimates for their masses are seen in Figure~\ref{fig:sm}.
+Within the 'canonical' SM the neutrinos are assumed to be massless spin-1/2 fermions. In the last decade, experiments have shown that neutrinos go through \textit{flavor oscillations} wherein they change flavor as they propagate through space. This flavor oscillation is dependent on \textbf{massive} neutrinos and can be described by a mixing among the mass and flavor eigenstates. The mixing is described by a 3x3 unitary matrix known as the \textit{PMNS matrix} (analogous to the CKM matrix). One could consider giving the neutrinos a Yukawa coupling with the Higgs and give them a Dirac mass $-m\bar{\nu}\nu = -m(\overline{\nu_{R}}\nu_{L} + m\overline{\nu_{L}}\nu_{R})$, but the non-observation of right-handed neutrinos does not allow that approach. The correct implementation of the neutrino mass is still an open question in the field. The currently known estimates for their masses are seen in Figure~\ref{fig:sm}.
 
 The neutrino mass sector possibly adds an additional 7 parameters \cite{pmns} to the SM:
 \begin{itemize}
 \item 3 neutrino masses: $m_{\nu_{1}}, m_{\nu_{2}}, m_{\nu_{3}}$
-\item 4 parameters describing the mixing between the neutrino mass and flavor eigenstates (PMNS matrix): often parameterized as $\theta_{12}, \theta_{13}, \theta_{23}, \delta$.
+\item 4 parameters describing the mixing among the neutrino mass and flavor eigenstates (PMNS matrix): often parameterized as $\theta_{12}, \theta_{13}, \theta_{23}, \delta$.
 \end{itemize}

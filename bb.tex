@@ -1,7 +1,7 @@
 \chapter{\bbbar-tagging of AK8 Jets}
 \label{chap:bb}
 
-A novel approach has been studied to identify large-radius jets composed of two b-quarks~\cite{CMS-PAS-BTV-15-002}. A dedicated multivariate (MVA) tagging algorithm is implemented to combine the information from the secondary vertices, the tracks, and the $\tau$-axes of the jet and optimize the discrimination between jets from two b-hadron decays and single-parton jets. To generalize the algorithm so that it does does not depend on the mass of the b-parents or the boost, the input variables are chosen so that they do not depend strongly on jet mass or jet \pt. All tracks with $p_{T}>1\,\textrm{GeV}$ are associated with jets in a cone $\Delta R<0.8$ around the jet axis, which is defined by the primary vertex and the direction of the jet momentum. The tracks are then associated with the closest $\tau$-axes. For this we take the distance between the sub-structure axis and the track to be the distance of closest approach, which is required to be within $700\mu m$ and the point of closest approach on the track is required to be $5\,\mathrm{cm}$ from the primary vertex. The impact parameter significance (with respect to the primary vertex) is used to discriminate tracks from the b decay from prompt tracks. Several input variables make use of the secondary vertices that are reconstructed using the Inclusive Vertex Finder~\cite{CMS-PAS-BTV-15-001}, which identifies secondary vertices independently of the jet clustering. The secondary vertices are then associated with the closest $\tau$-axis. For each $\tau$-axis, track momenta of the constituent tracks from all the secondary vertices associated with a given $\tau$-axis are added to compute the SV mass and transverse momentum.  The input variables to the double-b tagger MVA discriminant are detailed in ~\cite{CMS-PAS-BTV-15-002}.  Figure~\ref{fig:DoubleBROCBHadrons} shows the discrimination between between signal $H\rightarrow b\overline{b}$ and background jets based on the true number of b-hadrons.
+A novel approach has been studied to identify large-radius jets composed of two b quarks \cite{CMS-PAS-BTV-15-002}. A dedicated multivariate (MVA) tagging algorithm is implemented to combine the information from secondary vertices, tracks, and subjet axes to optimize the discrimination between jets containing two b quarks and those containing a single parton. Input variables which do not depend on the momentum or mass of the parent are chosen to allow consistent performance over a wide range. Tracks with $p_{T}>1\,\textrm{GeV}$ are associated to a jet if they are within a cone of $\Delta R<0.8$ around the jet. A track is associated with a subjet if its distance of closest approach with the subjet axis is less than $700\,\mu\mathrm{m}$ and if its distance of closest approach with the primary vertex is less than $5\,\mathrm{cm}$. The impact parameter significance with respect to the primary vertex is used to discriminate tracks from b decay with prompt tracks. Several input variables make use of the secondary vertices that are reconstructed using the Inclusive Vertex Finder~\cite{CMS-PAS-BTV-15-001}, which identifies secondary vertices independently of the jet clustering. The list of final input variables to the MVA discriminant are detailed in ~\cite{CMS-PAS-BTV-15-002}.  Figure~\ref{fig:DoubleBROCBHadrons} shows the discrimination between between signal $H\rightarrow b\overline{b}$ and background jets based on the true number of b-hadrons.
 
 \begin{figure}
   \begin{center}
@@ -15,10 +15,7 @@ A novel approach has been studied to identify large-radius jets composed of two 
   \end{center}
 \end{figure}
 
-Figure~\ref{fig:DoubleBEff} shows the signal efficiency for an $H\rightarrow b\bar{b}$ jet to pass the Double-b tag cut. The efficiencies are computed by matching reconstructed jets to a 
-generator-level Higgs or Z boson based on an angular requirement, $\Delta R<0.8$, between the jet and the appropriate gen-particle and has one or more B-hadrons associated with it via: Jet$\rightarrow$jetFlavourInfo().getbHadrons().size().
-The efficiency is above $80\%$ for the Double-b discriminator alone, and drops to $~65\%$ when the pruned mass cut is applied. At high jet \pt there is an inefficiency in the 
-Double-b tag as tracks from the b quarks become more collimated. The QCD background consists of some mistagged light flavor jets and jets with true b-hadrons which can come from gluon splitting or flavor excitation. The \ttbar background has both true heavy flavor jets and true \ptmiss, but a good number of the single b-hadron jets can be rejected with the Double-b tag requirement.
+The central and right plots of Figure~\ref{fig:DoubleBEff} show the signal efficiency for a $H\rightarrow b\bar{b}$ jet to pass the Double-b tag cut for the [85, 135 GeV] and [50, 250 GeV] mass windows, respectively. The efficiencies are computed by matching reconstructed jets to a generator-level Higgs or Z boson based on an angular requirement, $\Delta R<0.8$, between the jet and the appropriate generated particle. Additionally, the reconstructed jet is required to have one or more generated b-hadrons associated with it (jet.jetFlavourInfo().getbHadrons().size()). The efficiency is above $80\%$ for the Double-b discriminator alone, and drops to $~65\%$ when the pruned mass cut is applied. At high jet \pt there is an inefficiency in the double-b tag as tracks from the b quarks become more collimated. The QCD background consists of some mistagged light flavor jets and jets with true b-hadrons that can come from gluon splitting or flavor excitation. The \ttbar background has both true heavy flavor jets and true \ptmiss, but a good number of the single b-hadron jets can be rejected with the Double-b tag requirement.
 
 \begin{figure}
 \begin{center}
@@ -71,7 +68,7 @@ within $\Delta R <0.4$ of the sub-jet axis so that the jet can be ``double-muon 
 compared to give a data/MC scale factor which is fairly close to unity. The mis-tag rate is evaluated by comparing data and MC 
 for top-quark jets faking H jets in $t\overline{t}$ production. The studies are based on single lepton $t\overline{t}$ events 
 and the event selection requires one isolated muon with $p_{t}>50\,\textrm{GeV}$ and an AK4 jet in the same hemisphere. More details 
-can be found in~\cite{CMS-PAS-BTV-15-002}. Table~\ref{tab:DoublebSF} lists the data/MC scale-factors that correct for the efficiency difference between data and simulation based on the jet \pt. The final signal efficiency are scaled based on these scale-factors and the double-b efficiency systematic of the signal is based on the uncertainty of these scale-factors. For \pt values above the limit of 840 GeV, the scale factor at this limit is used with twice the uncertainty for the signal systematic.  
+can be found in~\cite{CMS-PAS-BTV-15-002}. Table~\ref{tab:DoublebSF} lists the data/MC scale-factors that correct for the efficiency difference between data and simulation based on the jet \pt. The final signal efficiency is scaled based on these scale-factors, and the double-b efficiency systematic of the signal is based on the uncertainty of these scale-factors. For \pt values above the limit of 840 GeV, the scale factor at this limit is used with twice the uncertainty for the signal systematic.  
 
 \begin{table}
 \centering
@@ -81,9 +78,9 @@ can be found in~\cite{CMS-PAS-BTV-15-002}. Table~\ref{tab:DoublebSF} lists the d
 \hline \hline
 \pt [GeV] & Signal SF\\
 \hline
-250-350 & $0.94\pm 0.03/0.02$ \\
-350-430 &  $1.00 \pm 0.04/0.03$\\
-430-840 &  $1.01\pm 0.02/0.04$\\
+250-350 & $0.94 + 0.03 - 0.02$\\
+350-430 & $1.00 + 0.04 - 0.03$\\
+430-840 & $1.01 + 0.02 - 0.04$\\
 \hline\hline
 \end{tabular}
 \end{table}
