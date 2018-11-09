@@ -8,7 +8,7 @@ If a more unifying theory than the SM exists it certainly has not been forthrigh
 
 The Minimal Supersymmetric SM contains a discrete symmetry called R-parity in which all SM and supersymmetric particles have charges ${-1}$ and ${+1}$, respectively \cite{susyprimer}. One direct consequence of R-parity conservation is that the decay of a massive supersymmetric particle must include an odd number of supersymmetric particles in the final state. This decay cascade will continue until the final state consists of the lightest such particle in the theory, denoted the lightest supersymmetric particle (LSP). If the LSP is electrically neutral it may escape detection, creating an imbalance in the net momentum of the event (similar to a neutrino). Therefore, events with a large momentum imbalance are also interesting as potential signals for SUSY. For this thesis, we assume R-parity is conserved.
 
-With this as a motivation, the authors (\cite{CMS-SUS-17-006}) designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the \bbbar decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as \textit{SMS} models and serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with production of a pair of sparticles that subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. Figures~\ref{fig:t5hh} and \ref{fig:t5zh} are known as the \textit{T5HH} and \textit{T5ZH} models respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ which decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson.
+With this as a motivation, the authors (\cite{CMS-SUS-17-006}) designed an analysis searching for physics beyond the SM in events with boosted H or Z bosons and a large transverse momentum imbalance of the event. We reconstruct the H and Z bosons in the \bbbar decay mode, with 57\% and 15\% branching fractions, respectively. Although our analysis is sensitive to any new physics with this final state, we have adopted two benchmark models seen in Figure~\ref{fig:sms}. These are known as the \textit{T5HH} (left) and \textit{T5ZH} (right) \textit{SMS} models, respectively. The proton-proton interaction produces a pair of gluinos $\tilde{g}$ that decay to a neutralino $\tilde{\chi}_{2}^{0}$ along with the emission of SM quarks. This neutralino $\tilde{\chi}_{2}^{0}$ further decays into a neutralino $\tilde{\chi}_{1}^{0}$ with the emission of a SM Higgs or Z boson. The blob in the figure indicates we are not interested in the particulars of the gluino production mechanism. SMS (simplified model spectrum) models serve to simplify the SUSY parameter space into particle masses, cross sections, and branching fractions \cite{CMS-SUS-11-016}. In general, the diagrams begin with production of a pair of sparticles that subsequently cascade decay to final states consisting of stable SM particles and a pair of stable supersymmetric particles which are the lightest in the theory. We have seen two other examples of these diagrams previously in Figure \ref{fig:oldlimits}.
 
 \begin{figure}
 \centering
@@ -373,10 +373,10 @@ $0.49\pm0.02$ & $0.40\pm0.05$ & $0.35\pm 0.08$ \\
 \end{tabular}
 \end{table}
 
-The scale factors are then applied to the samples to give yields better representative of data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosuresf} relative to Figure~\ref{fig:MCclosure} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. A distribution of $\kappa$ is derived by throwing gaussian pseudo-experiments for each of the scale factors, the final results being summarized in Table~\ref{tab:TotalKappa}.
+The scale factors are then applied to the samples to give yields better representative of data. The \ptmiss distributions for the signal regions and expectations from the ABCD background prediction are seen in Figure~\ref{fig:MCclosuresf} (the data-corrected version of Figure~\ref{fig:MCclosure}). The improved value of $\kappa$ is seen in the lower panel of each plot. The modified values of the yields in the signal region (seen in the calculation of $\kappa$) are seen in Tables~\ref{tab:CorrSignal} and~\ref{tab:CorrControl}. Since most of the scale factors are less than one the background decreases in Figure~\ref{fig:MCclosuresf} relative to Figure~\ref{fig:MCclosure} but still preserves the normalization so that $\kappa$ is statistically compatible with unity. In order to obtain the best central value and error for $\kappa$, pseudo-experiments are performed allowing the yields in the ABCD regions to fluctuate according to Gaussian statistics. This procedure results in a distribution which is summarized in Table~\ref{tab:TotalKappa}.
 
 \begin{table}
-\caption{The $\kappa$ factor computed by throwing Gaussian toys for the scale factors.}
+\caption{A summary of the background estimation corrections $\kappa$, obtained using pseudo-experiments.}
 \label{tab:TotalKappa}
 \centering
 \begin{tabular}{c|c|c}
@@ -507,27 +507,40 @@ $A_{2}$ & [700, $\infty$ GeV] & 1     & 4     & 28   & 0.62 $\pm$ 0.30 & 0.09$^{
 We consider a variety of systematic uncertainties on the signal efficiency and distribution. Some are common to more 
 inclusive SUSY analyses \cite{RA2b:Moriond} and there are additional systematic uncertainties related to $b\bar{b}$ tagging efficiency and 
 the effect of the pruned mass scale and resolution on the signal efficiency.  
+
 \begin{itemize}
-\item {\bf Luminosity:} The calculated uncertainty for the for the 2016 dataset is 2.5\% \cite{CMS-PAS-LUM-17-001}.
-\item {\bf Isolated Track Veto:} An uncertainty of 2\% is assigned to the signal samples to account for any data/MC differences based on the study from the 2015 analysis \cite{RA2b:Moriond}.
-\item {\bf Statistical Uncertainty:} The signal sample statistical uncertainty is generally 2-4\%.
-\item {\bf Trigger Efficiency:} The effect of the uncertainty on the signal yield is about 2\%.
-\item {\bf Pileup Reweighting:} The sensitivity to the pileup distribution was studied for various benchmark signal models by comparing events with $n_{\textrm{vtx}} < 20$ (low PU) or $n_{\textrm{vtx}} \geq 20$ (high PU). As no difference was observed, pileup reweighting is not applied and no associated uncertainty is assessed.
-\item {\bf ISR:} An ISR correction is derived from tt events, with a selection requiring two lep-
-tons (electrons or muons) and two b-tagged jets, implying that any other jets in the
-event arise from ISR. The correction factors are 1.000, 0.920, 0.821, 0.715, 0.662, 0.561,
-0.511 for NISR = 0, 1, 2, 3, 4, 5, 6+.
-The corrections are applied to the simulated signal jet samples with an additional normalization factor, typically about 1.15 (depending on the signal model), to ensure the overall cross section of the sample remains constant. The systematic uncertainty in these corrections is chosen to be half of the deviation from unity for each correction factor, with the largest effect at high \ptmiss.
-\item {\bf Scales:} The uncertainty is calculated using the envelope of the weights from varying the renormalization and factorization scales, $\mu_{R}$ and $\mu_{F}$,by a factor of 2 \cite{Cacciari:2003fi, Catani:2003zt}. The effect on the yield is less than 0.1\%.
-\item {\bf Jet Energy Corrections:} The jet energy corrections (JECs) are varied using the $p_{T}$-
-and $\eta$-dependent jet energy scale uncertainties from the official database.
-These variations are propagated into the various jet-dependent variables, including: $H_{T}$, MET, $\Delta\phi(\textrm{MET},j_{i})$.
-The overall effect is less than 1\%.
-\item {\bf Jet Energy Resolution:} The jet momenta in the  samples are smeared to match the jet energy resolution in data. The smearing factors are varied according to the uncertainties on the jet energy resolution measurements.
-These variations are propagated into the various jet-dependent variables, including: $H_{T}$, MET, $\Delta\phi(\textrm{MET},j_{i})$.
-The overall effect ranges from 0.01\%.
-\item {\bf PDFs:} The LHC4PDF prescription for the uncertainty on the total cross section is included as $\pm 1$ sigma bands in the results plots. No
-additional uncertainty is considered for the uncertainty in the acceptance due to PDFs, as per SUSY group recommendation.
+
+\item {\bf Luminosity:}
+The calculated uncertainty for the 2016 dataset is 2.5\% \cite{CMS-PAS-LUM-17-001}.
+
+\item {\bf Isolated Track Veto:}
+An uncertainty of 2\% is assigned to the signal samples to account for any data/MC differences based on the study from the 2015 analysis \cite{RA2b:Moriond}.
+
+\item {\bf Statistical Uncertainty:}
+The signal sample statistical uncertainty is generally 2-4\%.
+
+\item {\bf Trigger Efficiency:}
+The effect of the uncertainty on the signal yield is about 2\%.
+
+\item {\bf Pileup Reweighting:}
+MC production involves the simulation of the number of pileup interactions (vertices) in addition to the primary vertex. Corrections can be derived such that this distribution more closely resembles that as seen in data. The sensitivity of the various benchmark signal models to the pileup distribution was studied by comparing events with $n_{\textrm{vtx}} < 20$ (low PU) or $n_{\textrm{vtx}} \geq 20$ (high PU). As no difference was observed, pileup reweighting is not applied and no associated uncertainty is assessed.
+
+\item {\bf Initial State Radiation:}
+Incoming partons have a non-neglible probability to radiate quarks or gluons before the 'hard' interaction occurs, this is known as initial state radiation. Corrections can be derived such that this distribution more closely resembles that as seen in data. These are derived using $t\bar{t}$ events, requiring two oppositely charged leptons and two b-tagged jets. Any \textbf{additional} jets in the event are likely to arise from initial-state radiation. The correction factors are 1.000, 0.920, 0.821, 0.715, 0.662, 0.561, 0.511 for N$_{\textrm{ISR}}$ = 0, 1, 2, 3, 4, 5, 6+. The corrections are applied to the simulated signal samples with an additional normalization factor, typically about 1.15 (depending on the signal model), to ensure the overall cross section of the sample remains constant. The systematic uncertainty in these corrections is chosen to be half of the deviation from unity for each correction factor, with the largest effect at high \ptmiss.
+
+\item {\bf Renormalization and Factorization Scales:}
+The renormalization scale $\mu_{R}$ in perturbative QCD is the energy scale one uses in the calculation of the running of the strong coupling constant. The factorization scale $\mu_{F}$ of the parton distribution functions characterize the energy scale of the interactions. These uncertainties are derived using the envelope of the weights by varying $\mu_{R}$ and $\mu_{F}$ by a factor of 2 \cite{Cacciari:2003fi, Catani:2003zt}. The effect on the yield is less than 0.1\%.
+
+\item {\bf Jet Energy Corrections:}
+The jet energy corrections are varied using the $p_{T}$-and $\eta$-dependent jet energy scale uncertainties from the official database. These variations are propagated into the various jet-dependent variables, including: $H_{T}$, MET, $\Delta\phi(\textrm{MET},j_{i})$. The overall effect is less than 1\%.
+
+\item {\bf Jet Energy Resolution:}
+The jet momenta in the  samples are smeared to match the jet energy resolution in data. The smearing factors are varied according to the uncertainties on the jet energy resolution measurements. These variations are propagated into the various jet-dependent variables, including: $H_{T}$, MET, $\Delta\phi(\textrm{MET},j_{i})$.
+The size of the effect is neglible.
+
+\item {\bf Parton Distribution Functions:}
+The LHC4PDF prescription for the uncertainty on the total cross section is included as $\pm 1$ sigma bands in the results plots. No additional uncertainty is considered for the uncertainty in the acceptance due to PDFs, as per SUSY group recommendation.
+
 \end{itemize}
 
 The above signal systematics are applied as an uncertainty on the signal normalization and are small in general. The main signal systematics 

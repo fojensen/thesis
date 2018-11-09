@@ -26,7 +26,7 @@ Electron tracking is performed with a modified Gaussian sum filter to account fo
 
 \subsection{ECAL \& HCAL Clusters}
 
-\textit{Superclusters} in the ECAL are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (up to 8) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Superclusters are built separately in the barrel and endcap. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width $\sigma$ scale set by the crystal size.
+\textit{Superclusters} in the ECAL are built by first identifying a crystal with the largest energy deposit, this is called a \textit{seed}. The supercluster is then formed by aggregating any hits among the neighbors (8 or 4 for the ECAL or HCAL, respectively) of the hits already in the cluster. This process then proceeds building all the superclusters and consuming all the calorimeter hits. Within a given supercluster, N clusters are identified using an iterative algorithm assuming the observed hits arise from N Gaussian-distributed energy deposits; each of energy E, position in the $\eta-\phi$ plane $\vec{\mu}$, and width scale $\sigma$ set by the crystal size. Clusters are built separately in the HCAL, ECAL, barrel, and endcaps.
 
 \subsection{Muon Tracks}
 
